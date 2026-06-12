@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@azure/cosmos": "^4.9.3",
+    "@microsoft/signalr": "^10.0.0",
     "chessground": "^9.2.1",
     "chessops": "^0.15.0",
     "fabric": "^5.5.2",

@@ -1,0 +1,3 @@
+# Real connection strings live here — only the .example is committed
+local.settings.json
+node_modules

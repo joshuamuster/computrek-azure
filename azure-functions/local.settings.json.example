@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "CosmosDBConnection": "AccountEndpoint=https://computrek-fusd.documents.azure.com:443/;AccountKey=YOUR_COSMOS_PRIMARY_KEY;",
+    "AzureSignalRConnectionString": "Endpoint=https://YOUR_SIGNALR.service.signalr.net;AccessKey=YOUR_SIGNALR_KEY;Version=1.0;"
+  },
+  "Host": {
+    "CORS": "http://localhost:1701",
+    "CORSCredentials": false
+  }
+}

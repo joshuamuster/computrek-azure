@@ -50,26 +50,26 @@ export const AZURE_CLIENT_ID = import.meta.env.VITE_AZURE_CLIENT_ID || ''
 //   4. Set AZURE_DATABASE = true in src/config/featureFlags.ts.
 
 
-// ── Phase 3: Azure SignalR ────────────────────────────────────────────────────
-// Uncomment when Phase 3 real-time layer work begins. Requires Azure Functions
-// backend that watches the Cosmos DB change feed and pushes via SignalR hubs.
-// Run `npm install @microsoft/signalr` before activating.
+// ── Phase 3: Azure SignalR ── ✅ implemented in src/data/realtime.ts ──────────
+// Real-time layer:
 //
-// import { HubConnectionBuilder, LogLevel } from '@microsoft/signalr'
+//   src/data/realtime.ts    — shared SignalR connection (lazy @microsoft/signalr
+//                             import), fans container change events out to
+//                             subscriptions; negotiates against VITE_SIGNALR_URL
+//   src/data/cosmosBackend.ts (onSnapshot) — with AZURE_REALTIME on: one initial
+//                             fetch, then local result-set updates from
+//                             broadcasts; falls back to polling if SignalR is
+//                             unreachable, refetches on reconnect
+//   azure-functions/        — the backend: /api/negotiate + 9 Cosmos change-feed
+//                             triggers broadcasting to hub 'computrek', plus
+//                             soft-delete tombstone cleanup
 //
-// export const signalrConnection = new HubConnectionBuilder()
-//   .withUrl('/api/hub', {
-//     accessTokenFactory: () => getSignalRToken(),
-//   })
-//   .withAutomaticReconnect([0, 2000, 5000, 10000, 30000])
-//   .configureLogging(LogLevel.Warning)
-//   .build()
-//
-// async function getSignalRToken(): Promise<string> {
-//   const res = await fetch('/api/signalr/negotiate')
-//   const { accessToken } = await res.json()
-//   return accessToken
-// }
+// Cutover procedure (full steps in azure-functions/README.md):
+//   1. Create a SignalR Service (Serverless mode; F1 for dev, S1 for class use).
+//   2. Create a Function App (Consumption, Node 20) with CosmosDBConnection +
+//      AzureSignalRConnectionString settings and CORS for the app origins.
+//   3. cd azure-functions && func azure functionapp publish <name>
+//   4. Set VITE_SIGNALR_URL in .env; set AZURE_REALTIME = true in featureFlags.ts.
 
 
 // ── Phase 5: Azure Blob Storage ───────────────────────────────────────────────

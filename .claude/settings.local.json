@@ -114,7 +114,12 @@
       "Bash(curl -s http://localhost:1701)",
       "Bash(break)",
       "Bash(grep -iE \"serviceAccount|\\\\.env$\")",
-      "Bash(git fetch *)"
+      "Bash(git fetch *)",
+      "Bash(grep -iE \"\\\\.env$|serviceAccount\")",
+      "Bash(node --check src/index.js)",
+      "Bash(node -e \"require\\('./src/index.js'\\)\")",
+      "Bash(curl -s \"http://localhost:1701/src/components/modals/ObjectiveTimerPopup.vue\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:1701/src/components/modals/ObjectiveTimerPopup.vue\" \"http://localhost:1701/src/components/SettingsPanel.vue\" \"http://localhost:1701/src/data/cosmosBackend.ts\" \"http://localhost:1701/src/data/realtime.ts\")"
     ],
     "deny": []
   }

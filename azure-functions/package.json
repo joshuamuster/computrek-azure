@@ -1,0 +1,16 @@
+{
+  "name": "computrek-realtime",
+  "version": "1.0.0",
+  "description": "CompuTrek Phase 3 — Cosmos DB change feed → Azure SignalR broadcast",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "func start"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.9.3",
+    "@azure/functions": "^4.5.0"
+  }
+}

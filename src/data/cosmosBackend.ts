@@ -18,8 +18,18 @@
  *   Timestamp instances on read, so existing `.toDate()` / `.toMillis()` /
  *   `instanceof Timestamp` code keeps working.
  *
- * - onSnapshot is implemented as polling (every COSMOS_POLL_MS). Phase 3
- *   replaces this with Azure SignalR pushed from the Cosmos DB change feed.
+ * - onSnapshot has two modes. With AZURE_REALTIME off it polls every
+ *   COSMOS_POLL_MS. With AZURE_REALTIME on (Phase 3) it does one initial
+ *   fetch, then keeps the result set updated from SignalR change-feed
+ *   broadcasts (see src/data/realtime.ts and azure-functions/) — matching
+ *   changed docs against the query's where-constraints client-side, with
+ *   automatic fallback to polling if the SignalR connection fails.
+ *
+ * - Deletes are soft: deleteDoc marks the doc { __deleted: true } so the
+ *   change feed broadcasts the removal (Cosmos's change feed doesn't emit
+ *   hard deletes), then the doc is hard-deleted shortly after — client-side
+ *   here, and server-side by the Functions app once Phase 3 is live. All
+ *   queries filter out __deleted docs.
  *
  * - writeBatch is sequential, NOT atomic (Cosmos has no cross-partition
  *   transactions). Every existing batch in the app is a fan-out where partial
@@ -33,6 +43,8 @@
  */
 
 import type { Container, Database, RequestOptions } from '@azure/cosmos'
+import { AZURE_REALTIME } from '../config/featureFlags'
+import { subscribeContainer } from './realtime'
 
 // ── Container registry ─────────────────────────────────────────────────────────
 // Maps Firestore collection name → Cosmos container name + partition key path.
@@ -350,8 +362,9 @@ function buildSql(wheres: WhereConstraint[]) {
     return `${path} ${w.op === '==' ? '=' : w.op} ${name}`
   })
 
-  const whereSql = clauses.length ? ` WHERE ${clauses.join(' AND ')}` : ''
-  return { query: `SELECT * FROM c${whereSql}`, parameters: params }
+  // Soft-deleted docs (pending hard delete) are never query-visible
+  clauses.push('NOT IS_DEFINED(c["__deleted"])')
+  return { query: `SELECT * FROM c WHERE ${clauses.join(' AND ')}`, parameters: params }
 }
 
 // Firestore orderBy semantics: docs missing the field are excluded; null sorts first.
@@ -417,7 +430,10 @@ export class QuerySnapshot {
 async function fetchRawItem(collName: string, id: string): Promise<Record<string, unknown> | undefined> {
   const container = await getContainer(collName)
   const { resources } = await container.items
-    .query({ query: 'SELECT * FROM c WHERE c.id = @id', parameters: [{ name: '@id', value: id }] })
+    .query({
+      query: 'SELECT * FROM c WHERE c.id = @id AND NOT IS_DEFINED(c["__deleted"])',
+      parameters: [{ name: '@id', value: id }],
+    })
     .fetchAll()
   return resources[0]
 }
@@ -525,7 +541,22 @@ export async function deleteDoc(ref: DocumentReference): Promise<void> {
   const container = await getContainer(ref.collName)
   const raw = await fetchRawItem(ref.collName, ref.id)
   if (!raw) return // Firestore deleteDoc on a missing doc is a no-op
-  await container.item(ref.id, pkValueOf(ref.collName, raw)).delete()
+
+  // Soft-delete first so the change feed broadcasts the removal to live
+  // subscribers; queries already filter __deleted docs out.
+  const body: Record<string, unknown> = { __deleted: true }
+  for (const [k, v] of Object.entries(raw)) {
+    if (!k.startsWith('_')) body[k] = v // drop Cosmos system fields (_etag, _rid, ...)
+  }
+  await container.items.upsert(body)
+
+  // Hard delete shortly after. The Functions app also cleans __deleted docs
+  // server-side once Phase 3 is deployed; this covers pre-Phase-3 operation.
+  // Fire-and-forget — a 404 just means someone else cleaned it up first.
+  const pk = pkValueOf(ref.collName, raw)
+  setTimeout(() => {
+    container.item(ref.id, pk).delete().catch(() => {})
+  }, 2500)
 }
 
 // ── Batch (sequential, non-atomic — see header comment) ───────────────────────
@@ -606,12 +637,26 @@ export async function runTransaction<T>(
   throw lastErr
 }
 
-// ── onSnapshot (polling shim — replaced by SignalR in Phase 3) ────────────────
+// ── onSnapshot ─────────────────────────────────────────────────────────────────
+// AZURE_REALTIME off  → polling every COSMOS_POLL_MS.
+// AZURE_REALTIME on   → initial fetch + SignalR change-feed push (Phase 3),
+//                       falling back to polling if the connection fails.
 
 type Unsubscribe = () => void
+type SnapshotTarget = Query | CollectionReference | DocumentReference
 
 export function onSnapshot(
-  target: Query | CollectionReference | DocumentReference,
+  target: SnapshotTarget,
+  onNext: (snap: any) => void,
+  onError?: (err: Error) => void,
+): Unsubscribe {
+  return AZURE_REALTIME
+    ? realtimeSnapshot(target, onNext, onError)
+    : pollingSnapshot(target, onNext, onError)
+}
+
+function pollingSnapshot(
+  target: SnapshotTarget,
   onNext: (snap: any) => void,
   onError?: (err: Error) => void,
 ): Unsubscribe {
@@ -632,6 +677,142 @@ export function onSnapshot(
   tick() // immediate first emit, like Firestore
   const interval = setInterval(tick, COSMOS_POLL_MS)
   return () => { cancelled = true; clearInterval(interval) }
+}
+
+/** Does a decoded doc satisfy a query's where-constraints? (== / in / ranges) */
+function matchesWheres(
+  id: string,
+  data: Record<string, unknown>,
+  wheres: WhereConstraint[],
+): boolean {
+  return wheres.every(w => {
+    const actual = w.field === DOCUMENT_ID ? id : getFieldValue(data, w.field as string)
+    const expected = w.value instanceof Date ? Timestamp.fromMillis(w.value.getTime()) : w.value
+    switch (w.op) {
+      case '==': return deepEqual(actual, expected)
+      case '!=': return !deepEqual(actual, expected)
+      case 'in': return Array.isArray(expected) &&
+        expected.some(x => deepEqual(actual, x instanceof Date ? Timestamp.fromMillis(x.getTime()) : x))
+      case '<':  return compareValues(actual, expected) < 0
+      case '<=': return compareValues(actual, expected) <= 0
+      case '>':  return compareValues(actual, expected) > 0
+      case '>=': return compareValues(actual, expected) >= 0
+    }
+  })
+}
+
+/**
+ * Live subscription backed by SignalR. Strategy: fetch the initial result set
+ * once, then apply broadcast change-feed docs to it locally — a changed doc
+ * that matches the where-constraints is upserted into the set, one that no
+ * longer matches (or is soft-deleted) is removed, and orderBy/limit are
+ * re-applied before each emit. Zero RU cost per change.
+ *
+ * Known trade-off: with limit(n), a doc leaving the result set can leave it
+ * under-filled until the next change or reconnect refetch. No current live
+ * query pairs limit with high churn, so this is acceptable.
+ */
+function realtimeSnapshot(
+  target: SnapshotTarget,
+  onNext: (snap: any) => void,
+  onError?: (err: Error) => void,
+): Unsubscribe {
+  const isDocRef = target instanceof DocumentReference
+  const collName = target.collName
+  const containerName = containerInfo(collName).container
+  const constraints = target instanceof Query ? target.constraints : []
+  const wheres = constraints.filter((c): c is WhereConstraint => c.kind === 'where')
+
+  const docs = new Map<string, Record<string, unknown>>() // id → decoded data
+  let ready = false
+  let stopped = false
+  const buffer: Record<string, unknown>[] = [] // events arriving before initial fetch
+  let pollFallback: Unsubscribe | null = null
+
+  const emit = () => {
+    if (stopped || pollFallback) return
+    if (isDocRef) {
+      onNext(new DocumentSnapshot(target as DocumentReference, docs.get((target as DocumentReference).id)))
+      return
+    }
+    const items = [...docs.entries()].map(([id, data]) => ({ ...data, __id: id }))
+    const ordered = applyOrderAndLimit(items, constraints)
+    onNext(new QuerySnapshot(ordered.map(it => {
+      const { __id, ...data } = it
+      return new DocumentSnapshot(new DocumentReference(collName, __id as string), data)
+    })))
+  }
+
+  const applyRaw = (raw: Record<string, unknown>) => {
+    const id = raw.id as string
+    const deleted = raw.__deleted === true
+    const data = decodeItem(raw)
+    const isMatch = !deleted && (isDocRef
+      ? id === (target as DocumentReference).id
+      : matchesWheres(id, data, wheres))
+    if (isMatch) {
+      docs.set(id, data)
+      emit()
+    } else if (docs.delete(id)) {
+      emit()
+    }
+    // otherwise the doc is irrelevant to this subscription — no emit
+  }
+
+  const refetch = async () => {
+    try {
+      docs.clear()
+      if (isDocRef) {
+        const snap = await getDoc(target as DocumentReference)
+        if (snap.exists()) docs.set(snap.id, snap.data()!)
+      } else {
+        const snap = await getDocs(target as Query | CollectionReference)
+        for (const d of snap.docs) docs.set(d.id, d.data() as Record<string, unknown>)
+      }
+      ready = true
+      while (buffer.length) applyRaw(buffer.shift()!)
+      emit()
+    } catch (e) {
+      if (onError) onError(e as Error)
+      else console.error('[cosmosBackend] realtime initial fetch error:', e)
+    }
+  }
+
+  // The initial fetch is deferred until the SignalR connection is live —
+  // fetching before would leave a gap where changes are neither in the
+  // result set nor broadcast to us. Events that race the fetch are buffered.
+  let initialFetchStarted = false
+
+  const unsubHub = subscribeContainer(
+    containerName,
+    raw => {
+      if (stopped) return
+      if (!ready) { buffer.push(raw); return }
+      applyRaw(raw)
+    },
+    event => {
+      if (stopped) return
+      if (event === 'connected') {
+        if (!initialFetchStarted) {
+          initialFetchStarted = true
+          refetch()
+        }
+      } else if (event === 'reconnected') {
+        // Events during the outage were missed — rebuild from a fresh query
+        refetch()
+      } else if (event === 'failed' && !pollFallback) {
+        // SignalR unavailable (negotiate down, blocked WebSockets, ...) —
+        // degrade to polling so the app keeps working
+        pollFallback = pollingSnapshot(target, onNext, onError)
+      }
+    },
+  )
+
+  return () => {
+    stopped = true
+    unsubHub()
+    if (pollFallback) pollFallback()
+  }
 }
 
 // ── Network toggles (Firestore-only concept — no-ops on Cosmos) ───────────────

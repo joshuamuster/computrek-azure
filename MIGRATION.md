@@ -69,12 +69,29 @@ to `Timestamp` instances on read; `orderBy`/`limit` are applied client-side
 > `node scripts/migrate-firestore-to-cosmos.mjs` (it's an idempotent upsert)
 > right before the real cutover deploy — per the summer-break plan below.
 
-### Phase 3 — Real-time
-- [ ] Provision Azure SignalR Service
-- [ ] Deploy Azure Functions that watch Cosmos DB change feed and push via SignalR
-- [ ] Replace all `onSnapshot` calls with SignalR hub subscriptions in composables
-- Key surfaces: grading queue, ship status, CHAMPS, timers, challenge system, game rooms, warp core, live roster
-- [ ] Set `AZURE_REALTIME: true` in featureFlags.ts when complete
+### Phase 3 — Real-time 🚧 (code complete — awaiting SignalR + Functions provisioning)
+
+No composable changes were needed: `onSnapshot` in the data layer
+(`src/data/cosmosBackend.ts`) gained a realtime mode behind the
+`AZURE_REALTIME` flag. With the flag on, each subscription does one initial
+query, then keeps its result set updated from SignalR broadcasts — the
+Functions app (`azure-functions/`) watches the Cosmos change feed and pushes
+every changed doc to a hub target named after its container; the client
+matches docs against active where-constraints locally (zero RU per change).
+If SignalR is unreachable it degrades to the Phase 2 polling automatically,
+and refetches after reconnects. Deletes are handled with `__deleted`
+tombstones (the change feed can't emit hard deletes); queries filter them and
+the Functions app cleans them up.
+
+Covered live surfaces: grading queue, ship status, CHAMPS, timers, challenge
+system, game rooms, live roster, test sessions, challenge settings.
+
+- [x] Client realtime layer (`src/data/realtime.ts`) + realtime `onSnapshot` with polling fallback
+- [x] Azure Functions app (`azure-functions/`): `/api/negotiate` + 9 change-feed triggers + tombstone cleanup
+- [x] `@microsoft/signalr` installed (dynamically imported — bundle-neutral while flag is off)
+- [ ] Provision Azure SignalR Service (**Serverless mode**; F1 free tier for dev, **S1** before student rollout — 190+ concurrent connections during class)
+- [ ] Create + deploy the Function App (see `azure-functions/README.md`)
+- [ ] Set `VITE_SIGNALR_URL` in `.env`, flip `AZURE_REALTIME: true`, smoke-test
 
 ### Phase 4 — Multiplayer
 - [ ] Rewrite `gameRoomService.ts`, `moveSyncService.ts`, `reconnectService.ts` for Cosmos DB + SignalR
