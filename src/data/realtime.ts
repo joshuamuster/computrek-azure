@@ -38,7 +38,11 @@ async function ensureConnected(): Promise<boolean> {
       try {
         const signalR = await import('@microsoft/signalr')
         connection = new signalR.HubConnectionBuilder()
-          .withUrl(SIGNALR_URL) // client POSTs {url}/negotiate, then connects to Azure SignalR
+          // The client POSTs {url}/negotiate, then connects to Azure SignalR.
+          // withCredentials must be false for cross-origin negotiate: auth is
+          // header-token based (no cookies), and the Function App's CORS
+          // correctly refuses credentialed requests.
+          .withUrl(SIGNALR_URL, { withCredentials: false })
           .withAutomaticReconnect([0, 2000, 5000, 10000, 30000])
           .configureLogging(signalR.LogLevel.Warning)
           .build()

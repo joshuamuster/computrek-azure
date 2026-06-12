@@ -119,7 +119,24 @@
       "Bash(node --check src/index.js)",
       "Bash(node -e \"require\\('./src/index.js'\\)\")",
       "Bash(curl -s \"http://localhost:1701/src/components/modals/ObjectiveTimerPopup.vue\")",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:1701/src/components/modals/ObjectiveTimerPopup.vue\" \"http://localhost:1701/src/components/SettingsPanel.vue\" \"http://localhost:1701/src/data/cosmosBackend.ts\" \"http://localhost:1701/src/data/realtime.ts\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:1701/src/components/modals/ObjectiveTimerPopup.vue\" \"http://localhost:1701/src/components/SettingsPanel.vue\" \"http://localhost:1701/src/data/cosmosBackend.ts\" \"http://localhost:1701/src/data/realtime.ts\")",
+      "Bash(brew install *)",
+      "Bash(brew tap *)",
+      "Bash(az version *)",
+      "Bash(func --version)",
+      "Bash(brew list *)",
+      "Bash(brew trust *)",
+      "Bash(az functionapp *)",
+      "Bash(curl -s -X POST https://computrek-fusd.azurewebsites.net/api/negotiate)",
+      "Bash(az monitor *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(r[0][:19], '|', str\\(r[1]\\)[:300]\\) for r in d['tables'][0]['rows']]\")",
+      "Bash(az rest *)",
+      "Bash(timeout 90 func azure functionapp logstream computrek-fusd)",
+      "Bash(grep -viE \"^\\\\s*$\")",
+      "Bash(grep -viE \"^\\\\s*$\" /tmp/funclogs.txt)",
+      "Bash(curl -s -X POST https://computrek-fusd.azurewebsites.net/api/negotiate -o /dev/null -w \"negotiate: %{http_code}\\\\n\")",
+      "Bash(curl -s https://computrek-fusd.azurewebsites.net/admin/host/status -H 'x-functions-key: __CMDSUB_OUTPUT__')",
+      "Bash(az cosmosdb *)"
     ],
     "deny": []
   }

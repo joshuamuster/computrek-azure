@@ -48,7 +48,7 @@ export const AZURE_DATABASE = true
  * (Cosmos DB change feed → SignalR push) to be deployed first.
  * Depends on AZURE_DATABASE being true.
  */
-export const AZURE_REALTIME = false
+export const AZURE_REALTIME = true
 
 /**
  * Phase 4: Multiplayer game rooms backed by Cosmos DB + SignalR.

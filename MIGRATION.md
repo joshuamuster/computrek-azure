@@ -69,7 +69,7 @@ to `Timestamp` instances on read; `orderBy`/`limit` are applied client-side
 > `node scripts/migrate-firestore-to-cosmos.mjs` (it's an idempotent upsert)
 > right before the real cutover deploy — per the summer-break plan below.
 
-### Phase 3 — Real-time 🚧 (code complete — awaiting SignalR + Functions provisioning)
+### Phase 3 — Real-time ✅ (live as of June 12, 2026)
 
 No composable changes were needed: `onSnapshot` in the data layer
 (`src/data/cosmosBackend.ts`) gained a realtime mode behind the
@@ -89,9 +89,19 @@ system, game rooms, live roster, test sessions, challenge settings.
 - [x] Client realtime layer (`src/data/realtime.ts`) + realtime `onSnapshot` with polling fallback
 - [x] Azure Functions app (`azure-functions/`): `/api/negotiate` + 9 change-feed triggers + tombstone cleanup
 - [x] `@microsoft/signalr` installed (dynamically imported — bundle-neutral while flag is off)
-- [ ] Provision Azure SignalR Service (**Serverless mode**; F1 free tier for dev, **S1** before student rollout — 190+ concurrent connections during class)
-- [ ] Create + deploy the Function App (see `azure-functions/README.md`)
-- [ ] Set `VITE_SIGNALR_URL` in `.env`, flip `AZURE_REALTIME: true`, smoke-test
+- [x] Provision Azure SignalR Service — `computrek-signalr`, Serverless mode, **currently Free F1** (⚠ upgrade to **S1** on the Scale blade before student rollout — F1 caps at 20 concurrent connections / 20k messages per day)
+- [x] Create + deploy the Function App — `computrek-fusd` (Windows Consumption, West US 2)
+- [x] Set `VITE_SIGNALR_URL` in `.env`, flip `AZURE_REALTIME: true` — live push verified end-to-end June 12, 2026
+
+Provisioning gotchas hit (recorded for posterity):
+- The SignalR JS client needs `withCredentials: false` for cross-origin negotiate (fixed in `realtime.ts`); the Function App's CORS stays non-credentialed.
+- The Cosmos account firewall ("selected networks") blocked the Function App —
+  fixed by adding the `0.0.0.0` IP rule ("accept Azure datacenter traffic").
+  After fixing firewall issues, **restart the Function App**: failed trigger
+  listeners don't retry on their own.
+- The original migration script used an invalid `partitionKeyPaths` property,
+  so containers were silently created with a default `/_partitionKey` —
+  containers were deleted and re-migrated June 12, 2026 with correct keys.
 
 ### Phase 4 — Multiplayer
 - [ ] Rewrite `gameRoomService.ts`, `moveSyncService.ts`, `reconnectService.ts` for Cosmos DB + SignalR

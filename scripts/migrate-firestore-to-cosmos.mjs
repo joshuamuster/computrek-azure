@@ -162,7 +162,7 @@ async function main() {
 
     const { container } = await database.containers.createIfNotExists({
       id: containerName,
-      partitionKeyPaths: [pk],
+      partitionKey: { paths: [pk], kind: 'Hash' },
     })
 
     let written = 0
