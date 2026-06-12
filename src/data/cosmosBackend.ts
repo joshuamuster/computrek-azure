@@ -44,7 +44,21 @@
 
 import type { Container, Database, RequestOptions } from '@azure/cosmos'
 import { AZURE_REALTIME } from '../config/featureFlags'
-import { subscribeContainer } from './realtime'
+import { subscribeContainer, pushDocBroadcast } from './realtime'
+
+// Containers where write→subscriber latency matters (game moves, challenge
+// handshakes, classroom timers/CHAMPS). After writing one of these, the
+// client also pings the Functions app's /broadcast endpoint so other clients
+// see the doc in well under a second instead of waiting out the change-feed
+// poll. The change feed still broadcasts the same doc afterwards — harmless,
+// since subscriptions upsert by id.
+const LOW_LATENCY_CONTAINERS = new Set(['gameRooms', 'challenges', 'timerState', 'champsState'])
+
+function maybeBroadcast(collName: string, rawBody: Record<string, unknown>): void {
+  if (!AZURE_REALTIME) return
+  const { container } = containerInfo(collName)
+  if (LOW_LATENCY_CONTAINERS.has(container)) pushDocBroadcast(container, rawBody)
+}
 
 // ── Container registry ─────────────────────────────────────────────────────────
 // Maps Firestore collection name → Cosmos container name + partition key path.
@@ -488,7 +502,9 @@ export async function setDoc(
   const existing = raw ? decodeItem(raw) : {}
   const resolved = resolveValue(data, existing) as Record<string, unknown>
   const merged = options?.merge ? deepMerge(existing, resolved) : resolved
-  await container.items.upsert({ id: ref.id, ...(encodeValue(merged) as object) })
+  const body = { id: ref.id, ...(encodeValue(merged) as object) }
+  await container.items.upsert(body)
+  maybeBroadcast(ref.collName, body)
 }
 
 function deepMerge(base: Record<string, unknown>, patch: Record<string, unknown>): Record<string, unknown> {
@@ -507,7 +523,15 @@ export async function updateDoc(ref: DocumentReference, fields: Record<string, u
 
 /**
  * Shared by updateDoc and transactions. Expands Firestore dot-path keys
- * ('data.score') into nested updates, resolves sentinels, then replaces the item.
+ * ('data.score') into nested updates, resolves sentinels, then replaces the
+ * item.
+ *
+ * Concurrency: Firestore's updateDoc is atomic per-field server-side; a
+ * read-modify-replace is not — two simultaneous updates (both Battleship
+ * players placing fleets, a student with two tabs) could silently drop one.
+ * So each replace is etag-guarded and retried from a fresh read on conflict.
+ * When the caller supplies its own requestOptions (runTransaction passes the
+ * etag from its read), a 412 propagates instead — the transaction owns retry.
  */
 async function applyUpdate(
   ref: DocumentReference,
@@ -515,26 +539,40 @@ async function applyUpdate(
   requestOptions?: RequestOptions,
 ): Promise<void> {
   const container = await getContainer(ref.collName)
-  const raw = await fetchRawItem(ref.collName, ref.id)
-  if (!raw) {
-    throw new Error(`[cosmosBackend] updateDoc: no document ${ref.collName}/${ref.id}`)
-  }
-  const existing = decodeItem(raw)
+  const MAX_ATTEMPTS = 5
 
-  for (const [path, value] of Object.entries(fields)) {
-    if (value === undefined) continue
-    const segs = path.split('.')
-    let target: Record<string, unknown> = existing
-    for (const seg of segs.slice(0, -1)) {
-      if (!isPlainObject(target[seg])) target[seg] = {}
-      target = target[seg] as Record<string, unknown>
+  for (let attempt = 0; ; attempt++) {
+    const raw = await fetchRawItem(ref.collName, ref.id)
+    if (!raw) {
+      throw new Error(`[cosmosBackend] updateDoc: no document ${ref.collName}/${ref.id}`)
     }
-    const leaf = segs[segs.length - 1]
-    target[leaf] = resolveValue(value, target[leaf])
-  }
+    const existing = decodeItem(raw)
 
-  const body = { id: ref.id, ...(encodeValue(existing) as object) }
-  await container.item(ref.id, pkValueOf(ref.collName, raw)).replace(body, requestOptions)
+    for (const [path, value] of Object.entries(fields)) {
+      if (value === undefined) continue
+      const segs = path.split('.')
+      let target: Record<string, unknown> = existing
+      for (const seg of segs.slice(0, -1)) {
+        if (!isPlainObject(target[seg])) target[seg] = {}
+        target = target[seg] as Record<string, unknown>
+      }
+      const leaf = segs[segs.length - 1]
+      target[leaf] = resolveValue(value, target[leaf])
+    }
+
+    const body = { id: ref.id, ...(encodeValue(existing) as object) }
+    const options: RequestOptions = requestOptions
+      ?? { accessCondition: { type: 'IfMatch', condition: raw._etag as string } }
+    try {
+      await container.item(ref.id, pkValueOf(ref.collName, raw)).replace(body, options)
+      maybeBroadcast(ref.collName, body)
+      return
+    } catch (e: any) {
+      const conflict = e?.code === 412 || e?.statusCode === 412
+      if (!conflict || requestOptions || attempt >= MAX_ATTEMPTS - 1) throw e
+      // etag mismatch — someone wrote between our read and replace; re-read and re-apply
+    }
+  }
 }
 
 export async function deleteDoc(ref: DocumentReference): Promise<void> {
@@ -549,6 +587,7 @@ export async function deleteDoc(ref: DocumentReference): Promise<void> {
     if (!k.startsWith('_')) body[k] = v // drop Cosmos system fields (_etag, _rid, ...)
   }
   await container.items.upsert(body)
+  maybeBroadcast(ref.collName, body)
 
   // Hard delete shortly after. The Functions app also cleans __deleted docs
   // server-side once Phase 3 is deployed; this covers pre-Phase-3 operation.

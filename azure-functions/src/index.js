@@ -67,12 +67,43 @@ app.http('negotiate', {
   }),
 })
 
+// ── /api/broadcast (Phase 4 — low-latency path) ────────────────────────────────
+// Clients POST a doc here immediately after writing it to a latency-sensitive
+// container (game moves, challenges, timers, CHAMPS), so opponents see it in
+// well under a second instead of after the change-feed poll. The change feed
+// re-broadcasts the same doc shortly after; subscribers upsert by id, so the
+// duplicate is harmless and the feed remains the consistency backstop.
+//
+// Trust level: anonymous, same as negotiate — clients already hold the Cosmos
+// key and receive all broadcast docs, so this adds no new exposure. Endpoint
+// auth (validated tokens) lands with Phase 6 alongside negotiate hardening.
+app.http('broadcast', {
+  methods: ['POST'],
+  authLevel: 'anonymous',
+  extraOutputs: [signalROutput],
+  handler: async (request, context) => {
+    let body
+    try { body = await request.json() } catch { return { status: 400 } }
+    const { container, docs } = body ?? {}
+    if (!LIVE_CONTAINERS[container] || !Array.isArray(docs) || docs.length === 0 || docs.length > 20) {
+      return { status: 400 }
+    }
+    context.extraOutputs.set(signalROutput, [{ target: container, arguments: [docs] }])
+    return { status: 204 }
+  },
+})
+
 // ── Change-feed triggers (one per live container) ──────────────────────────────
 let cosmosClient = null
 function cosmos() {
   if (!cosmosClient) cosmosClient = new CosmosClient(process.env.CosmosDBConnection)
   return cosmosClient
 }
+
+// Faster change-feed polling for containers backing live gameplay — this is
+// the backstop behind the /broadcast fast path, so a missed broadcast still
+// arrives quickly. Other containers keep the 5s default.
+const FEED_POLL_MS = { gameRooms: 1000, challenges: 2000 }
 
 for (const [containerName, pkPath] of Object.entries(LIVE_CONTAINERS)) {
   app.cosmosDB(`changefeed-${containerName}`, {
@@ -82,6 +113,7 @@ for (const [containerName, pkPath] of Object.entries(LIVE_CONTAINERS)) {
     leaseContainerName: 'leases',
     leaseContainerPrefix: containerName,
     createLeaseContainerIfNotExists: true,
+    ...(FEED_POLL_MS[containerName] ? { feedPollDelay: FEED_POLL_MS[containerName] } : {}),
     extraOutputs: [signalROutput],
     handler: async (documents, context) => {
       if (!Array.isArray(documents) || documents.length === 0) return

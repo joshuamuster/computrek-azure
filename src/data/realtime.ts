@@ -118,3 +118,20 @@ export function subscribeContainer(
     if (onState) stateHandlers.delete(onState)
   }
 }
+
+/**
+ * Fire-and-forget push of a just-written doc to all connected clients via the
+ * Functions app's /broadcast endpoint, skipping the change-feed poll delay.
+ * Used by cosmosBackend for latency-sensitive containers (game moves,
+ * challenges, timers, CHAMPS). The change feed re-broadcasts the same doc
+ * shortly after — subscribers upsert by id, so duplicates are harmless.
+ */
+export function pushDocBroadcast(container: string, doc: Record<string, unknown>): void {
+  fetch(`${SIGNALR_URL}/broadcast`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ container, docs: [doc] }),
+  }).catch(() => {
+    // Best-effort only — the change feed delivers the doc regardless.
+  })
+}

@@ -136,7 +136,15 @@
       "Bash(grep -viE \"^\\\\s*$\" /tmp/funclogs.txt)",
       "Bash(curl -s -X POST https://computrek-fusd.azurewebsites.net/api/negotiate -o /dev/null -w \"negotiate: %{http_code}\\\\n\")",
       "Bash(curl -s https://computrek-fusd.azurewebsites.net/admin/host/status -H 'x-functions-key: __CMDSUB_OUTPUT__')",
-      "Bash(az cosmosdb *)"
+      "Bash(az cosmosdb *)",
+      "Bash(rm /tmp/budget.json)",
+      "Bash(node --check azure-functions/src/index.js)",
+      "Bash(func azure *)",
+      "Bash(curl -s -X POST https://computrek-fusd.azurewebsites.net/api/broadcast -H \"content-type: application/json\" -d '{\"container\":\"gameRooms\",\"docs\":[{\"id\":\"smoke-test\"}]}' -o /dev/null -w \"broadcast endpoint: %{http_code}\\\\n\")",
+      "Bash(curl -s -X POST https://computrek-fusd.azurewebsites.net/api/broadcast -H \"content-type: application/json\" -d '{\"container\":\"missions\",\"docs\":[{\"id\":\"x\"}]}' -o /dev/null -w \"rejects non-live container: %{http_code}\\\\n\")",
+      "Bash(curl -s -o /dev/null -w \"TopNav.vue: %{http_code}\\\\n\" \"http://localhost:1701/src/components/TopNav.vue\")",
+      "Bash(curl -s -o /dev/null -w \"cosmosBackend.ts: %{http_code}\\\\n\" \"http://localhost:1701/src/data/cosmosBackend.ts\")",
+      "Bash(curl -s -o /dev/null -w \"realtime.ts: %{http_code}\\\\n\" \"http://localhost:1701/src/data/realtime.ts\")"
     ],
     "deny": []
   }

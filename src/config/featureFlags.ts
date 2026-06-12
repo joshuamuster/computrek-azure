@@ -54,7 +54,7 @@ export const AZURE_REALTIME = true
  * Phase 4: Multiplayer game rooms backed by Cosmos DB + SignalR.
  * Depends on AZURE_DATABASE and AZURE_REALTIME both being true.
  */
-export const AZURE_MULTIPLAYER = false
+export const AZURE_MULTIPLAYER = true
 
 /**
  * Phase 5: Azure Blob Storage for submission file uploads.

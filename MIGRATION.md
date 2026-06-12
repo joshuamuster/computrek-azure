@@ -103,10 +103,27 @@ Provisioning gotchas hit (recorded for posterity):
   so containers were silently created with a default `/_partitionKey` —
   containers were deleted and re-migrated June 12, 2026 with correct keys.
 
-### Phase 4 — Multiplayer
-- [ ] Rewrite `gameRoomService.ts`, `moveSyncService.ts`, `reconnectService.ts` for Cosmos DB + SignalR
-- [ ] Game engines themselves (chess, mancala, battleship, etc.) are pure TypeScript — no changes needed
-- [ ] Set `AZURE_MULTIPLAYER: true` in featureFlags.ts when complete
+### Phase 4 — Multiplayer ✅ (live as of June 12, 2026)
+
+The three multiplayer services needed **no rewrite** — they already ride the
+Phase 2/3 data layer (`@/data/db`), and the `gameRooms` change-feed trigger
+covers room sync. Phase 4 instead hardened the data layer for gameplay:
+
+- [x] `updateDoc` is now etag-guarded with retry-on-conflict (Firestore's
+  updateDoc was atomic server-side; plain read-modify-replace could drop a
+  write when both players update a room simultaneously — e.g. Battleship
+  fleet placement, or one student with two tabs)
+- [x] Low-latency broadcast path: after writing to `gameRooms` / `challenges`
+  / `timerState` / `champsState`, the client POSTs the doc to the Functions
+  app's `/api/broadcast`, which pushes it over SignalR immediately. The change
+  feed re-broadcasts shortly after as the consistency backstop (subscriptions
+  upsert by id, so duplicates are harmless)
+- [x] Change-feed poll lowered for gameplay containers (`gameRooms` 1s,
+  `challenges` 2s; others stay at the 5s default)
+- [x] Game engines untouched (pure TypeScript), `AZURE_MULTIPLAYER: true`
+
+Measured move-delivery latency (write → opponent's client): **~0.9s** via the
+broadcast fast path, ~1.3s via the change-feed backstop (was up to ~6s before).
 
 ### Phase 5 — Storage + Presence
 - [ ] Replace Firebase Storage upload calls with Azure Blob Storage SDK
