@@ -1,0 +1,713 @@
+[
+  {
+    "Elementary":"Addams",
+    "Middle":"Gaston",
+    "High":"Edison High",
+    "Boundaried":"Yes",
+    "Region":"Edison",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Columbia",
+    "Middle":"Gaston",
+    "High":"Edison High",
+    "Boundaried":"Yes",
+    "Region":"Edison",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"King",
+    "Middle":"Gaston",
+    "High":"Edison High",
+    "Boundaried":"Yes",
+    "Region":"Edison",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Kirk",
+    "Middle":"Gaston",
+    "High":"Edison High",
+    "Boundaried":"Yes",
+    "Region":"Edison",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Lincoln",
+    "Middle":"Gaston",
+    "High":"Edison High",
+    "Boundaried":"Yes",
+    "Region":"Edison",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Anthony",
+    "Middle":"Tehipite",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Jackson",
+    "Middle":"Tehipite",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Jefferson",
+    "Middle":"Tehipite",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Lowell",
+    "Middle":"Tehipite",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Webster",
+    "Middle":"Tehipite",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Yokomi",
+    "Middle":"Tehipite",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Balderas",
+    "Middle":"Sequoia",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Calwa",
+    "Middle":"Sequoia",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Lane",
+    "Middle":"Sequoia",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Vang Pao",
+    "Middle":"Sequoia",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Winchell",
+    "Middle":"Sequoia",
+    "High":"Roosevelt High",
+    "Boundaried":"Yes",
+    "Region":"Roosevelt",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Bakman",
+    "Middle":"Kings Canyon",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Burroughs",
+    "Middle":"Kings Canyon",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Easterby",
+    "Middle":"Kings Canyon",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Greenberg",
+    "Middle":"Kings Canyon",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Ayer",
+    "Middle":"Terronez",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Aynesworth",
+    "Middle":"Terronez",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Herrera",
+    "Middle":"Terronez",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Olmos",
+    "Middle":"Terronez",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Storey",
+    "Middle":"Terronez",
+    "High":"Sunnyside High",
+    "Boundaried":"Yes",
+    "Region":"Sunnyside",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Birney",
+    "Middle":"Scandinavian",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Ericson",
+    "Middle":"Scandinavian",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Ewing",
+    "Middle":"Scandinavian",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Norseman",
+    "Middle":"Scandinavian",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Turner",
+    "Middle":"Scandinavian",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Wishon",
+    "Middle":"Scandinavian",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Hidalgo",
+    "Middle":"Yosemite",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Leavenworth",
+    "Middle":"Yosemite",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Mayfair",
+    "Middle":"Yosemite",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Rowell",
+    "Middle":"Yosemite",
+    "High":"McLane High",
+    "Boundaried":"Yes",
+    "Region":"McLane",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Eaton",
+    "Middle":"Ahwahnee",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"McCardle",
+    "Middle":"Ahwahnee",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Robinson",
+    "Middle":"Ahwahnee",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Viking",
+    "Middle":"Ahwahnee",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Wolters",
+    "Middle":"Ahwahnee",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Centennial",
+    "Middle":"Tioga",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Holland",
+    "Middle":"Tioga",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Pyle",
+    "Middle":"Tioga",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Thomas",
+    "Middle":"Tioga",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Vinland",
+    "Middle":"Tioga",
+    "High":"Hoover High",
+    "Boundaried":"Yes",
+    "Region":"Hoover",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Figarden",
+    "Middle":"Tenaya",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Gibson",
+    "Middle":"Tenaya",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Kratt",
+    "Middle":"Tenaya",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Lawless",
+    "Middle":"Tenaya",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Malloch",
+    "Middle":"Tenaya",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Starr",
+    "Middle":"Tenaya",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Tatarian",
+    "Middle":"Tenaya",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Powers-Ginsburg",
+    "Middle":"Wawona",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Slater",
+    "Middle":"Wawona",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Del Mar",
+    "Middle":"Fort Miller",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Fremont",
+    "Middle":"Fort Miller",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Heaton",
+    "Middle":"Fort Miller",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Homan",
+    "Middle":"Fort Miller",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Muir",
+    "Middle":"Fort Miller",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Roeding",
+    "Middle":"Fort Miller",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Williams",
+    "Middle":"Fort Miller",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Wilson",
+    "Middle":"Fort Miller",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"Elementary",
+    "Notes":null
+  },
+  {
+    "Elementary":"Hamilton (K-6)",
+    "Middle":"Hamilton (7-8)",
+    "High":"Fresno High",
+    "Boundaried":"Yes",
+    "Region":"Fresno High",
+    "School Type":"K-8",
+    "Notes":null
+  },
+  {
+    "Elementary":"Wawona (K-8)",
+    "Middle":"Wawona (7-8)",
+    "High":"Bullard High",
+    "Boundaried":"Yes",
+    "Region":"Bullard",
+    "School Type":"K-8",
+    "Notes":null
+  },
+  {
+    "Elementary":null,
+    "Middle":"Baird Middle (Magnet 5-8)",
+    "High":null,
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"Middle (Magnet)",
+    "Notes":"Non-boundaried middle; districtwide option"
+  },
+  {
+    "Elementary":null,
+    "Middle":"Computech Middle School",
+    "High":null,
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"Middle (Magnet)",
+    "Notes":"Magnet middle; districtwide application"
+  },
+  {
+    "Elementary":null,
+    "Middle":"Cooper Academy (Magnet)",
+    "High":null,
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"Middle (Magnet)",
+    "Notes":"Magnet middle; districtwide application"
+  },
+  {
+    "Elementary":"Bullard Talent K-8 School",
+    "Middle":null,
+    "High":null,
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"K-8 (Magnet)",
+    "Notes":"K-8 magnet; no boundaried feeder"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"Design Science Middle College High School",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"High (Specialty)",
+    "Notes":"Non-boundaried high; application"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"DeWolf High School (Continuation)",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"High (Continuation)",
+    "Notes":"Non-boundaried high; continuation"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"Duncan Polytechnical High School",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"High (CTE)",
+    "Notes":"Non-boundaried high; CTE focus"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"Farber Educational Campus",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"9-12 \/ Online \/ Independent Studies",
+    "Notes":"Credit attainment \/ independent studies \/ online"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"Patiño School of Entrepreneurship",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"High (Specialty)",
+    "Notes":"Non-boundaried high; entrepreneurship"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"Phoenix Secondary (7-12)",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"7-12 (Alternative)",
+    "Notes":"Non-boundaried; grades 7-12"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"RATA Special Ed (9-12)",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"High (Special Education)",
+    "Notes":"Non-boundaried; special education"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"CART (Center for Advanced Research & Technology)",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"Regional CTE",
+    "Notes":"Regional CTE center (FUSD\/CUSD); not boundaried"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"Fresno Adult School",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"Adult Education",
+    "Notes":"Adult education; not boundaried"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"ATP Trailblazers (Adult Transition Program)",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"Adult Transition",
+    "Notes":"Adult transition program; not feeder-based"
+  },
+  {
+    "Elementary":null,
+    "Middle":null,
+    "High":"Fulton School",
+    "Boundaried":"No",
+    "Region":"Districtwide",
+    "School Type":"Special Program",
+    "Notes":"Special program campus; not boundaried"
+  }
+]

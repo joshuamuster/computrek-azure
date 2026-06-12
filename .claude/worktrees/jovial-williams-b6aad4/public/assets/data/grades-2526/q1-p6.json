@@ -1,0 +1,482 @@
+[
+    {
+        "name": "Samwise Gamgee",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 57,
+            "Lesson 02": 70,
+            "Lesson 03": 69,
+            "Lesson 04": 84,
+            "Lesson 05": 60,
+            "Lesson 06": 87,
+            "Lesson 07": 85,
+            "Lesson 08": 89,
+            "Lesson 09": 68,
+            "Lesson 10": 52
+        }
+    },
+    {
+        "name": "Anakin Skywalker",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 76,
+            "Lesson 02": 98,
+            "Lesson 03": 62,
+            "Lesson 04": 57,
+            "Lesson 05": 71,
+            "Lesson 06": 78,
+            "Lesson 07": 99,
+            "Lesson 08": 60,
+            "Lesson 09": 54,
+            "Lesson 10": 100
+        }
+    },
+    {
+        "name": "John Watson",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 68,
+            "Lesson 02": 54,
+            "Lesson 03": 50,
+            "Lesson 04": 73,
+            "Lesson 05": 62,
+            "Lesson 06": 69,
+            "Lesson 07": 77,
+            "Lesson 08": 99,
+            "Lesson 09": 97,
+            "Lesson 10": 96
+        }
+    },
+    {
+        "name": "Obi-Wan Kenobi",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 78,
+            "Lesson 02": 50,
+            "Lesson 03": 70,
+            "Lesson 04": 82,
+            "Lesson 05": 79,
+            "Lesson 06": 65,
+            "Lesson 07": 59,
+            "Lesson 08": 93,
+            "Lesson 09": 70,
+            "Lesson 10": 75
+        }
+    },
+    {
+        "name": "Thor Odinson",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 84,
+            "Lesson 02": 51,
+            "Lesson 03": 56,
+            "Lesson 04": 66,
+            "Lesson 05": 76,
+            "Lesson 06": 80,
+            "Lesson 07": 59,
+            "Lesson 08": 96,
+            "Lesson 09": 72,
+            "Lesson 10": 80
+        }
+    },
+    {
+        "name": "Ahsoka Tano",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 90,
+            "Lesson 02": 76,
+            "Lesson 03": 73,
+            "Lesson 04": 50,
+            "Lesson 05": 87,
+            "Lesson 06": 89,
+            "Lesson 07": 93,
+            "Lesson 08": 89,
+            "Lesson 09": 63,
+            "Lesson 10": 62
+        }
+    },
+    {
+        "name": "Frodo Baggins",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 94,
+            "Lesson 02": 95,
+            "Lesson 03": 60,
+            "Lesson 04": 86,
+            "Lesson 05": 89,
+            "Lesson 06": 90,
+            "Lesson 07": 72,
+            "Lesson 08": 96,
+            "Lesson 09": 76,
+            "Lesson 10": 70
+        }
+    },
+    {
+        "name": "Natasha Romanoff",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 95,
+            "Lesson 02": 54,
+            "Lesson 03": 77,
+            "Lesson 04": 67,
+            "Lesson 05": 71,
+            "Lesson 06": 62,
+            "Lesson 07": 57,
+            "Lesson 08": 56,
+            "Lesson 09": 88,
+            "Lesson 10": 74
+        }
+    },
+    {
+        "name": "Haymitch Abernathy",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 60,
+            "Lesson 02": 90,
+            "Lesson 03": 59,
+            "Lesson 04": 83,
+            "Lesson 05": 73,
+            "Lesson 06": 59,
+            "Lesson 07": 69,
+            "Lesson 08": 50,
+            "Lesson 09": 82,
+            "Lesson 10": 55
+        }
+    },
+    {
+        "name": "Ron Weasley",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 88,
+            "Lesson 02": 52,
+            "Lesson 03": 85,
+            "Lesson 04": 90,
+            "Lesson 05": 92,
+            "Lesson 06": 74,
+            "Lesson 07": 86,
+            "Lesson 08": 73,
+            "Lesson 09": 54,
+            "Lesson 10": 99
+        }
+    },
+    {
+        "name": "Bruce Banner",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 52,
+            "Lesson 02": 54,
+            "Lesson 03": 85,
+            "Lesson 04": 94,
+            "Lesson 05": 63,
+            "Lesson 06": 58,
+            "Lesson 07": 50,
+            "Lesson 08": 67,
+            "Lesson 09": 54,
+            "Lesson 10": 74
+        }
+    },
+    {
+        "name": "Katniss Everdeen",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 70,
+            "Lesson 02": 98,
+            "Lesson 03": 52,
+            "Lesson 04": 52,
+            "Lesson 05": 68,
+            "Lesson 06": 73,
+            "Lesson 07": 55,
+            "Lesson 08": 71,
+            "Lesson 09": 52,
+            "Lesson 10": 92
+        }
+    },
+    {
+        "name": "Gale Hawthorne",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 68,
+            "Lesson 02": 88,
+            "Lesson 03": 92,
+            "Lesson 04": 78,
+            "Lesson 05": 68,
+            "Lesson 06": 82,
+            "Lesson 07": 62,
+            "Lesson 08": 75,
+            "Lesson 09": 69,
+            "Lesson 10": 89
+        }
+    },
+    {
+        "name": "Sherlock Holmes",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 99,
+            "Lesson 02": 98,
+            "Lesson 03": 87,
+            "Lesson 04": 64,
+            "Lesson 05": 50,
+            "Lesson 06": 97,
+            "Lesson 07": 92,
+            "Lesson 08": 51,
+            "Lesson 09": 88,
+            "Lesson 10": 82
+        }
+    },
+    {
+        "name": "Tony Stark",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 66,
+            "Lesson 02": 95,
+            "Lesson 03": 82,
+            "Lesson 04": 83,
+            "Lesson 05": 72,
+            "Lesson 06": 98,
+            "Lesson 07": 89,
+            "Lesson 08": 51,
+            "Lesson 09": 70,
+            "Lesson 10": 96
+        }
+    },
+    {
+        "name": "Harry Potter",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 61,
+            "Lesson 02": 57,
+            "Lesson 03": 67,
+            "Lesson 04": 75,
+            "Lesson 05": 90,
+            "Lesson 06": 79,
+            "Lesson 07": 57,
+            "Lesson 08": 77,
+            "Lesson 09": 55,
+            "Lesson 10": 69
+        }
+    },
+    {
+        "name": "Luna Lovegood",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 85,
+            "Lesson 02": 99,
+            "Lesson 03": 87,
+            "Lesson 04": 77,
+            "Lesson 05": 68,
+            "Lesson 06": 89,
+            "Lesson 07": 83,
+            "Lesson 08": 89,
+            "Lesson 09": 90,
+            "Lesson 10": 72
+        }
+    },
+    {
+        "name": "Peeta Mellark",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 75,
+            "Lesson 02": 82,
+            "Lesson 03": 74,
+            "Lesson 04": 59,
+            "Lesson 05": 61,
+            "Lesson 06": 54,
+            "Lesson 07": 67,
+            "Lesson 08": 80,
+            "Lesson 09": 66,
+            "Lesson 10": 92
+        }
+    },
+    {
+        "name": "Moriarty James",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 69,
+            "Lesson 02": 91,
+            "Lesson 03": 81,
+            "Lesson 04": 60,
+            "Lesson 05": 74,
+            "Lesson 06": 87,
+            "Lesson 07": 98,
+            "Lesson 08": 87,
+            "Lesson 09": 81,
+            "Lesson 10": 93
+        }
+    },
+    {
+        "name": "Gandalf Grey",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 60,
+            "Lesson 02": 86,
+            "Lesson 03": 88,
+            "Lesson 04": 81,
+            "Lesson 05": 58,
+            "Lesson 06": 94,
+            "Lesson 07": 80,
+            "Lesson 08": 63,
+            "Lesson 09": 50,
+            "Lesson 10": 96
+        }
+    },
+    {
+        "name": "Steve Rogers",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 70,
+            "Lesson 02": 69,
+            "Lesson 03": 62,
+            "Lesson 04": 81,
+            "Lesson 05": 96,
+            "Lesson 06": 59,
+            "Lesson 07": 68,
+            "Lesson 08": 56,
+            "Lesson 09": 75,
+            "Lesson 10": 72
+        }
+    },
+    {
+        "name": "Hermione Granger",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 63,
+            "Lesson 02": 55,
+            "Lesson 03": 98,
+            "Lesson 04": 74,
+            "Lesson 05": 99,
+            "Lesson 06": 62,
+            "Lesson 07": 76,
+            "Lesson 08": 74,
+            "Lesson 09": 69,
+            "Lesson 10": 98
+        }
+    },
+    {
+        "name": "Effie Trinket",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 65,
+            "Lesson 02": 87,
+            "Lesson 03": 59,
+            "Lesson 04": 73,
+            "Lesson 05": 92,
+            "Lesson 06": 96,
+            "Lesson 07": 59,
+            "Lesson 08": 76,
+            "Lesson 09": 79,
+            "Lesson 10": 82
+        }
+    },
+    {
+        "name": "Mycroft Holmes",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 65,
+            "Lesson 02": 54,
+            "Lesson 03": 55,
+            "Lesson 04": 84,
+            "Lesson 05": 74,
+            "Lesson 06": 91,
+            "Lesson 07": 84,
+            "Lesson 08": 54,
+            "Lesson 09": 57,
+            "Lesson 10": 67
+        }
+    },
+    {
+        "name": "Aragorn Elessar",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 75,
+            "Lesson 02": 73,
+            "Lesson 03": 81,
+            "Lesson 04": 64,
+            "Lesson 05": 70,
+            "Lesson 06": 89,
+            "Lesson 07": 64,
+            "Lesson 08": 92,
+            "Lesson 09": 93,
+            "Lesson 10": 65
+        }
+    },
+    {
+        "name": "Neville Longbottom",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 82,
+            "Lesson 02": 76,
+            "Lesson 03": 54,
+            "Lesson 04": 68,
+            "Lesson 05": 99,
+            "Lesson 06": 56,
+            "Lesson 07": 51,
+            "Lesson 08": 74,
+            "Lesson 09": 54,
+            "Lesson 10": 98
+        }
+    },
+    {
+        "name": "Irene Adler",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 65,
+            "Lesson 02": 76,
+            "Lesson 03": 95,
+            "Lesson 04": 81,
+            "Lesson 05": 63,
+            "Lesson 06": 89,
+            "Lesson 07": 67,
+            "Lesson 08": 66,
+            "Lesson 09": 97,
+            "Lesson 10": 71
+        }
+    },
+    {
+        "name": "Legolas Greenleaf",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 63,
+            "Lesson 02": 70,
+            "Lesson 03": 72,
+            "Lesson 04": 84,
+            "Lesson 05": 66,
+            "Lesson 06": 76,
+            "Lesson 07": 52,
+            "Lesson 08": 98,
+            "Lesson 09": 96,
+            "Lesson 10": 75
+        }
+    },
+    {
+        "name": "Darth Vader",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 54,
+            "Lesson 02": 63,
+            "Lesson 03": 53,
+            "Lesson 04": 66,
+            "Lesson 05": 64,
+            "Lesson 06": 68,
+            "Lesson 07": 85,
+            "Lesson 08": 64,
+            "Lesson 09": 85,
+            "Lesson 10": 78
+        }
+    },
+    {
+        "name": "Yoda Master",
+        "period": "Period 6",
+        "grades": {
+            "Lesson 01": 58,
+            "Lesson 02": 68,
+            "Lesson 03": 54,
+            "Lesson 04": 72,
+            "Lesson 05": 67,
+            "Lesson 06": 82,
+            "Lesson 07": 54,
+            "Lesson 08": 65,
+            "Lesson 09": 56,
+            "Lesson 10": 62
+        }
+    }
+]

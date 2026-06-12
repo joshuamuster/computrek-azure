@@ -1,0 +1,62 @@
+{
+	"CompSci": {
+		"unit01": {
+			"unitId": "Unit 1",
+			"title": "Problem Solving and Computing",
+			"summary": "Students explore computer science through problem solving, learning computing basics and designing a simple app to address a real-world need.",
+			"description": "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems. The unit concludes with a project in which you design an application that helps solve a problem of your choosing."
+		},
+		"unit02": {
+			"unitId": "Unit 2",
+			"title": "Web Development and Digital Citizenship",
+			"summary": "Students learn web development by designing websites for real users, building teamwork and coding skills while exploring online safety and digital responsibility.",
+			"description": "In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students develop the pages and begin to see themselves as web developers and designers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem-solving related to programming while learning valuable skills such as debugging, using resources, and teamwork. At the conclusion of chapter one, students will design and create a web page for a user. After chapter two, students will have worked with a team to create a multi-page website they can publish and share.",
+			"chapters": []
+		},
+		"unit03": {
+			"unitId": "Unit 3b",
+			"title": "Programming with Music Lab",
+			"summary": "Students explore coding through music, learning programming and problem-solving skills to create and remix songs, culminating in a genre mash-up project.",
+			"description": "This unit is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.",
+			"chapters": []
+		},
+		"unit05": {
+			"unitId": "Unit 5",
+			"title": "Data and Society",
+			"summary": "Students explore how computers use data to solve problems, ending with a project that automates a solution using data they collect.",
+			"description": "The Data and Society unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.",
+			"chapters": []
+		},
+		"unit07": {
+			"unitId": "Unit 7",
+			"title": "AI and Machine Learning",
+			"summary": "Students learn how computers make decisions using data, then build machine learning apps to solve real-world problems.",
+			"description": "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.",
+			"chapters": []
+		}
+	},
+	"MultiMedia": {
+		"unit01": {
+			"unitId": "Unit 1",
+			"title": "Design History & Foundations",
+			"summary": "From hand-lettered manuscripts to movable type and modern design. Students learn core vocabulary and how design solves communication problems.",
+			"description": "A fast, engaging survey: illuminated manuscripts, the printing press, early typesetting, Arts & Crafts, Bauhaus/Swiss styles, and the digital era. Emphasis on how form serves function and how to talk about design choices.",
+			"chapters": []
+		},
+		"unit02": {
+			"unitId": "Unit 2",
+			"title": "Branding, Heraldry, and Identity",
+			"summary": "Symbols and branding from medieval crests to modern logos; students create logos and a personal crest using color, type, and design principles.",
+			"description": "Connects history, symbolism, and branding. Students study heraldry, analyze modern logo systems, and create identity designs through research, iteration, and reflection.",
+			"chapters": []
+		},
+		"unit03": {
+			"unitId": "Unit 3",
+			"title": "Visual Storytelling & Multimedia Production",
+			"summary": "Narrative, motion, and sound to produce short multimedia pieces that extend brand identity into motion graphics.",
+			"description": "Introduces story structure, storyboarding, motion graphics fundamentals, and multimedia production culminating in a short promotional video.",
+			"chapters": []
+		}
+	}
+	
+}

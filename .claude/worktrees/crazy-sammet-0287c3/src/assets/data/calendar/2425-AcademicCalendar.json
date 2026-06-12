@@ -1,0 +1,1262 @@
+[
+    {
+        "Day of School": 1,
+        "Month": "August",
+        "Date": 19,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 2,
+        "Month": "August",
+        "Date": 20,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 3,
+        "Month": "August",
+        "Date": 21,
+        "Schedule Type": "Rally Schedule Odd",
+        "Instructional Minutes": 59
+    },
+    {
+        "Day of School": 4,
+        "Month": "August",
+        "Date": 22,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 5,
+        "Month": "August",
+        "Date": 23,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 6,
+        "Month": "August",
+        "Date": 26,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 7,
+        "Month": "August",
+        "Date": 27,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 8,
+        "Month": "August",
+        "Date": 28,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 9,
+        "Month": "August",
+        "Date": 29,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 10,
+        "Month": "August",
+        "Date": 30,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 11,
+        "Month": "September",
+        "Date": 3,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 12,
+        "Month": "September",
+        "Date": 4,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 13,
+        "Month": "September",
+        "Date": 5,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 14,
+        "Month": "September",
+        "Date": 6,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 15,
+        "Month": "September",
+        "Date": 9,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 16,
+        "Month": "September",
+        "Date": 10,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 17,
+        "Month": "September",
+        "Date": 11,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 18,
+        "Month": "September",
+        "Date": 12,
+        "Schedule Type": "Rally Schedule Even",
+        "Instructional Minutes": 59
+    },
+    {
+        "Day of School": 19,
+        "Month": "September",
+        "Date": 13,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 20,
+        "Month": "September",
+        "Date": 16,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 21,
+        "Month": "September",
+        "Date": 17,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 22,
+        "Month": "September",
+        "Date": 18,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 23,
+        "Month": "September",
+        "Date": 19,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 24,
+        "Month": "September",
+        "Date": 20,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 25,
+        "Month": "September",
+        "Date": 23,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 26,
+        "Month": "September",
+        "Date": 24,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 27,
+        "Month": "September",
+        "Date": 25,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 28,
+        "Month": "September",
+        "Date": 26,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 29,
+        "Month": "September",
+        "Date": 27,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 30,
+        "Month": "September",
+        "Date": 30,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 31,
+        "Month": "October",
+        "Date": 1,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 32,
+        "Month": "October",
+        "Date": 2,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 33,
+        "Month": "October",
+        "Date": 3,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 34,
+        "Month": "October",
+        "Date": 4,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 35,
+        "Month": "October",
+        "Date": 7,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 36,
+        "Month": "October",
+        "Date": 8,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 37,
+        "Month": "October",
+        "Date": 9,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 38,
+        "Month": "October",
+        "Date": 10,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 39,
+        "Month": "October",
+        "Date": 11,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 40,
+        "Month": "October",
+        "Date": 14,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 41,
+        "Month": "October",
+        "Date": 15,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 42,
+        "Month": "October",
+        "Date": 16,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 43,
+        "Month": "October",
+        "Date": 17,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 44,
+        "Month": "October",
+        "Date": 21,
+        "Schedule Type": "Advisory/Awards Even",
+        "Instructional Minutes": 59
+    },
+    {
+        "Day of School": 45,
+        "Month": "October",
+        "Date": 22,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 46,
+        "Month": "October",
+        "Date": 23,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 47,
+        "Month": "October",
+        "Date": 24,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 48,
+        "Month": "October",
+        "Date": 25,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 49,
+        "Month": "October",
+        "Date": 28,
+        "Schedule Type": "Rally Schedule Odd",
+        "Instructional Minutes": 59
+    },
+    {
+        "Day of School": 50,
+        "Month": "October",
+        "Date": 29,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 51,
+        "Month": "October",
+        "Date": 30,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 52,
+        "Month": "October",
+        "Date": 31,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 53,
+        "Month": "November",
+        "Date": 1,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 54,
+        "Month": "November",
+        "Date": 4,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 55,
+        "Month": "November",
+        "Date": 5,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 56,
+        "Month": "November",
+        "Date": 6,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 57,
+        "Month": "November",
+        "Date": 7,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 58,
+        "Month": "November",
+        "Date": 8,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 59,
+        "Month": "November",
+        "Date": 12,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 60,
+        "Month": "November",
+        "Date": 13,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 61,
+        "Month": "November",
+        "Date": 14,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 62,
+        "Month": "November",
+        "Date": 15,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 63,
+        "Month": "November",
+        "Date": 18,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 64,
+        "Month": "November",
+        "Date": 19,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 65,
+        "Month": "November",
+        "Date": 20,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 66,
+        "Month": "November",
+        "Date": 21,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 67,
+        "Month": "November",
+        "Date": 22,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 68,
+        "Month": "December",
+        "Date": 2,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 69,
+        "Month": "December",
+        "Date": 3,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 70,
+        "Month": "December",
+        "Date": 4,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 71,
+        "Month": "December",
+        "Date": 5,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 72,
+        "Month": "December",
+        "Date": 6,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 73,
+        "Month": "December",
+        "Date": 9,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 74,
+        "Month": "December",
+        "Date": 10,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 75,
+        "Month": "December",
+        "Date": 11,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 76,
+        "Month": "December",
+        "Date": 12,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 77,
+        "Month": "December",
+        "Date": 13,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 78,
+        "Month": "December",
+        "Date": 16,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 79,
+        "Month": "December",
+        "Date": 17,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 80,
+        "Month": "December",
+        "Date": 18,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 81,
+        "Month": "December",
+        "Date": 19,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 82,
+        "Month": "December",
+        "Date": 20,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 83,
+        "Month": "January",
+        "Date": 13,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 84,
+        "Month": "January",
+        "Date": 14,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 85,
+        "Month": "January",
+        "Date": 15,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 86,
+        "Month": "January",
+        "Date": 16,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 87,
+        "Month": "January",
+        "Date": 17,
+        "Schedule Type": "Advisory/Awards Odd",
+        "Instructional Minutes": 59
+    },
+    {
+        "Day of School": 88,
+        "Month": "January",
+        "Date": 21,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 89,
+        "Month": "January",
+        "Date": 22,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 90,
+        "Month": "January",
+        "Date": 23,
+        "Schedule Type": "Rally Schedule Even",
+        "Instructional Minutes": 59
+    },
+    {
+        "Day of School": 91,
+        "Month": "January",
+        "Date": 24,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 92,
+        "Month": "January",
+        "Date": 27,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 93,
+        "Month": "January",
+        "Date": 28,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 94,
+        "Month": "January",
+        "Date": 29,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 95,
+        "Month": "January",
+        "Date": 30,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 96,
+        "Month": "January",
+        "Date": 31,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 97,
+        "Month": "February",
+        "Date": 3,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 98,
+        "Month": "February",
+        "Date": 4,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 99,
+        "Month": "February",
+        "Date": 5,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 100,
+        "Month": "February",
+        "Date": 6,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 101,
+        "Month": "February",
+        "Date": 7,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 102,
+        "Month": "February",
+        "Date": 11,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 103,
+        "Month": "February",
+        "Date": 12,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 104,
+        "Month": "February",
+        "Date": 13,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 105,
+        "Month": "February",
+        "Date": 14,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 106,
+        "Month": "February",
+        "Date": 18,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 107,
+        "Month": "February",
+        "Date": 19,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 108,
+        "Month": "February",
+        "Date": 20,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 109,
+        "Month": "February",
+        "Date": 21,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 110,
+        "Month": "February",
+        "Date": 24,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 111,
+        "Month": "February",
+        "Date": 25,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 112,
+        "Month": "February",
+        "Date": 26,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 113,
+        "Month": "February",
+        "Date": 27,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 114,
+        "Month": "February",
+        "Date": 28,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 115,
+        "Month": "March",
+        "Date": 3,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 116,
+        "Month": "March",
+        "Date": 4,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 117,
+        "Month": "March",
+        "Date": 5,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 118,
+        "Month": "March",
+        "Date": 6,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 119,
+        "Month": "March",
+        "Date": 7,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 120,
+        "Month": "March",
+        "Date": 11,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 121,
+        "Month": "March",
+        "Date": 12,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 122,
+        "Month": "March",
+        "Date": 13,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 123,
+        "Month": "March",
+        "Date": 14,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 124,
+        "Month": "March",
+        "Date": 17,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 125,
+        "Month": "March",
+        "Date": 18,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 126,
+        "Month": "March",
+        "Date": 19,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 127,
+        "Month": "March",
+        "Date": 20,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 128,
+        "Month": "March",
+        "Date": 21,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 129,
+        "Month": "March",
+        "Date": 24,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 130,
+        "Month": "March",
+        "Date": 25,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 131,
+        "Month": "March",
+        "Date": 26,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 132,
+        "Month": "March",
+        "Date": 27,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 133,
+        "Month": "March",
+        "Date": 28,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 134,
+        "Month": "March",
+        "Date": 31,
+        "Schedule Type": "Advisory/Awards Even",
+        "Instructional Minutes": 59
+    },
+    {
+        "Day of School": 135,
+        "Month": "April",
+        "Date": 1,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 136,
+        "Month": "April",
+        "Date": 2,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 137,
+        "Month": "April",
+        "Date": 3,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 138,
+        "Month": "April",
+        "Date": 4,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 139,
+        "Month": "April",
+        "Date": 7,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 140,
+        "Month": "April",
+        "Date": 8,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 141,
+        "Month": "April",
+        "Date": 9,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 142,
+        "Month": "April",
+        "Date": 10,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 143,
+        "Month": "April",
+        "Date": 11,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 144,
+        "Month": "April",
+        "Date": 22,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 145,
+        "Month": "April",
+        "Date": 23,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 146,
+        "Month": "April",
+        "Date": 24,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 147,
+        "Month": "April",
+        "Date": 25,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 148,
+        "Month": "April",
+        "Date": 28,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 149,
+        "Month": "April",
+        "Date": 29,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 150,
+        "Month": "April",
+        "Date": 30,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 151,
+        "Month": "May",
+        "Date": 1,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 152,
+        "Month": "May",
+        "Date": 2,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 153,
+        "Month": "May",
+        "Date": 5,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 154,
+        "Month": "May",
+        "Date": 6,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 155,
+        "Month": "May",
+        "Date": 7,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 156,
+        "Month": "May",
+        "Date": 8,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 157,
+        "Month": "May",
+        "Date": 9,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 158,
+        "Month": "May",
+        "Date": 12,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 159,
+        "Month": "May",
+        "Date": 13,
+        "Schedule Type": "Early Dismissal Odd",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 160,
+        "Month": "May",
+        "Date": 14,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 161,
+        "Month": "May",
+        "Date": 15,
+        "Schedule Type": "Rally Schedule Odd",
+        "Instructional Minutes": 59
+    },
+    {
+        "Day of School": 162,
+        "Month": "May",
+        "Date": 16,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 163,
+        "Month": "May",
+        "Date": 19,
+        "Schedule Type": "Testing",
+        "Instructional Minutes": 0
+    },
+    {
+        "Day of School": 164,
+        "Month": "May",
+        "Date": 20,
+        "Schedule Type": "Testing",
+        "Instructional Minutes": 0
+    },
+    {
+        "Day of School": 165,
+        "Month": "May",
+        "Date": 21,
+        "Schedule Type": "Testing",
+        "Instructional Minutes": 0
+    },
+    {
+        "Day of School": 166,
+        "Month": "May",
+        "Date": 22,
+        "Schedule Type": "Testing",
+        "Instructional Minutes": 0
+    },
+    {
+        "Day of School": 167,
+        "Month": "May",
+        "Date": 23,
+        "Schedule Type": "Testing",
+        "Instructional Minutes": 0
+    },
+    {
+        "Day of School": 168,
+        "Month": "May",
+        "Date": 27,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 169,
+        "Month": "May",
+        "Date": 28,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 170,
+        "Month": "May",
+        "Date": 29,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 171,
+        "Month": "May",
+        "Date": 30,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 172,
+        "Month": "June",
+        "Date": 2,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 173,
+        "Month": "June",
+        "Date": 3,
+        "Schedule Type": "Early Dismissal Even",
+        "Instructional Minutes": 74
+    },
+    {
+        "Day of School": 174,
+        "Month": "June",
+        "Date": 4,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 175,
+        "Month": "June",
+        "Date": 5,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 176,
+        "Month": "June",
+        "Date": 6,
+        "Schedule Type": "Regular Odd",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 177,
+        "Month": "June",
+        "Date": 9,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 178,
+        "Month": "June",
+        "Date": 10,
+        "Schedule Type": "Minimum Day",
+        "Instructional Minutes": 30
+    },
+    {
+        "Day of School": 179,
+        "Month": "June",
+        "Date": 11,
+        "Schedule Type": "Regular Even",
+        "Instructional Minutes": 89
+    },
+    {
+        "Day of School": 180,
+        "Month": "June",
+        "Date": 12,
+        "Schedule Type": "Minimum Day",
+        "Instructional Minutes": 30
+    }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "version": "0.8.129",
+    "date": "2026-06-11",
+    "title": "Add Fractured Frontier to Mission Library simulation dropdown",
+    "changes": [
+      "Add Fractured Frontier to Mission Library simulation dropdown"
+    ]
+  },
+  {
+    "version": "0.8.124",
+    "date": "2026-06-10",
+    "title": "Include firestore:rules in deploy script",
+    "changes": [
+      "chore: include firestore:rules in deploy script"
+    ]
+  },
+  {
+    "version": "0.8.112",
+    "date": "2026-06-09",
+    "title": "Fractured Frontier: add final title SVG and thumbnail JPG assets",
+    "changes": [
+      "Fractured Frontier: add final title SVG and thumbnail JPG assets",
+      "Fractured Frontier: rename all internal IDs, routes, and file paths",
+      "Rename Orbital Bombardment → Fractured Frontier (display names only)"
+    ]
+  },
+  {
+    "version": "0.8.97",
+    "date": "2026-06-04",
+    "title": "GradingView: add Firestore rule for gradebookSnapshots collection",
+    "changes": [
+      "GradingView: add Firestore rule for gradebookSnapshots collection"
+    ]
+  },
+  {
+    "version": "0.8.94",
+    "date": "2026-06-04",
+    "title": "RulesOfAcquisition: fix game-over popup instantly dismissing and tie mis-recorded",
+    "changes": [
+      "RulesOfAcquisition: fix game-over popup instantly dismissing and tie mis-recorded"
+    ]
+  },
+  {
+    "version": "0.8.72",
+    "date": "2026-06-02",
+    "title": "Settings: replace deploy deny rules with permission prompts",
+    "changes": [
+      "Settings: replace deploy deny rules with permission prompts"
+    ]
+  },
+  {
+    "version": "0.8.71",
+    "date": "2026-06-02",
+    "title": "CHAMPS panel: fix hover tooltip clipping by using fixed positioning",
+    "changes": [
+      "CHAMPS panel: fix hover tooltip clipping by using fixed positioning",
+      "CHAMPS panel: remove Simulations toggle — move to Settings modal only",
+      "Settings: block Claude from running deploy commands without permission"
+    ]
+  },
+  {
+    "version": "0.8.56",
+    "date": "2026-06-01",
+    "title": "Fix tutorial passages: lower targetWpm to 20, remove periods/caps/unlearned keys",
+    "changes": [
+      "Fix tutorial passages: lower targetWpm to 20, remove periods/caps/unlearned keys"
+    ]
+  },
+  {
+    "version": "0.8.51",
+    "date": "2026-06-01",
+    "title": "Settings modal: full teacher control surface (period, simulations, broadcast)",
+    "changes": [
+      "Settings modal: full teacher control surface (period, simulations, broadcast)",
+      "Broadcast: move exit controls into Settings modal",
+      "Challenges: store challengedName at send-time, move toggle to ChampsPanel",
+      "Feature: Simulation Invite — student-to-student game challenges"
+    ]
+  },
+  {
+    "version": "0.8.48",
+    "date": "2026-06-01",
+    "title": "Deploy: auto-update changelog from git commits on each production build",
+    "changes": [
+      "Deploy: auto-update changelog from git commits on each production build"
+    ]
+  },
+  {
+    "version": "0.8.46",
+    "date": "2026-05-31",
+    "title": "Changelog & Weekend Schedule Fix",
+    "changes": [
+      "Added Changelog page so cadets and crew can track mission updates",
+      "Fixed Mission Clock incorrectly counting down on weekends — now shows dashes",
+      "Fixed HUD schedule label showing 'Normal Day' on weekends; now correctly reads 'Odd Weekend' or 'Even Weekend'",
+      "HUD schedule label is now always visible for staff and admin users"
+    ]
+  },
+  {
+    "version": "0.8.45",
+    "date": "2026-05-31",
+    "title": "AdminNav & HUD Improvements",
+    "changes": [
+      "Broadcast button moved to the top of AdminNav for faster access during live sessions",
+      "Added Opening Sequence shortcut button in AdminNav",
+      "Build process updated: version number only increments on production deploys, not local test builds"
+    ]
+  },
+  {
+    "version": "0.8.44",
+    "date": "2026-05-31",
+    "title": "iOS Sign-In Improvements",
+    "changes": [
+      "Improved Google Sign-In flow for iOS Safari (iPad and iPhone)",
+      "Switched to redirect-based authentication on iOS to avoid new-tab popup issues",
+      "Responsive layout fix for iPad 10: topbar, viewport, and scroll area now display correctly"
+    ]
+  },
+  {
+    "version": "0.8.40",
+    "date": "2026-05-30",
+    "title": "Graphics Mode & Starfield Background",
+    "changes": [
+      "Replaced video background with a CSS-animated starfield — much lighter on older devices",
+      "Added Graphics Mode setting to reduce animations and GPU load on low-spec devices",
+      "Background video pauses automatically when the browser tab is hidden to save battery"
+    ]
+  },
+  {
+    "version": "0.8.39",
+    "date": "2026-05-30",
+    "title": "Chess Game Overhaul",
+    "changes": [
+      "Migrated chess engine from chess.js to chessops for better variant support",
+      "Added five new chess variants: King of the Hill, Horde, Racing Kings, Three-Check, Atomic",
+      "New variant chooser, forfeit button, captured pieces panel, and session restore",
+      "Multiple piece theme options added to chess game"
+    ]
+  },
+  {
+    "version": "0.8.38",
+    "date": "2026-05-29",
+    "title": "Missions, Topbar Polish & Conduct Log",
+    "changes": [
+      "Added /missions student-facing page for browsing class missions",
+      "Renamed internal route /missions → /flight-plan for staff mission management",
+      "Topbar polish: gear icon for settings, narrower left frame, cleaner layout",
+      "Conduct Log now shows the date on each entry card",
+      "Rethemed conduct score colors to match Atlas/FUSD grading palette",
+      "HUD Mission Reports panel: added On-Time Rate group and paired layout"
+    ]
+  }
+]

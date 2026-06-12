@@ -1,0 +1,138 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   hud.css  —  Shared styles for HUD panel components (TypingReport, MissionReports)
+   Imported via @import in each panel component's <style scoped> block.
+───────────────────────────────────────────────────────────────────────────── */
+
+/* ── Panel ───────────────────────────────────────────────────────────────── */
+.hud-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: auto;
+  padding: 0.75rem 1rem;
+  min-width: 0;
+  overflow: hidden;
+  height: 100%;
+  background: rgba(51, 122, 191, 0.4);
+  border-bottom: 0.18rem dashed rgba(51, 122, 191, 1);
+  border-top: 0.18rem dashed rgba(51, 122, 191, 1);
+  backdrop-filter: blur(12px) saturate(160%);
+  border-radius: 1.25rem;
+  /*animation: pulse 3s ease-in-out infinite;*/
+}
+
+/*@keyframes pulse {*/
+/*  0% {*/
+/*    backdrop-filter: blur(6px) saturate(160%);*/
+/*  }*/
+/*  50% {*/
+/*    backdrop-filter: blur(16px) saturate(160%);*/
+/*  }*/
+/*  100% {*/
+/*    backdrop-filter: blur(6px) saturate(160%);*/
+/*  }*/
+/*}*/
+
+/* ── Panel title ─────────────────────────────────────────────────────────── */
+.panel-title {
+  font-size:      0.75rem;
+  font-family: 'Press Start 2P', monospace;
+  font-weight:    400;
+  letter-spacing: 0.12em;
+  color:          #ffffff;
+  white-space:    nowrap;
+  text-align:     center;
+  text-transform: uppercase;
+  align-self:     center;
+}
+
+/* ── Metric group (paired "mine vs. class" rows) ─────────────────────────── */
+/* Groups are the space-between items; rows within a group sit tight together */
+.metric-group {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.1rem;
+  width:          100%;
+}
+
+/* ── Metric row ──────────────────────────────────────────────────────────── */
+.metric-row {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  width:           100%;
+  font-family:     'Tiny5', monospace;
+  line-height:     0.75rem;
+}
+
+/* Bar + value grouped together on the right */
+.m-right {
+  display:     flex;
+  align-items: center;
+  gap:         0.3125rem;
+  flex-shrink: 0;
+}
+
+.metric-row .m-label {
+  color: #cccccc;
+}
+
+.metric-row.class-row .m-label {
+  color: #44ddcc;
+}
+
+/* ── Label ───────────────────────────────────────────────────────────────── */
+.m-label {
+  font-size:  1rem;
+  line-height: 1;
+  min-width: 8rem;
+  overflow:    hidden;
+  white-space: nowrap;
+}
+
+/* ── Segmented bar ───────────────────────────────────────────────────────── */
+.m-bar {
+  display:     flex;
+  gap:         0.2rem;
+  align-items: center;
+  min-width: 4.75rem;
+}
+
+.m-seg {
+  width:         0.25rem;
+  height:        0.75rem;
+  border-radius: 0.075rem;
+  flex-shrink:   0;
+}
+
+.seg-empty  { background: rgba(255, 255, 255, 0.07); }
+.seg-green  { background: #00dd66; box-shadow: 0 0 0.1875rem rgba(0, 220, 100, 0.65); }
+.seg-orange { background: #ee8800; box-shadow: 0 0 0.1875rem rgba(238, 136, 0, 0.65); }
+.seg-cyan   { background: #00aadd; box-shadow: 0 0 0.1875rem rgba(0, 170, 220, 0.65); }
+
+/* ── Value readout ───────────────────────────────────────────────────────── */
+.m-val {
+  color:       #ffffff;
+  white-space: nowrap;
+  min-width:   1.5rem;
+}
+
+.m-unit {
+  color:       rgba(255, 255, 255, 0.55);
+  margin-left: 0.0625rem;
+}
+
+/* ── Grade colours (reserved for future use) ─────────────────────────────── */
+.gc-green  { color: #00e87a; }
+.gc-yellow { color: #ffcc00; }
+.gc-orange { color: #ff8c00; }
+.gc-red    { color: #ff3333; }
+.gc-grey   { color: rgba(255, 255, 255, 0.3); }
+
+/* ── Graphics performance overrides ─────────────────────────────────────── */
+[data-graphics="medium"] .hud-panel { backdrop-filter: blur(3px); }
+
+[data-graphics="low"] .seg-green,
+[data-graphics="low"] .seg-orange,
+[data-graphics="low"] .seg-cyan    { box-shadow: none; }

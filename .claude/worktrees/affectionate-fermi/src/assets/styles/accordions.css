@@ -1,0 +1,79 @@
+.accordions {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.accordion-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	color: white;
+	font-family: 'Antonio', sans-serif;
+	font-size: 1rem;
+	text-transform: uppercase;
+	padding: 0.75rem 1.25rem;
+	cursor: pointer;
+	letter-spacing: 0.05em;
+}
+
+.accordion-header:hover {
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.chevron {
+	transition: transform 0.3s ease;
+	display: inline-block;
+}
+
+.chevron.open {
+	transform: rotate(180deg);
+}
+
+.accordion-body {
+	/* The composable sets inline height and transition; these are safe defaults */
+	height: 0;
+	overflow: hidden;
+	transition: height 0.4s ease;
+	background: rgba(0, 0, 0, 0.2);
+	border: 1px solid transparent;
+	border-top: none;
+	padding: 0 1.25rem;
+	color: white;
+	font-family: 'Antonio', sans-serif;
+	box-sizing: border-box;
+	will-change: height;
+}
+
+.accordion-body.open {
+	border-color: rgba(255, 255, 255, 0.1);
+	padding: 1.25rem;
+}
+
+.accordion-body p {
+	margin-bottom: 1rem;
+	line-height: 1.6;
+}
+
+.accordion-body ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.accordion-body li {
+	line-height: 1.5;
+}
+
+.accordion-body li span {
+	font-weight: bold;
+	color: #ffc400;
+}

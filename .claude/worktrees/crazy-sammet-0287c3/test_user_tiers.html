@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Tier Test</title>
+</head>
+<body>
+    <h1>User Tier Testing</h1>
+    <p>This is a simple test to verify the user authentication system works.</p>
+
+    <h2>Test Instructions:</h2>
+    <ol>
+        <li>Run the development server: <code>npm run dev</code></li>
+        <li>Open the browser console and run these commands to test different user tiers:</li>
+        <ul>
+            <li><strong>Cadet:</strong> <code>localStorage.setItem('userRole', 'cadet'); localStorage.setItem('isAuthenticated', 'true'); location.reload();</code></li>
+            <li><strong>Parent:</strong> <code>localStorage.setItem('userRole', 'parent'); localStorage.setItem('isAuthenticated', 'true'); location.reload();</code></li>
+            <li><strong>Admin:</strong> <code>localStorage.setItem('userRole', 'admin'); localStorage.setItem('isAuthenticated', 'true'); location.reload();</code></li>
+        </ul>
+        <li>Navigate to these pages to verify different messages appear:</li>
+        <ul>
+            <li>/courses (CoursesMain.vue)</li>
+            <li>/grades (Grades.vue)</li>
+            <li>/crew (Crew.vue)</li>
+        </ul>
+    </ol>
+
+    <h2>Expected Results:</h2>
+    <h3>CoursesMain.vue (/courses):</h3>
+    <ul>
+        <li><strong>Cadet:</strong> "Computer Science Discoveries is an introductory mission..."</li>
+        <li><strong>Parent:</strong> "Welcome to your child's Computer Science Discoveries journey..."</li>
+        <li><strong>Admin:</strong> "Administrative overview of Computer Science Discoveries curriculum..."</li>
+    </ul>
+
+    <h3>Grades.vue (/grades):</h3>
+    <ul>
+        <li><strong>Cadet:</strong> "Track your academic performance across all class periods..."</li>
+        <li><strong>Parent:</strong> "Monitor your child's academic progress..."</li>
+        <li><strong>Admin:</strong> "Administrative grade overview displaying student performance analytics..."</li>
+    </ul>
+
+    <h3>Crew.vue (/crew):</h3>
+    <ul>
+        <li><strong>Cadet:</strong> "Meet your instructors and support crew..." & "Your technical instructors are here to help..."</li>
+        <li><strong>Parent:</strong> "Get to know the teaching staff..." & "Our technical teaching staff specializes..."</li>
+        <li><strong>Admin:</strong> "Administrative staff directory..." & "Technical staff assignments..."</li>
+    </ul>
+</body>
+</html>

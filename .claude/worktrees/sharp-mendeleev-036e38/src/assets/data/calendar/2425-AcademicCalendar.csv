@@ -1,0 +1,181 @@
+Day of School,Month,Date,Schedule Type,Instructional Minutes
+1,August,19,Regular Odd,89
+2,August,20,Early Dismissal Even,74
+3,August,21,Rally Schedule Odd,59
+4,August,22,Regular Even,89
+5,August,23,Regular Odd,89
+6,August,26,Regular Even,89
+7,August,27,Early Dismissal Odd,74
+8,August,28,Regular Even,89
+9,August,29,Regular Odd,89
+10,August,30,Regular Even,89
+11,September,3,Regular Odd,89
+12,September,4,Regular Even,89
+13,September,5,Regular Odd,89
+14,September,6,Regular Even,89
+15,September,9,Regular Odd,89
+16,September,10,Early Dismissal Even,74
+17,September,11,Regular Odd,89
+18,September,12,Rally Schedule Even,59
+19,September,13,Regular Odd,89
+20,September,16,Regular Even,89
+21,September,17,Early Dismissal Odd,74
+22,September,18,Regular Even,89
+23,September,19,Regular Odd,89
+24,September,20,Regular Even,89
+25,September,23,Regular Odd,89
+26,September,24,Early Dismissal Even,74
+27,September,25,Regular Odd,89
+28,September,26,Regular Even,89
+29,September,27,Regular Odd,89
+30,September,30,Regular Even,89
+31,October,1,Early Dismissal Odd,74
+32,October,2,Regular Even,89
+33,October,3,Regular Odd,89
+34,October,4,Regular Even,89
+35,October,7,Regular Odd,89
+36,October,8,Early Dismissal Even,74
+37,October,9,Regular Odd,89
+38,October,10,Regular Even,89
+39,October,11,Regular Odd,89
+40,October,14,Regular Even,89
+41,October,15,Regular Odd,89
+42,October,16,Regular Even,89
+43,October,17,Regular Odd,89
+44,October,21,Advisory/Awards Even,59
+45,October,22,Early Dismissal Odd,74
+46,October,23,Regular Even,89
+47,October,24,Regular Odd,89
+48,October,25,Regular Even,89
+49,October,28,Rally Schedule Odd,59
+50,October,29,Early Dismissal Even,74
+51,October,30,Regular Odd,89
+52,October,31,Regular Even,89
+53,November,1,Regular Odd,89
+54,November,4,Regular Even,89
+55,November,5,Early Dismissal Odd,74
+56,November,6,Regular Even,89
+57,November,7,Regular Odd,89
+58,November,8,Regular Even,89
+59,November,12,Regular Odd,89
+60,November,13,Regular Even,89
+61,November,14,Regular Odd,89
+62,November,15,Regular Even,89
+63,November,18,Regular Odd,89
+64,November,19,Early Dismissal Even,74
+65,November,20,Regular Odd,89
+66,November,21,Regular Even,89
+67,November,22,Regular Odd,89
+68,December,2,Regular Even,89
+69,December,3,Early Dismissal Odd,74
+70,December,4,Regular Even,89
+71,December,5,Regular Odd,89
+72,December,6,Regular Even,89
+73,December,9,Regular Odd,89
+74,December,10,Early Dismissal Even,74
+75,December,11,Regular Odd,89
+76,December,12,Regular Even,89
+77,December,13,Regular Odd,89
+78,December,16,Regular Even,89
+79,December,17,Early Dismissal Odd,74
+80,December,18,Regular Even,89
+81,December,19,Regular Odd,89
+82,December,20,Regular Even,89
+83,January,13,Regular Odd,89
+84,January,14,Early Dismissal Even,74
+85,January,15,Regular Odd,89
+86,January,16,Regular Even,89
+87,January,17,Advisory/Awards Odd,59
+88,January,21,Regular Even,89
+89,January,22,Regular Odd,89
+90,January,23,Rally Schedule Even,59
+91,January,24,Regular Odd,89
+92,January,27,Regular Even,89
+93,January,28,Early Dismissal Odd,74
+94,January,29,Regular Even,89
+95,January,30,Regular Odd,89
+96,January,31,Regular Even,89
+97,February,3,Regular Odd,89
+98,February,4,Early Dismissal Even,74
+99,February,5,Regular Odd,89
+100,February,6,Regular Even,89
+101,February,7,Regular Odd,89
+102,February,11,Regular Even,89
+103,February,12,Regular Odd,89
+104,February,13,Regular Even,89
+105,February,14,Regular Odd,89
+106,February,18,Regular Even,89
+107,February,19,Regular Odd,89
+108,February,20,Regular Even,89
+109,February,21,Regular Odd,89
+110,February,24,Regular Even,89
+111,February,25,Early Dismissal Odd,74
+112,February,26,Regular Even,89
+113,February,27,Regular Odd,89
+114,February,28,Regular Even,89
+115,March,3,Regular Odd,89
+116,March,4,Early Dismissal Even,74
+117,March,5,Regular Odd,89
+118,March,6,Regular Even,89
+119,March,7,Regular Odd,89
+120,March,11,Regular Even,89
+121,March,12,Regular Odd,89
+122,March,13,Regular Even,89
+123,March,14,Regular Odd,89
+124,March,17,Regular Even,89
+125,March,18,Early Dismissal Odd,74
+126,March,19,Regular Even,89
+127,March,20,Regular Odd,89
+128,March,21,Regular Even,89
+129,March,24,Regular Odd,89
+130,March,25,Early Dismissal Even,74
+131,March,26,Regular Odd,89
+132,March,27,Regular Even,89
+133,March,28,Regular Odd,89
+134,March,31,Advisory/Awards Even,59
+135,April,1,Early Dismissal Odd,74
+136,April,2,Regular Even,89
+137,April,3,Regular Odd,89
+138,April,4,Regular Even,89
+139,April,7,Regular Odd,89
+140,April,8,Early Dismissal Even,74
+141,April,9,Regular Odd,89
+142,April,10,Regular Even,89
+143,April,11,Regular Odd,89
+144,April,22,Regular Even,89
+145,April,23,Regular Odd,89
+146,April,24,Regular Even,89
+147,April,25,Regular Odd,89
+148,April,28,Regular Even,89
+149,April,29,Early Dismissal Odd,74
+150,April,30,Regular Even,89
+151,May,1,Regular Odd,89
+152,May,2,Regular Even,89
+153,May,5,Regular Odd,89
+154,May,6,Early Dismissal Even,74
+155,May,7,Regular Odd,89
+156,May,8,Regular Even,89
+157,May,9,Regular Odd,89
+158,May,12,Regular Even,89
+159,May,13,Early Dismissal Odd,74
+160,May,14,Regular Even,89
+161,May,15,Rally Schedule Odd,59
+162,May,16,Regular Even,89
+163,May,19,Testing,0
+164,May,20,Testing,0
+165,May,21,Testing,0
+166,May,22,Testing,0
+167,May,23,Testing,0
+168,May,27,Regular Odd,89
+169,May,28,Regular Even,89
+170,May,29,Regular Odd,89
+171,May,30,Regular Even,89
+172,June,2,Regular Odd,89
+173,June,3,Early Dismissal Even,74
+174,June,4,Regular Odd,89
+175,June,5,Regular Even,89
+176,June,6,Regular Odd,89
+177,June,9,Regular Even,89
+178,June,10,Minimum Day,30
+179,June,11,Regular Even,89
+180,June,12,Minimum Day,30

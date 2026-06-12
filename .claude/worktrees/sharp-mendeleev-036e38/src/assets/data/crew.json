@@ -1,0 +1,388 @@
+{
+  "divisionColors": {
+    "white": "#FFFFFF",
+    "gold": "#F59D08",
+    "red": "#E35E5E",
+    "blue": "#3279BE"
+  },
+  "technical": [
+    {
+      "name": "Joshua Muster",
+      "rank": "Science Officer",
+      "bio": "Passionate about technology and education, leading the mission to explore the digital frontier with students.",
+      "photo": "@/assets/images/staff/ct-teacher-tech-muster-min.jpg"
+    },
+    {
+      "name": "Antione Jones",
+      "rank": "Science Officer",
+      "bio": "Specialist in innovative teaching methods, helping young minds boldly go where no one has gone before.",
+      "photo": "@/assets/images/staff/ct-teacher-tech-jones-min.jpg"
+    }
+  ],
+  "admin": [
+    {
+      "name": "Tobaise Brookins",
+      "rank": "Captain",
+      "bio": "Dedicated to ensuring the entire crew has what they need to thrive.",
+      "photo": "@/assets/images/staff/ct-admin-1-brookins-min.jpg"
+    },
+    {
+      "name": "Heather D'Olier",
+      "rank": "First Officer",
+      "bio": "Supporting the mission behind the scenes with exceptional leadership.",
+      "photo": "@/assets/images/staff/ct-admin-2-dolier-min.jpg"
+    },
+    {
+      "name": "Gabe Hawkins",
+      "rank": "Command Staff",
+      "bio": "Always working to make our voyages smooth and successful.",
+      "photo": "@/assets/images/staff/ct-admin-3-hawkins-min.jpg"
+    }
+  ],
+  "history": [
+    {
+      "name": "Steve Xiong",
+      "rank": "History Officer",
+      "bio": "Always ready to troubleshoot and innovate for the good of the mission.",
+      "photo": "@/assets/images/staff/ct-teacher-history-xiong-min.jpg"
+    },
+    {
+      "name": "Sean Bryan",
+      "rank": "History Officer",
+      "bio": "Charting courses for student success and keeping our ship on the right heading.",
+      "photo": "@/assets/images/staff/ct-teacher-history-bryan-min.jpg"
+    },
+    {
+      "name": "Benjamin Weemes",
+      "rank": "History Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-history-weemes-min.jpg"
+    },
+    {
+      "name": "Karissa Payne",
+      "rank": "History Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-history-payne-min.jpg"
+    }
+  ],
+  "ela": [
+    {
+      "name": "Jonathan McNeely",
+      "rank": "ELA Officer",
+      "bio": "Always ready to troubleshoot and innovate for the good of the mission.",
+      "photo": "@/assets/images/staff/ct-teacher-ela-mcneely-min.jpg"
+    },
+    {
+      "name": "Julie Adams",
+	    "rank": "ELA Officer",
+      "bio": "Charting courses for student success and keeping our ship on the right heading.",
+      "photo": "@/assets/images/staff/ct-teacher-ela-adams-min.jpg"
+    },
+    {
+      "name": "Staci Thornton",
+	    "rank": "ELA Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-ela-thornton-min.jpg"
+    },
+    {
+      "name": "Desiree Garza",
+	    "rank": "ELA Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-ela-garza-min.jpg"
+    }
+  ],
+  "science": [
+    {
+      "name": "Steve Ramos",
+      "rank": "Science Officer",
+      "bio": "Always ready to troubleshoot and innovate for the good of the mission.",
+      "photo": "@/assets/images/staff/ct-teacher-science-ramos-min.jpg"
+    },
+    {
+      "name": "Judy Vang",
+      "rank": "Science Officer",
+      "bio": "Charting courses for student success and keeping our ship on the right heading.",
+      "photo": "@/assets/images/staff/ct-teacher-science-vang-min.jpg"
+    },
+    {
+      "name": "A. J. Bassill",
+      "rank": "Science Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-science-bassill-min.jpg"
+    },
+    {
+      "name": "Jane Koshiba",
+      "rank": "Science Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-science-koshiba-min.jpg"
+    },
+    {
+      "name": "William Harris",
+      "rank": "Science Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-science-harris-min.jpg"
+    }
+  ],
+  "mathematics": [
+    {
+      "name": "Jonathan Muster",
+      "rank": "Mathematics Officer",
+      "bio": "Always ready to troubleshoot and innovate for the good of the mission.",
+      "photo": "@/assets/images/staff/ct-teacher-math-muster-min.jpg"
+    },
+    {
+      "name": "Julio Tejada",
+      "rank": "Mathematics Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-math-tejada-min.jpg"
+    },
+    {
+      "name": "Terese Riojas",
+      "rank": "Mathematics Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-math-riojas-min.jpg"
+    },
+    {
+      "name": "Ron Baumheckel",
+      "rank": "Mathematics Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-math-baumheckel-min.jpg"
+    },
+    {
+      "name": "Jose Melchor",
+      "rank": "Mathematics Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-math-melchor-min.jpg"
+    }
+  ],
+  "physicaled": [
+    {
+      "name": "Andrew Bernyk",
+      "rank": "Recreational Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-pe-bernyk-min.jpg"
+    },
+	  {
+		  "name": "Connor Nolan",
+		  "rank": "Recreational Officer",
+		  "bio": "A placeholder crew member with a generic bio.",
+		  "photo": "@/assets/images/staff/ct-teacher-pe-nolan-min.jpg"
+	  },
+    {
+      "name": "Miranda Gonzales",
+      "rank": "Recreational Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-pe-gonzales-min.jpg"
+    },
+    {
+      "name": "Rochelle Flores",
+      "rank": "Recreational Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-pe-flores-min.jpg"
+    }
+  ],
+  "lote": [
+    {
+      "name": "Jose Bolanos",
+      "rank": "Linguistics Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-lote-bolanos-min.jpg"
+    },
+    {
+      "name": "Adriana Valencia",
+      "rank": "Linguistics Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-lote-valencia-min.jpg"
+    },
+    {
+      "name": "Judy Vang",
+      "rank": "Linguistics Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-lote-vang-min.jpg"
+    }
+  ],
+  "engineering": [
+    {
+      "name": "Ben Piffero",
+      "rank": "Engineering Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-engineering-piffero-min.jpg"
+    },
+    {
+      "name": "Taylor Vizthum",
+      "rank": "CTE/ICT Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-engineering-vizthum-min.jpg"
+    },
+    {
+      "name": "Sopheak Real",
+      "rank": "Robotics Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-engineering-real-min.jpg"
+    },
+    {
+      "name": "Andrew Bernyk",
+      "rank": "BioMed Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-engineering-bernyk-min.jpg"
+    },
+    {
+      "name": "William Harris",
+      "rank": "Engineering Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-engineering-harris-min.jpg"
+    },
+    {
+      "name": "Erin Smith",
+      "rank": "Applied Arts Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-engineering-smith-min.jpg"
+    }
+  ],
+  "vapa": [
+    {
+      "name": "Erin Smith",
+      "rank": "Drama & Dance",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-vapa-smith-min.jpg"
+    },
+    {
+      "name": "Chuck Salanitro",
+      "rank": "Band & Choir",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-vapa-salanitro-min.jpg"
+    },
+    {
+      "name": "Erin Adams",
+      "rank": "Orchestra",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-vapa-adams-min.jpg"
+    },
+    {
+      "name": "Jessica Shubbin",
+      "rank": "Studio Art",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-teacher-vapa-shubbin-min.jpg"
+    }
+  ],
+  "sped": [
+    {
+      "name": "Hayley Briar",
+      "rank": "Crew Specialist",
+      "bio": "Committed to collaborative work and ensuring our objectives are met.",
+      "photo": "@/assets/images/staff/ct-teacher-sped-briar-min.jpg"
+    }
+  ],
+  "climate": [
+    {
+      "name": "Nicole Vargas",
+      "rank": "Climate, Culture, & Leadership Specialist",
+      "bio": "Committed to collaborative work and ensuring our objectives are met.",
+      "photo": "@/assets/images/staff/ct-staff-climate-vargas-min.jpg"
+    }
+  ],
+  "library": [
+    {
+      "name": "Aimee Ward",
+      "rank": "Crew Specialist",
+      "bio": "Committed to collaborative work and ensuring our objectives are met.",
+      "photo": "@/assets/images/staff/ct-staff-library-ward-min.jpg"
+    },
+    {
+      "name": "Misty Cameron",
+      "rank": "Crew Specialist",
+      "bio": "Keeping the ship running smoothly and ensuring every mission is a success.",
+      "photo": "@/assets/images/staff/ct-staff-library-cameron-min.jpg"
+    }
+  ],
+  "counselors": [
+    {
+      "name": "Chris Her",
+      "rank": "Crew Specialist",
+      "bio": "Committed to collaborative work and ensuring our objectives are met.",
+      "photo": "@/assets/images/staff/ct-staff-counselor-her-min.jpg"
+    },
+    {
+      "name": "Mayra Villalobos",
+      "rank": "Crew Specialist",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-counselor-villalobos-min.jpg"
+    },
+    {
+      "name": "Arthur Sulcer",
+      "rank": "Crew Specialist",
+      "bio": "Keeping the ship running smoothly and ensuring every mission is a success.",
+      "photo": "@/assets/images/staff/ct-staff-counselor-sulcer-min.jpg"
+    }
+  ],
+  "operations": [
+    {
+      "name": "Juan Rios",
+      "rank": "Chief Facilities Officer",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-services-rios-min.jpg"
+    },
+    {
+      "name": "Ramandeep Sandhu",
+      "rank": "Chief Medical Officer (RN)",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-services-sandhu-min.jpg"
+    },
+    {
+      "name": "Eileen Swift",
+      "rank": "After School Program",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-services-swift-min.jpg"
+    },
+    {
+      "name": "Ms. Vang",
+      "rank": "School Psychologist",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-services-vang-min.jpg"
+    },
+    {
+      "name": "Alicia Ruiz",
+      "rank": "Office Manager",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-services-ruiz-min.jpg"
+    },
+    {
+      "name": "Saundra Duran-Rios",
+      "rank": "Office Assistant",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-services-duran-rios-min.jpg"
+    },
+    {
+      "name": "Julia Sanchez",
+      "rank": "Homeschool Liaison",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-services-sanchez-min.jpg"
+    },
+    {
+      "name": "Hilda Cruz",
+      "rank": "Attendance",
+      "bio": "A placeholder crew member with a generic bio.",
+      "photo": "@/assets/images/staff/ct-staff-services-cruz-min.jpg"
+    }
+  ],
+	"security": [
+		{
+			"name": "Ruben Lucio",
+			"rank": "Security Officer",
+			"bio": "A placeholder crew member with a generic bio.",
+			"photo": "@/assets/images/staff/ct-staff-security-lucio-min.jpg"
+		},
+		{
+			"name": "Jose Huerta",
+			"rank": "Security Officer",
+			"bio": "A placeholder crew member with a generic bio.",
+			"photo": "@/assets/images/staff/ct-staff-security-huerta-min.jpg"
+		},
+		{
+			"name": "Melinda Solis",
+			"rank": "Security Officer",
+			"bio": "A placeholder crew member with a generic bio.",
+			"photo": "@/assets/images/staff/ct-staff-security-solis-min.jpg"
+		}
+	]
+}

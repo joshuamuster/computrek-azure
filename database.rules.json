@@ -1,0 +1,36 @@
+{
+  "rules": {
+    // ── Presence ──────────────────────────────────────────────────────────────
+    // Each cadet writes only to their own node (auth.uid must match $uid).
+    // Any authenticated user may READ presence so classmates can see who's online.
+    //
+    // PII note: the only data stored here is { online: boolean, lastChanged: timestamp }.
+    // No names, emails, periods, or teacher info are ever written to RTDB.
+    // A UID by itself is meaningless without Firestore access (which is separately
+    // secured); cadets only query presence for UIDs they received from loadRoster(),
+    // so the read-open rule does not create a new enumeration surface.
+    "presence": {
+      "$uid": {
+        ".write": "auth != null && auth.uid == $uid",
+        ".read":  "auth != null"
+      }
+    },
+
+    // ── Live game cursor (Fractured Frontier movement + aim streaming) ──────────
+    // Stores only { x, fuelUsed, angle, power } for each player's current turn.
+    // Ephemeral: the firing client sets the node to null after submitting a move.
+    // Keyed by joinCode (a short room code) — no PII at all.
+    "live": {
+      "$gameCode": {
+        ".read":  "auth != null",
+        ".write": "auth != null"
+      }
+    },
+
+    // Deny everything else — no other data should ever be written to RTDB.
+    "$other": {
+      ".read":  false,
+      ".write": false
+    }
+  }
+}

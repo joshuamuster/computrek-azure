@@ -1,0 +1,177 @@
+{
+	"unit02": {
+		"title": "Unit 3 - Interactive Animations and Games",
+		"summary": "_______",
+		"description": "_______",
+		"chapters": [
+			{
+				"chapter": "Chapter 01",
+				"description": "_______.",
+				"goal01": "_______.",
+				"goal02": "_______.",
+				"goal03": "",
+				"goal04": "",
+				"goal05": "",
+				"big questions 01": "_______.",
+				"big questions 02": "",
+				"big questions 03": "",
+				"lessons": [
+					{
+						"id": "01",
+						"longId": "Lesson01",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					},
+					{
+						"id": "02",
+						"longId": "Lesson02",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					},
+					{
+						"id": "03",
+						"longId": "Lesson03",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					},
+					{
+						"id": "04",
+						"longId": "Lesson04",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					},
+					{
+						"id": "05",
+						"longId": "Lesson05",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					}
+				]
+			},
+			{
+				"chapter": "Chapter 02",
+				"description": "_______.",
+				"goal01": "_______.",
+				"goal02": "_______.",
+				"goal03": "",
+				"goal04": "",
+				"goal05": "",
+				"big questions 01": "_______.",
+				"big questions 02": "",
+				"big questions 03": "",
+				"lessons": [
+					{
+						"id": "01",
+						"longId": "Lesson01",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					},
+					{
+						"id": "02",
+						"longId": "Lesson02",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					},
+					{
+						"id": "03",
+						"longId": "Lesson03",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					},
+					{
+						"id": "04",
+						"longId": "Lesson04",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					},
+					{
+						"id": "05",
+						"longId": "Lesson05",
+						"title": "_______",
+						"overview": "_______",
+						"question": "_______",
+						"content": "_______",
+						"objective1": "_______",
+						"objective2": "_______",
+						"objective3": "_______",
+						"objective4": "",
+						"objective5": "",
+						"type": "lesson"
+					}
+				]
+			}
+		]
+	}
+}

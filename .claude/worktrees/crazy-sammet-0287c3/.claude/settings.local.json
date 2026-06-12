@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"useGameScores\\\\|const DIFFICULTIES\" /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/games/*.vue)",
+      "Bash(grep -E \"DIFFICULTIES|useGameScores\" /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/games/*.vue)",
+      "Bash(npx vue-tsc *)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 status)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 log --oneline main..HEAD)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 log --oneline origin/main..HEAD)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 diff --stat)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 add src/composables/useAssignments.ts src/multiplayer/firestore.rules src/pages/MissionLibrary.vue src/pages/StudentDashboard.vue)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 commit -m ' *)",
+      "Bash(find /Users/joshuamuster/Documents/Github/computrekcs-vue -type f -name \"*.vue\" | grep -i report | head -20)",
+      "Bash(grep -E \"\\\\.\\(ts|json\\)$\")"
+    ]
+  }
+}

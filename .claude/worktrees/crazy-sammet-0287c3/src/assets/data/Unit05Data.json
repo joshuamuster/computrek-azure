@@ -1,0 +1,370 @@
+{
+	"unit05": {
+		"title": "Unit 5 - Data and Society",
+		"summary": "Students learn how information is represented, collected, and used to solve problems, then build a simple recommendation engine using data they gather and analyze.",
+		"description": "Data and Society emphasizes the importance of data in solving problems and highlights how computers support this process. Chapter 1 focuses on multiple systems for representing information in computers and the tradeoffs of each. Chapter 2 explores how collections of data are used to solve problems and how computers help automate this work. The unit concludes with a project in which students collect their own data and design a simple recommendation algorithm.",
+		"chapters": [
+			{
+				"chapter": "Chapter 01",
+				"description": "Representing Information: explore why representation matters, create and decode systems (text, images, numbers), combine representations, and practice basic data privacy and encryption.",
+				"goal01": "Explain why data representation affects what we can do with information.",
+				"goal02": "Use binary systems (ASCII, images, numbers) to encode and decode information.",
+				"goal03": "Compare tradeoffs among different representation systems.",
+				"goal04": "Describe basic concepts of data privacy and encryption.",
+				"goal05": "Create a representation that communicates meaningful information.",
+				"big questions 01": "How does the way information is represented affect our decisions and possibilities?",
+				"big questions 02": "What are the systems computers use to represent text, images, and numbers?",
+				"big questions 03": "How can we keep data secret and use it responsibly?",
+				"lessons": [
+					{
+						"id": "01",
+						"longId": "Lesson01",
+						"title": "Representation Matters",
+						"overview": "Explore what data is and how different representations of the same information can change the decisions we make.",
+						"question": "How does data affect decisions we make every day?",
+						"content": "Compare meal recommendations across multiple representations (pictures, recipes, menus, nutrition) and reflect on tradeoffs.",
+						"objective1": "Define data and explain how representation influences conclusions.",
+						"objective2": "Compare multiple representations of the same dataset.",
+						"objective3": "Reflect on advantages and limitations of each representation.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1iOLHC5jD8ZnCAGMconV90uueRyjpLUW50ygxbeF7OP4/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "resource" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1iOLHC5jD8ZnCAGMconV90uueRyjpLUW50ygxbeF7OP4/present"
+							}
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "02",
+						"longId": "Lesson02",
+						"title": "Patterns and Representation",
+						"overview": "Design a system that represents the alphabet using patterns of cards; exchange and decode messages to evaluate the system.",
+						"question": "How can we create a system for representing information?",
+						"content": "Brainstorm yes/no systems; create a pattern-based alphabet; test by encoding and decoding messages.",
+						"objective1": "Create a consistent encoding system for letters using patterns.",
+						"objective2": "Evaluate encodings for clarity, efficiency, and consistency.",
+						"objective3": "Explain why shared, arbitrary conventions are necessary for communication.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1kogMnngrG75g6Lz3Kdth6vc81bNBDnvdzwf1khCNCzI/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "resource" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "03",
+						"longId": "Lesson03",
+						"title": "ASCII and Binary Representation",
+						"overview": "Connect prior work to real-world encodings; practice representing text with bits using ASCII.",
+						"question": "What system do computers use to represent letters and words?",
+						"content": "Learn bits and binary; encode/decode text using ASCII and discuss how computers store characters.",
+						"objective1": "Define bit and binary representation.",
+						"objective2": "Encode and decode characters using ASCII.",
+						"objective3": "Relate ASCII to broader ideas of digital representation.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1IYp0AMitXn8vHozUgrtjxoHljV_yKXSFZriby2EM1Sk/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "resource" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "04",
+						"longId": "Lesson04",
+						"title": "Representing Images",
+						"overview": "Investigate how pixel grids encode images with on/off values; try black-and-white pixelation challenges.",
+						"question": "What system do computers use to represent images?",
+						"content": "Use a pixelation model to represent images with bits; discuss resolution and limitations.",
+						"objective1": "Explain pixels as units of image representation.",
+						"objective2": "Encode simple images using binary on/off pixels.",
+						"objective3": "Identify challenges in representing complex visuals with pixels.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1TMx_NMBUm7YHGW8aO7cPeE5NcSaB-hNBMwp3aeENneo/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "05",
+						"longId": "Lesson05",
+						"title": "Representing Numbers",
+						"overview": "Use place-value cards to represent integers in binary, observing patterns and extending to a generic 4-bit system.",
+						"question": "What system do computers use to represent numbers?",
+						"content": "Turn bits on/off to form numbers; connect patterns to base-2 place value.",
+						"objective1": "Represent integers using binary place value.",
+						"objective2": "Relate bit patterns to decimal values.",
+						"objective3": "Explain limits of fixed-bit representations.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "06",
+						"longId": "Lesson06",
+						"title": "Combining Representations",
+						"overview": "Decode a record that mixes ASCII, numbers, and images; discuss why the ‘meaning’ of bits requires agreed structure.",
+						"question": "How do computers tell the difference between binary codes for letters, numbers, or images?",
+						"content": "Decode a pet record using structure; reflect on metadata, format, and context.",
+						"objective1": "Interpret binary by using an agreed schema/format.",
+						"objective2": "Combine multiple encodings to represent a single object.",
+						"objective3": "Explain the role of metadata and structure in meaning-making.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "resource" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "07",
+						"longId": "Lesson07",
+						"title": "Keeping Data Secret",
+						"overview": "Explore why data needs protection and practice a simple binary encryption system to send secret messages.",
+						"question": "How can we keep data secret and protect it from misuse?",
+						"content": "Discuss risks; learn a punchcard-based binary encryption; encrypt/decrypt messages and reflect.",
+						"objective1": "Explain reasons for protecting personal/sensitive data.",
+						"objective2": "Apply a simple encryption method to encode/decode data.",
+						"objective3": "Discuss benefits and limits of basic encryption approaches.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "08",
+						"longId": "Lesson08",
+						"title": "Project - Create a Representation",
+						"overview": "Design and test a representation that communicates your ‘perfect day’ using ASCII, numbers, and images.",
+						"question": "How can I represent complex information using binary systems?",
+						"content": "Plan key information; encode with ASCII, numbers, images; exchange and decode with peers; reflect.",
+						"objective1": "Plan and encode information using multiple binary systems.",
+						"objective2": "Decode others’ representations and give feedback.",
+						"objective3": "Reflect on tradeoffs when representing complex experiences digitally.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" },
+							{ "type": "rubric" }
+						],
+						"type": "project"
+					}
+				]
+			},
+			{
+				"chapter": "Chapter 02",
+				"description": "Solving Data Problems: collect, structure, interpret, and automate decisions with data; consider big data and machine learning; build a recommendation project.",
+				"goal01": "Apply a problem-solving process to data problems.",
+				"goal02": "Collect, clean, visualize, and interpret data to support decisions.",
+				"goal03": "Design simple algorithms to automate parts of data decision-making.",
+				"goal04": "Explain societal considerations of data collection, big data, and ML.",
+				"goal05": "Create and present a data-driven recommendation.",
+				"big questions 01": "How can we use data to solve problems in our community?",
+				"big questions 02": "Which steps of the data process can computers automate—and which need humans?",
+				"big questions 03": "How do big data and machine learning change what’s possible?",
+				"lessons": [
+					{
+						"id": "09",
+						"longId": "Lesson09",
+						"title": "Problem Solving With Data",
+						"overview": "Use the problem-solving process to investigate a civic decision and build an argument with evidence.",
+						"question": "How can we use data to solve problems in our community?",
+						"content": "Research options (e.g., city services); collect evidence; justify a recommendation; map steps to the process.",
+						"objective1": "Apply Define→Prepare→Try→Reflect to a data problem.",
+						"objective2": "Collect and cite data from credible sources.",
+						"objective3": "Construct and present an evidence-based argument.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "10",
+						"longId": "Lesson10",
+						"title": "Structuring Data",
+						"overview": "Clean and visualize results from a class survey; decide how to handle ‘other’ data and compare visualization choices.",
+						"question": "How can we make it easier for computers to process data?",
+						"content": "Organize and graph pizza-topping data; address messy entries; reflect on automation vs human judgment.",
+						"objective1": "Create visualizations to reveal patterns.",
+						"objective2": "Handle irregular data and justify choices.",
+						"objective3": "Identify steps that can be automated by a computer.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "11",
+						"longId": "Lesson11",
+						"title": "Interpreting Data",
+						"overview": "Use cross-tabulation to examine relationships (e.g., cake vs icing) and consider how relationships inform decisions.",
+						"question": "How can patterns in data help us make decisions?",
+						"content": "Create a two-variable table/graph; analyze relationships; brainstorm problems this could help solve.",
+						"objective1": "Construct and interpret cross-tabulations.",
+						"objective2": "Explain how relationships affect recommendations.",
+						"objective3": "Identify limits of correlation for decision-making.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "resource" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "12",
+						"longId": "Lesson12",
+						"title": "Making Decisions with Data",
+						"overview": "Work through familiar scenarios to practice drawing conclusions from data—sometimes deciding to collect more.",
+						"question": "How can patterns in data help make a decision?",
+						"content": "Discuss group choices, justify with data, and reflect on differing conclusions from the same dataset.",
+						"objective1": "Use evidence to support decisions.",
+						"objective2": "Identify when additional data is necessary.",
+						"objective3": "Reflect on how perspective influences interpretation.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "13",
+						"longId": "Lesson13",
+						"title": "Automating Data Decisions",
+						"overview": "Design rules that a computer could use (e.g., vacation suggestions) and test on class data to compare to human choices.",
+						"question": "How can computers help us make decisions about data?",
+						"content": "Create and refine an algorithm; test against real data; discuss tradeoffs of automation.",
+						"objective1": "Translate decision criteria into algorithmic rules.",
+						"objective2": "Evaluate algorithm outputs versus human judgments.",
+						"objective3": "Discuss benefits and drawbacks of automated decisions.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "resource" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "14",
+						"longId": "Lesson14",
+						"title": "Problem Solving with Big Data",
+						"overview": "Explore real services that use large-scale data; distinguish active, passive, and sensor data collection.",
+						"question": "How is our data collected and why is it useful?",
+						"content": "Analyze scenarios; watch a case-study video; classify data collection methods.",
+						"objective1": "Describe how organizations collect and use data.",
+						"objective2": "Differentiate active, passive, and sensor data.",
+						"objective3": "Reflect on personal data and societal impacts.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "15",
+						"longId": "Lesson15",
+						"title": "Data and Machine Learning",
+						"overview": "Use AI for Oceans to train and test a model, then choose your own labels to see how training data affects results.",
+						"question": "How can machines \"learn\"?",
+						"content": "Classify images as fish/not fish; expand training data; define new labels and test model behavior.",
+						"objective1": "Describe the idea of training data and a model.",
+						"objective2": "Explain how label choices and data affect outcomes.",
+						"objective3": "Reflect on opportunities and limits of ML at this level.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "16",
+						"longId": "Lesson16",
+						"title": "Project - Make a Recommendation",
+						"overview": "Plan and build a simple recommendation engine using class survey data; peer review and present.",
+						"question": "How can I use data to make my own recommendations?",
+						"content": "Choose a decision to support; design a survey; collect and interpret data; create and apply a recommendation algorithm; present.",
+						"objective1": "Collect and analyze data to support a recommendation.",
+						"objective2": "Define and implement a simple recommendation algorithm.",
+						"objective3": "Iterate based on peer feedback and present findings.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar", "visibility": "staff" },
+							{ "type": "slides" },
+							{ "type": "rubric" },
+							{ "type": "peerReview" }
+						],
+						"type": "project"
+					}
+				]
+			}
+		]
+	}
+}

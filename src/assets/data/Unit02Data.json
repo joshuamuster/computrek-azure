@@ -1,0 +1,469 @@
+{
+	"unit02": {
+		"title": "Unit 2 - Web Development",
+		"summary": "Students learn HTML and CSS to design for a user, think critically about sharing information online, and collaborate to build and publish a multi‑page website.",
+		"description": "In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students build pages and begin to see themselves as web developers and designers, they consider the impact of sharing information online and learn to be critical consumers of content. They are introduced to programming‑related problem solving, debugging, using resources, and teamwork. After Chapter 1, students will have designed and created a web page for a user; after Chapter 2, they will have worked with a team to create a multi‑page website they can publish and share.",
+		"chapters": [
+			{
+				"chapter": "Chapter 01",
+				"description": "Creating Webpages: learn core HTML elements, structure text, practice ethical and safe online habits, and add CSS styles before completing a user‑focused mini‑project and a chapter project.",
+				"goal01": "Use HTML to structure content for a specific user need.",
+				"goal02": "Apply CSS to style text and elements for readability and design intent.",
+				"goal03": "Explain responsible use of others’ content and practice safe digital citizenship.",
+				"goal04": "Debug and iterate on webpages using pair programming practices.",
+				"goal05": "Design and build a user‑focused page and justify design choices.",
+				"big questions 01": "How do we communicate page content and structure to a computer?",
+				"big questions 02": "How can style improve usability and communicate hierarchy?",
+				"big questions 03": "What are our responsibilities when sharing and borrowing content online?",
+				"lessons": [
+					{
+						"id": "01",
+						"longId": "Lesson01",
+						"title": "Exploring Web Pages",
+						"overview": "Students analyze a variety of site designs and match them to possible users, then prototype a design for a chosen user and reflect on the role of a web designer.",
+						"question": "How can we choose websites based on the needs of a user?",
+						"content": "Investigate site designs, match to users, and sketch a paper/digital prototype for a user.",
+						"objective1": "Identify design features that serve different users and purposes.",
+						"objective2": "Prototype a page layout that aligns to a target user’s needs.",
+						"objective3": "Describe what web designers do and how they consider users.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "02a",
+						"longId": "Lesson02a",
+						"title": "Rubber Ducky Debugging",
+						"overview": "Students practice rubber-ducky debugging with a pen-and-paper activity that focuses on spotting syntax-like mistakes (parentheses, brackets, braces, quotes, tags, commas, and missing symbols). Working in pairs, they think aloud to justify which line is wrong in each set and explain why.",
+						"question": "How does explaining our steps out loud help us detect tiny mistakes in instructions and symbols?",
+						"content": "Introduce rubber-ducky debugging; model one set together; pairs complete the ten 'Spot the Bug' sets and write brief explanations; swap papers to check reasoning; finish with the exit ticket reflection from the guide.",
+						"objective1": "Explain the rubber-ducky debugging routine and use think-aloud to reason about errors.",
+						"objective2": "",
+						"objective3": "",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1toWmg8aK2trlx3mzpL8wZ4DYcpsI-J790o9vtHNaIaY/embed"
+							}
+						],
+						"slidesUrl": "https://docs.google.com/presentation/d/1toWmg8aK2trlx3mzpL8wZ4DYcpsI-J790o9vtHNaIaY/embed",
+						"type": "lesson"
+					},
+					{
+						"id": "02b",
+						"longId": "Lesson02b",
+						"title": "Intro to HTML",
+						"overview": "Students are introduced to HTML and Web Lab, exploring how tags convey both content and structure. They write first HTML after an unplugged activity on communicating structure.",
+						"question": "How can we tell the computer both what to put on the web page, and how to organize it?",
+						"content": "Explore an exemplar HTML page, then write basic HTML with proper structure in Web Lab.",
+						"objective1": "Differentiate between content and structure in a web page.",
+						"objective2": "Use core HTML tags to structure headings and paragraphs.",
+						"objective3": "Navigate Web Lab and lesson resources to build pages.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "03",
+						"longId": "Lesson03",
+						"title": "Headings and Lists",
+						"overview": "Students practice pair programming and debugging while learning heading and list elements to add structure to their pages.",
+						"question": "How can we work together to fix problems with our websites?",
+						"content": "Add headings and lists; practice pair programming roles and debugging strategies.",
+						"objective1": "Use heading and list tags to structure content.",
+						"objective2": "Apply pair programming roles to collaborate effectively.",
+						"objective3": "Debug common HTML issues using systematic checks.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "resource" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "04",
+						"longId": "Lesson04",
+						"title": "Digital Footprint",
+						"overview": "Students analyze fictitious social media pages to see what information can be inferred, then set guidelines for posting personal information online.",
+						"question": "How can you make sure that your private information stays private?",
+						"content": "Investigate public profiles and discuss safe, responsible sharing practices.",
+						"objective1": "Explain how personal data can surface online intentionally or not.",
+						"objective2": "Develop class guidelines for protecting privacy while publishing.",
+						"objective3": "Connect privacy practices to upcoming personal site work.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "05",
+						"longId": "Lesson05",
+						"title": "HTML Web Page",
+						"overview": "Students design and build a user’s page using HTML, guided by the Problem Solving Process and optional review activities.",
+						"question": "How can I use HTML to design and build a web page for a user?",
+						"content": "Plan with Define→Prepare→Try→Reflect; implement the page in Web Lab; review and revise.",
+						"objective1": "Translate user needs into structured HTML content.",
+						"objective2": "Use appropriate tags to implement a planned layout.",
+						"objective3": "Incorporate feedback to improve the page.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "handoutPeerReview" },
+							{ "type": "rubric" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "project"
+					},
+					{
+						"id": "06",
+						"longId": "Lesson06",
+						"title": "Styling Text with CSS",
+						"overview": "Students learn CSS syntax and properties that affect text, styling a provided page and optionally exploring additional properties.",
+						"question": "How can we change the style of text on a web page?",
+						"content": "Add CSS rules for text properties; apply styles in Web Lab and practice on sample pages.",
+						"objective1": "Write valid CSS rule‑sets targeting elements.",
+						"objective2": "Apply text‑related properties to improve readability and emphasis.",
+						"objective3": "Use optional activities to extend styling vocabulary.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "07",
+						"longId": "Lesson07",
+						"title": "Intellectual Property",
+						"overview": "Students explore copyright and Creative Commons to understand how creators’ and users’ rights are protected when using online content.",
+						"question": "What kind of rules protect everyone's rights when we use each other's content?",
+						"content": "Discuss copyright purposes and compare Creative Commons licenses.",
+						"objective1": "Identify copyright’s role for creators and users.",
+						"objective2": "Select appropriate Creative Commons licenses for reuse.",
+						"objective3": "Apply attribution practices for borrowed media.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "08",
+						"longId": "Lesson08",
+						"title": "Using Images",
+						"overview": "Students add images with the <img> tag and attributes, and practice citing sources appropriately while considering ethical use.",
+						"question": "How can we add images on our websites, while making sure we respect everyone's rights?",
+						"content": "Insert images with proper attributes; add citations and alt text as appropriate.",
+						"objective1": "Use image tags and attributes to display media.",
+						"objective2": "Cite sources and apply ethical media use.",
+						"objective3": "Differentiate self‑closing tags from container tags.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "09",
+						"longId": "Lesson09",
+						"title": "Styling Elements with CSS",
+						"overview": "Students extend CSS beyond text to style images and layouts, practicing on a sample site and applying styles to personal pages.",
+						"question": "How can we style the images and layouts of our pages?",
+						"content": "Investigate and modify CSS on a sample site, then apply to personal pages.",
+						"objective1": "Use CSS to style non‑text elements and layout aspects.",
+						"objective2": "Analyze existing styles and extend them appropriately.",
+						"objective3": "Iterate on personal page styles for clarity and aesthetics.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "10",
+						"longId": "Lesson10",
+						"title": "Adding Style to a Web Page",
+						"overview": "Students style a user’s page with CSS, optionally reviewing HTML/CSS, getting feedback, and reflecting on their process.",
+						"question": "How can I use CSS to style a web page for a user?",
+						"content": "Plan styling choices, add CSS to meet user needs, and revise after review.",
+						"objective1": "Select CSS properties that support design goals and user needs.",
+						"objective2": "Organize stylesheets for maintainability.",
+						"objective3": "Incorporate feedback to improve style and usability.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "handoutPeerReview" },
+							{ "type": "rubric" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "project"
+					},
+					{
+						"id": "11",
+						"longId": "Lesson11",
+						"title": "CSS Classes",
+						"overview": "Students learn to apply classes to target groups of elements for different styles, investigate examples, and create their own classes.",
+						"question": "How can we create different styles for the same type of element?",
+						"content": "Add classes in HTML and target them in CSS; compare to element‑only styling.",
+						"objective1": "Create and apply CSS classes to control appearance.",
+						"objective2": "Explain when classes are preferable to element selectors.",
+						"objective3": "Reflect on how classes improve team site organization.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "12",
+						"longId": "Lesson12",
+						"title": "Organizing Content with Flexbox",
+						"overview": "Students organize HTML with div containers and use Flexbox properties to position items and control layout.",
+						"question": "What are div tags and Flexbox and why are they important in web design?",
+						"content": "Wrap content in divs; use Flexbox properties to layout sections responsively.",
+						"objective1": "Structure pages with semantic containers where appropriate.",
+						"objective2": "Use core Flexbox properties to arrange content.",
+						"objective3": "Evaluate layout choices for readability and flow.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "handout" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "13",
+						"longId": "Lesson13",
+						"title": "Flexbox Children for More Control",
+						"overview": "Students use advanced child properties (order, align‑self, flex‑grow, flex‑shrink) and apply them through practice and a creative activity.",
+						"question": "How do Flexbox child properties affect the layout and organization of elements within a webpage?",
+						"content": "Experiment with child properties to refine layout control and responsiveness.",
+						"objective1": "Adjust child properties to change layout behavior.",
+						"objective2": "Explain effects of order, align‑self, flex‑grow, and flex‑shrink.",
+						"objective3": "Collaborate on a layout‑focused creative exercise.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "handout" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "14",
+						"longId": "Lesson14",
+						"title": "CHAPTER 1 PROJECT",
+						"overview": "Students organize a user’s web page with CSS classes and Flexbox, optionally gathering feedback and reflecting on the process.",
+						"question": "How can I use CSS classes and Flexbox to organize webpage content for a user?",
+						"content": "Plan content organization; implement layouts in Web Lab; review against rubric.",
+						"objective1": "Organize content with classes and Flexbox to support user goals.",
+						"objective2": "Apply the Problem Solving Process to structure and iterate.",
+						"objective3": "Use rubric criteria to self‑assess and revise.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "handout" },
+							{ "type": "handoutPeerReview" },
+							{ "type": "rubric" },
+							{ "type": "slides" },
+							{ "type": "checklist", "label": "Student Checklist" }
+						],
+						"slidesUrl": "",
+						"type": "project"
+					}
+				]
+			},
+			{
+				"chapter": "Chapter 02",
+				"description": "Multi‑page Websites: collaborate as a team, research trustworthy sources, add navigation and interactivity, plan a multi‑page site, and build and publish a website for a purpose.",
+				"goal01": "Plan and collaborate effectively on a multi‑page site.",
+				"goal02": "Use links and navigation conventions to combine pages into a coherent site.",
+				"goal03": "Apply CSS pseudo‑classes and additional styling for interactivity and usability.",
+				"goal04": "Evaluate sources for credibility and apply citation practices.",
+				"goal05": "Deliver, review, and refine a team website that meets user needs.",
+				"big questions 01": "How do teams plan, divide work, and build together?",
+				"big questions 02": "How do we find relevant, trustworthy information online?",
+				"big questions 03": "What practices improve navigation, interactivity, and user experience?",
+				"lessons": [
+					{
+						"id": "15",
+						"longId": "Lesson15",
+						"title": "Team Problem Solving",
+						"overview": "Students set group norms, define roles, and brainstorm features for their websites to support effective collaboration.",
+						"question": "How can we work together to make a great team?",
+						"content": "Establish norms and roles; brainstorm site features and workflow.",
+						"objective1": "Define team expectations and communication practices.",
+						"objective2": "Plan responsibilities and timelines for project tasks.",
+						"objective3": "Begin ideation for final team website.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "16",
+						"longId": "Lesson16",
+						"title": "Sources and Research",
+						"overview": "Students learn how search engines work, practice finding information, and evaluate sources for credibility; they also consider how to make their own sites trustworthy.",
+						"question": "How do we find relevant and trustworthy information on the Internet?",
+						"content": "Search for sources; analyze credibility; plan citations and trust signals for their site.",
+						"objective1": "Explain key ideas in how search engines surface results.",
+						"objective2": "Apply credibility criteria to select sources.",
+						"objective3": "Plan to cite and present information transparently on the site.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "17",
+						"longId": "Lesson17",
+						"title": "Linking Pages",
+						"overview": "Students learn to create links and apply navigation conventions, connecting multiple pages into a coherent website.",
+						"question": "How can we combine several different web pages into one website?",
+						"content": "Create internal links, nav areas, and page structure; reflect on project goals.",
+						"objective1": "Use anchor tags for internal navigation between pages.",
+						"objective2": "Apply navigation conventions to improve usability.",
+						"objective3": "Organize files and folders for a multi‑page site.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "18",
+						"longId": "Lesson18",
+						"title": "CSS Pseudo‑classes",
+						"overview": "Students use pseudo‑classes (link, visited, hover, active) to enhance interactivity and style; they practice, assess, and extend with challenges.",
+						"question": "What is a CSS pseudo‑class, and how does it change the way an element looks or behaves on a web page?",
+						"content": "Add pseudo‑class rules to links and UI elements to improve feedback states.",
+						"objective1": "Write pseudo‑class selectors to style interactive states.",
+						"objective2": "Evaluate impact of state styles on UX and accessibility.",
+						"objective3": "Refine styles based on testing and feedback.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "19",
+						"longId": "Lesson19",
+						"title": "Planning a Multi‑Page Site",
+						"overview": "Teams sketch each page, gather media, and assign responsibilities, reporting agreement on a plan.",
+						"question": "How do we plan a web page as a group?",
+						"content": "Create page sketches, download media, and divide tasks across the team.",
+						"objective1": "Produce page‑by‑page plans and wireframes.",
+						"objective2": "Organize shared assets and folder structures.",
+						"objective3": "Document task ownership and checkpoints.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "rubric" },
+							{ "type": "slides" },
+							{ "type": "checklist", "label": "Student Checklist" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					},
+					{
+						"id": "20",
+						"longId": "Lesson20",
+						"title": "Project — Website for a Purpose",
+						"overview": "Teams code their multi‑page site guided by a project brief, integrating work into a single published site.",
+						"question": "What skills and practices will help us work together to make a great website?",
+						"content": "Implement pages, integrate assets, and publish; check against project guide.",
+						"objective1": "Build a coherent multi‑page site meeting user and project criteria.",
+						"objective2": "Integrate individual work into a shared codebase.",
+						"objective3": "Test, iterate, and prepare for peer review.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "project"
+					},
+					{
+						"id": "21",
+						"longId": "Lesson21",
+						"title": "Peer Review and Final Touches",
+						"overview": "Students use a structured peer‑feedback process aligned to the rubric, then apply final revisions and reflect on the process.",
+						"question": "How can we use feedback to make our websites better?",
+						"content": "Request, receive, and act on feedback; finalize and present the site.",
+						"objective1": "Use rubric‑aligned peer review to target improvements.",
+						"objective2": "Prioritize revisions for quality and usability.",
+						"objective3": "Reflect on teamwork and the design process.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "handoutPeerReview" },
+							{ "type": "handoutPeerReviewExemplar", "label": "Exemplar Peer Review" },
+							{ "type": "handout", "file": "Reflect", "label": "Reflect" },
+							{ "type": "resourceExemplar", "file": "Exemplar-Reflect", "label": "Exemplar Reflect" },
+							{ "type": "slides" }
+						],
+						"slidesUrl": "",
+						"type": "lesson"
+					}
+				]
+			}
+		]
+	}
+}

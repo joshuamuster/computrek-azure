@@ -1,0 +1,64 @@
+.unit-description {
+  margin-bottom: 1.25rem;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: 'Roboto';
+}
+
+.unit-chapter {
+   margin-top: 3rem;
+  /*padding: 1.25rem;*/
+  /* border: 0.0625rem solid #ddd; */
+  border-radius: 0.5rem;
+  /* background-color: #f9f9f9; */
+}
+
+.unit-lesson {
+  margin-top: 0.9375rem;
+}
+
+.listed-lesson {
+  margin-bottom: 0.625rem;
+  /* padding: 0.625rem; */
+  border-radius: 0.25rem;
+  /* background-color: #fff; */
+  font-size: 1.3em;
+}
+
+.listed-lessonID {
+  color: #f86;
+  font-weight: bold;
+}
+
+.listed-lessonTitle {
+  color: #dbf;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.listed-lessonTitle:hover {
+  color: #f86;
+}
+
+.listedLessonType {
+  color: #aaf;
+  text-transform: uppercase;
+  
+}
+
+.project-type {
+  color: #CC4444;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.coming-soon {
+  margin-top: 1.875rem;
+  padding: 1.875rem;
+  text-align: center;
+  /*background-color: #f5f5f5;*/
+  border-radius: 0.5rem;
+  border: 0.0625rem dashed #ccc;
+}

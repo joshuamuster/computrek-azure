@@ -1,0 +1,335 @@
+{
+	"unit03": {
+		"title": "Unit 3b - Programming with Music Lab",
+		"summary": "Students learn core programming concepts through music—sequencing, loops, and functions—culminating in a creative remix project.",
+		"description": "This unit blends computer science and music creation. Students code in Music Lab to build, remix, and perform original songs while practicing the Problem Solving Process and Computational Thinking (pattern recognition, algorithmic thinking, and debugging). They progress from structured exposure to mastery and open-ended creativity across sequencing, loops, and functions, and finish with a genre mash‑up project that showcases both code fluency and musical expression.",
+		"chapters": [
+			{
+				"chapter": "Chapter 01",
+				"description": "Through a sequence of explore–practice–synthesize lessons, students learn to design and perform music with code using sequencing, loops, and functions, then complete a culminating remix project.",
+				"goal01": "Use sequencing, loops, and functions to organize and perform music with code.",
+				"goal02": "Apply the Problem Solving Process to design, test, and refine musical ideas.",
+				"goal03": "Debug systematically and use pair programming and feedback to improve work.",
+				"goal04": "Explain how abstraction (functions) reduces repetition and clarifies structure.",
+				"goal05": "Create and present a final remix that demonstrates mastery and creativity.",
+				"big questions 01": "How do programmers think like musicians—and musicians like programmers?",
+				"big questions 02": "How do sequencing, loops, and functions change the way we structure songs?",
+				"big questions 03": "How do we iterate and debug creatively to achieve a musical goal?",
+				"lessons": [
+					{
+						"id": "00",
+						"longId": "Lesson00",
+						"title": "Prime Video Sports: Behind the Streams",
+						"overview": "From the stadium to devices, discover how computer science and people work together to bring sports to millions of fans around the world. In this tour, students explore the following careers: Producer, Technical Operations Manager, Live Event Support Engineer, Product Manager, Applied Scientist.",
+						"question": "How does Prime Video Sports get the data from the stadium to devices with as little of a delay as possible? How can Prime Video Sports anticipate possible issues with the stream and troubleshoot to ensure customers don’t miss a second of the big game?",
+						"content": "Review example songs, read client stories with goals/moods, match songs to clients, and discuss design implications.",
+						"objective1": "Trace the data pathway from a live stadium to various consumer devices with minimal delay.",
+						"objective2": "Identify key STEM careers involved in live streaming, such as Applied Scientists, Product Managers, and Live Event Support Engineers.",
+						"objective3": "Explain how technology ensures reliability, specifically how engineers troubleshoot and use redundancy to prevent stream interruptions.",
+						"objective4": "Define core technical vocabulary including latency, encoding, Content Delivery Networks (CDN), and machine learning within a real-world context.",
+						"objective5": "Understand the role of AI and computer vision in building features that enhance the fan's viewing experience.",
+						"slidesUrl": "https://docs.google.com/presentation/d/1Id-oG_FYnSnxwN7beyX2_suJxWcig4M4Tra8FZqqZ6s/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "teacherGuide" },
+							{ "type": "activityGuideExemplar" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1Id-oG_FYnSnxwN7beyX2_suJxWcig4M4Tra8FZqqZ6s/present"
+							}
+						],
+						"type": "lesson"
+					},
+					
+					{
+						"id": "01",
+						"longId": "Lesson01",
+						"title": "Introduction to Music Lab",
+						"overview": "Students act as music experience designers, reviewing early songs, matching client stories to songs, and reflecting on how user goals shape design decisions.",
+						"question": "How does understanding a user’s goal guide creative coding choices?",
+						"content": "Review example songs, read client stories with goals/moods, match songs to clients, and discuss design implications.",
+						"objective1": "Identify user goals and relate them to musical/interactive choices.",
+						"objective2": "Describe how Music Lab can be used to meet a client’s needs.",
+						"objective3": "Reflect on how designer choices affect user experience.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/17DawezsP-ZRvma0JihCk4Y253F8LBfQl6zDYd3zuWaw/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "handout" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "handoutExemplar" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/17DawezsP-ZRvma0JihCk4Y253F8LBfQl6zDYd3zuWaw/present"
+							}
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "02",
+						"longId": "Lesson02",
+						"title": "Sequencing – Explore",
+						"overview": "Students build a song step‑by‑step, layering tracks and using blocks like play together while predicting behavior and identifying patterns.",
+						"question": "How do we combine sounds in sequence to form a song?",
+						"content": "Follow guided steps to layer tracks, use play‑together, and make predictions before running code.",
+						"objective1": "Explain sequencing and identify patterns in song structure.",
+						"objective2": "Layer tracks using step‑by‑step instructions in Music Lab.",
+						"objective3": "Use predictions and checks to reason about code behavior.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1AWlvr0CLdpIGdBP0tc_LrW3RgiIrrN6PxUDbA_PrMAQ/present",
+						"resources": [
+							{ "type": "handoutDefinitions" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1AWlvr0CLdpIGdBP0tc_LrW3RgiIrrN6PxUDbA_PrMAQ/present"
+							}
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "03",
+						"longId": "Lesson03",
+						"title": "Sequencing – Practice",
+						"overview": "Students practice sequencing with tracks of different lengths and rests to create offsets, building fluency through guided challenges.",
+						"question": "How can rests and timing create structure and variety?",
+						"content": "Combine unequal track lengths and rests; complete practice challenges in pairs.",
+						"objective1": "Use rests and offsets to control timing.",
+						"objective2": "Apply sequencing to coordinate multiple tracks.",
+						"objective3": "Collaborate via pair programming to debug and improve code.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1et_nxjhPlQXBpLogLL--iInkmjaqtbN996eCNwmaspw/present",
+						"resources": [
+							{ "type": "resource", "file": "Resource-1", "label": "Resource 1" },
+							{ "type": "handoutDefinitions", "file": "Resource-2", "label": "Resource 2" },
+							{ "type": "teacherGuide" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1et_nxjhPlQXBpLogLL--iInkmjaqtbN996eCNwmaspw/present"
+							}
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "04",
+						"longId": "Lesson04",
+						"title": "Sequencing – Synthesize",
+						"overview": "Students review sequencing skills in an open‑ended context, explore Effect blocks, and layer tracks creatively, inspired by a professional producer.",
+						"question": "How can we use effects and layering to elevate our song?",
+						"content": "Revisit sequencing; add effects; experiment with layering to achieve a musical goal.",
+						"objective1": "Select and justify effects that support musical intent.",
+						"objective2": "Synthesize sequencing skills in a less‑scaffolded task.",
+						"objective3": "Reflect on creative choices and outcomes.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/13KhczmoJTsMcNVzeuIvqg2V9pSdkiicFWknZop-EjZI/present",
+						"resources": [
+							{ "type": "handoutDefinitions" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/13KhczmoJTsMcNVzeuIvqg2V9pSdkiicFWknZop-EjZI/present"
+							}
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "05",
+						"longId": "Lesson05",
+						"title": "Mini‑Project — Walk‑Up Songs",
+						"overview": "Students create personalized walk‑up songs for characters, using sequencing and new triggers to control timing and flair.",
+						"question": "How can code and timing communicate a character’s mood or identity?",
+						"content": "Explore examples; plan and build a walk‑up song; use triggers to coordinate moments.",
+						"objective1": "Design a short song that expresses a brief or persona.",
+						"objective2": "Use triggers to time musical events.",
+						"objective3": "Iterate based on feedback and self‑assessment.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1n-My1sUmGlkDoA75QLfmDG7aJc_da3WZxsSlR66eMzo/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "handoutDefinitions" },
+							{ "type": "rubric" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1n-My1sUmGlkDoA75QLfmDG7aJc_da3WZxsSlR66eMzo/present"
+							}
+						],
+						"type": "project"
+					},
+					{
+						"id": "06",
+						"longId": "Lesson06",
+						"title": "Loops – Explore",
+						"overview": "Students are introduced to loops via real‑world loop‑pedal performances, then predict and test repeat behavior and how loops strengthen structure.",
+						"question": "How do loops simplify code and strengthen musical patterns?",
+						"content": "Investigate repeat behavior; identify repeated patterns; apply loops to reduce repetition.",
+						"objective1": "Explain what a loop does in music code.",
+						"objective2": "Identify patterns suitable for looping.",
+						"objective3": "Use loops to refactor repeated sequences.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/12gvu0ScbRN8hoiEsxYHSnYn00iGh08mNMCLEEBjIY-c/present",
+						"type": "lesson"
+					},
+					{
+						"id": "07",
+						"longId": "Lesson07",
+						"title": "Loops – Practice",
+						"overview": "Students practice with more complex loops, including nested loops and loops with rests; check‑ins support pacing and feedback.",
+						"question": "How can we nest and vary loops to create structure?",
+						"content": "Build patterns with lyrics/rests and nested loops; complete check‑ins and challenges.",
+						"objective1": "Use nested loops to organize repeating sections.",
+						"objective2": "Control timing with rests inside loops.",
+						"objective3": "Debug loop logic in collaborative practice.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1ESuBGDSQV9vm9gXVpJeyiDY-YoXtU4Uf26UkbRDGEiE/present",
+						"type": "lesson"
+					},
+					{
+						"id": "08",
+						"longId": "Lesson08",
+						"title": "Loops – Synthesize",
+						"overview": "Through the lens of live coding, students blend structure with real‑time experimentation to perform loop‑based songs.",
+						"question": "How can live coding with loops support performance and improvisation?",
+						"content": "Review loops; experiment with performance‑style iterations; reflect on outcomes.",
+						"objective1": "Demonstrate loop fluency in an open‑ended task.",
+						"objective2": "Evaluate how loop choices affect audience perception.",
+						"objective3": "Reflect on experimentation as part of debugging/design.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1DOe7um_QssQq9gNJgmeziUsoUaR6H-Gii1vNbCO7UA0/present",
+						"type": "lesson"
+					},
+					{
+						"id": "09",
+						"longId": "Lesson09",
+						"title": "Mini‑Project — Cat GIF Loops",
+						"overview": "Students design a musical loop to match the mood of a looping cat GIF, exploring randomness to add variety and surprise.",
+						"question": "How can randomness enhance a loop without breaking its feel?",
+						"content": "Choose a GIF; plan mood; code a matching loop; add random elements thoughtfully.",
+						"objective1": "Map visual cues to musical structure and tone.",
+						"objective2": "Use random blocks to vary repeated sections.",
+						"objective3": "Balance variation with coherence in a loop.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1y0PC3eyGzDh8VKbofg-AIEsDFUPnWd3ZZo0GTNdieAM/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "rubric" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1y0PC3eyGzDh8VKbofg-AIEsDFUPnWd3ZZo0GTNdieAM/present"
+							}
+						],
+						"type": "project"
+					},
+					{
+						"id": "10",
+						"longId": "Lesson10",
+						"title": "Functions – Explore",
+						"overview": "Students listen to mashups to identify sections, then use functions to organize code into reusable parts, reducing repetition and clarifying structure.",
+						"question": "How do functions help us structure and reuse musical ideas?",
+						"content": "Define and call functions to represent song sections; practice predicting outcomes.",
+						"objective1": "Explain abstraction and how functions reduce repetition.",
+						"objective2": "Create functions to represent musical sections.",
+						"objective3": "Trace function calls to predict song flow.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1hQCtfjO-yfdGzC6MGOFzlL8oTfHV_xGzw3zMmF0bg7s/present",
+						"resources": [
+							{ "type": "handoutDefinitions" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1hQCtfjO-yfdGzC6MGOFzlL8oTfHV_xGzw3zMmF0bg7s/present"
+							}
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "11",
+						"longId": "Lesson11",
+						"title": "Functions – Practice",
+						"overview": "Students define, reuse, and compose multiple functions to structure a song, deepening understanding of abstraction.",
+						"question": "How can composing functions build complex musical structure?",
+						"content": "Build a track using several functions; reuse and compose them to form a song.",
+						"objective1": "Write and reuse functions for recurring ideas.",
+						"objective2": "Compose functions to express higher‑level structure.",
+						"objective3": "Debug incorrect calls and parameters (if applicable).",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/1VymHM7zvK4zenEvt0JueMA0CQS4ObgSbuLLgiBvfmok/present",
+						"resources": [
+							{ "type": "handoutDefinitions" },
+							{ "type": "Resource" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/1VymHM7zvK4zenEvt0JueMA0CQS4ObgSbuLLgiBvfmok/present"
+							}
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "12",
+						"longId": "Lesson12",
+						"title": "Functions – Synthesize",
+						"overview": "Students compare an original and a remix, then remix their own track using functions, inspired by a professional remixer.",
+						"question": "How can functions support remixing and reinterpretation?",
+						"content": "Identify remix strategies; reorganize sections via functions; reflect on abstraction.",
+						"objective1": "Apply functions to restructure familiar patterns.",
+						"objective2": "Justify remix decisions in terms of audience and effect.",
+						"objective3": "Reflect on how abstraction enables creative change.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/12DFK2jUaNzMafY6NtRASeWZ5eVoTjFpLfB5-slpBVok/present",
+						"resources": [
+							{ "type": "handoutDefinitions" },
+							{ "type": "Resource" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/12DFK2jUaNzMafY6NtRASeWZ5eVoTjFpLfB5-slpBVok/present"
+							}
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "13",
+						"longId": "Lesson13",
+						"title": "Project — Genre Mash‑Up",
+						"overview": "For the capstone, students select an existing song and remix it into a new genre using well‑structured functions and techniques from the unit.",
+						"question": "How can we demonstrate mastery by remixing a song into a new genre?",
+						"content": "Plan sections/functions; implement and iterate; present the remix with reflection.",
+						"objective1": "Define clear functions for sections and transitions.",
+						"objective2": "Demonstrate creative and technical mastery in the remix.",
+						"objective3": "Present and reflect on process and product.",
+						"objective4": "",
+						"objective5": "",
+						"slidesUrl": "https://docs.google.com/presentation/d/13Po7E2P6fO-QX7GPlJmw_0llvh02sg_OozERBeV5pjc/present",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "Resource" },
+							{
+								"type": "slides",
+								"source": "external",
+								"url": "https://docs.google.com/presentation/d/13Po7E2P6fO-QX7GPlJmw_0llvh02sg_OozERBeV5pjc/present"
+							}
+						],
+						"type": "project"
+					}
+				]
+			}
+		]
+	}
+}

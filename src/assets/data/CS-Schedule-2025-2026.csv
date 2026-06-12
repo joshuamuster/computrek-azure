@@ -1,0 +1,335 @@
+Unnamed: 0,Month,Day,Date,Schedule Type,Unit,Lesson #,Pts.,Lesson Title
+,August,Fri,1,Summer,,,,
+,August,Sat,2,,,,,
+,August,Sun,3,,,,,
+,August,Mon,4,Summer,,,,
+,August,Tue,5,Summer,,,,
+,August,Wed,6,Summer,,,,
+,August,Thu,7,Summer,,,,
+,August,Fri,8,Summer,,,,
+,August,Sat,9,,,,,
+,August,Sun,10,,,,,
+,August,Mon,11,Summer,,,,
+,August,Tue,12,Summer,,,,
+,August,Wed,13,Summer,,,,
+,August,Thu,14,Summer,,,,
+,August,Fri,15,Summer,,,,
+,August,Sat,16,,,,,
+,August,Sun,17,,,,,
+1,August,Mon,18,Advisory/Awards Odd,,,,Stuff n' Things
+2,August,Tue,19,Early Dismissal Even,,,,Stuff n' Things
+3,August,Wed,20,Advisory/Awards Odd,,,,Imago
+4,August,Thu,21,Advisory/Awards Even,,,,Imago
+5,August,Fri,22,Rally Schedule Odd,,,,Imago
+,August,Sat,23,,,,,
+,August,Sun,24,,,,,
+6,August,Mon,25,Regular Even,,,,Imago
+7,August,Tue,26,Early Dismissal Odd,,,,iReady
+8,August,Wed,27,Regular Even,,,,iReady
+9,August,Thu,28,Regular Odd,,,,iReady
+10,August,Fri,29,Regular Even,,,,iReady
+,August,Sat,30,,,,,
+,August,Sun,31,,,,,
+,September,Mon,1,Holiday,,,,
+11,September,Tue,2,Regular Odd,,,,iReady
+12,September,Wed,3,Regular Even,,,,iReady
+13,September,Thu,4,Regular Odd,,,,Imago
+14,September,Fri,5,Regular Even,,,,Imago
+,September,Sat,6,,,,,
+,September,Sun,7,,,,,
+15,September,Mon,8,Regular Odd,,,40,All About Me
+16,September,Tue,9,Early Dismissal Even,,,40,All About Me
+17,September,Wed,10,Regular Odd,Unit 01,0,,Fix The Broken Bot
+18,September,Thu,11,Regular Even,Unit 01,0,,Fix The Broken Bot
+19,September,Fri,12,Regular Odd,Unit 01,1,15,Mini-Project - Paper Tower
+,September,Sat,13,,,,,
+,September,Sun,14,,,,,
+20,September,Mon,15,Regular Even,Unit 01,1,15,Mini-Project - Paper Tower
+21,September,Tue,16,Early Dismissal Odd,Unit 01,2,,The Problem Solving Process
+22,September,Wed,17,Regular Even,Unit 01,2,,The Problem Solving Process
+23,September,Thu,18,Regular Odd,Unit 01,3,,Exploring Problem Solving
+24,September,Fri,19,Regular Even,Unit 01,3,,Exploring Problem Solving
+,September,Sat,20,,,,,
+,September,Sun,21,,,,,
+25,September,Mon,22,Regular Odd,Unit 01,4,,What is a Computer?
+26,September,Tue,23,Early Dismissal Even,Unit 01,4,,What is a Computer?
+27,September,Wed,24,Regular Odd,Unit 01,5,,Input and Output
+28,September,Thu,25,Regular Even,Unit 01,5,,Input and Output
+29,September,Fri,26,Regular Odd,Unit 01,6,,Processing
+,September,Sat,27,,,,,
+,September,Sun,28,,,,,
+30,September,Mon,29,Regular Even,Unit 01,6,,Processing
+31,September,Tue,30,Early Dismissal Odd,Unit 01,7,,Storage
+32,October,Wed,1,Regular Even,Unit 01,7,,Storage
+33,October,Thu,2,Regular Odd,Unit 01,8,30,Project - Propose an App
+34,October,Fri,3,Regular Even,Unit 01,8,30,Project - Propose an App
+,October,Sat,4,,,,,
+,October,Sun,5,,,,,
+35,October,Mon,6,Golden Hour Odd,Unit 01,8,,Project - Propose an App
+36,October,Tue,7,Early Dismissal Even,Unit 01,8,,Project - Propose an App
+37,October,Wed,8,Regular Odd,Unit 02,1,,Exploring Web Pages
+38,October,Thu,9,Regular Even,Unit 02,1,,Exploring Web Pages
+39,October,Fri,10,Regular Odd,Unit 02,2,,Intro to HTML
+,October,Sat,11,,,,,
+,October,Sun,12,,,,,
+40,October,Mon,13,Regular Even,Unit 02,2,,Intro to HTML
+41,October,Tue,14,Regular Odd,Unit 02,3,,Headings and Lists
+42,October,Wed,15,Regular Even,Unit 02,3,,Headings and Lists
+43,October,Thu,16,Regular Odd,Unit 02,4,,Digital Footprint
+,October,Fri,17,Holiday,,,,
+,October,Sat,18,,,,,
+,October,Sun,19,,,,,
+44,October,Mon,20,Regular Even,Unit 02,4,,Digital Footprint
+45,October,Tue,21,Early Dismissal Odd,Unit 02,5,,Mini-Project - HTML Web Page
+46,October,Wed,22,Advisory/Awards Even,Unit 02,5,,Mini-Project - HTML Web Page
+47,October,Thu,23,Regular Odd,Unit 02,6,,Styling Text with CSS
+48,October,Fri,24,Regular Even,Unit 02,6,,Styling Text with CSS
+,October,Sat,25,,,,,
+,October,Sun,26,,,,,
+49,October,Mon,27,Regular Odd,Unit 02,7,,Intellectual Property
+50,October,Tue,28,Early Dismissal Even,Unit 02,7,,Intellectual Property
+51,October,Wed,29,Regular Odd,Unit 02,8,,Using Images
+52,October,Thu,30,Regular Even,Unit 02,8,,Using Images
+53,October,Fri,31,Regular Odd,Unit 02,9,,Styling Elements with CSS
+,November,Sat,1,,,,,
+,November,Sun,2,,,,,
+54,November,Mon,3,Regular Even,Unit 02,9,,Styling Elements with CSS
+55,November,Tue,4,Early Dismissal Odd,Unit 02,10,,Mini-Project - Adding Style to a Web Page
+56,November,Wed,5,Regular Even,Unit 02,10,,Mini-Project - Adding Style to a Web Page
+57,November,Thu,6,Regular Odd,Unit 02,11,,CSS Classes
+58,November,Fri,7,Regular Even,Unit 02,11,,CSS Classes
+,November,Sat,8,,,,,
+,November,Sun,9,,,,,
+59,November,Mon,10,Regular Odd,Unit 02,12,,Organizing Content with Flexbox
+,November,Tue,11,,,,,
+60,November,Wed,12,Regular Even,Unit 02,12,,Organizing Content with Flexbox
+61,November,Thu,13,Regular Odd,Unit 02,13,,Flexbox Children for More Control
+62,November,Fri,14,Regular Even,Unit 02,13,,Flexbox Children for More Control
+,November,Sat,15,,,,,
+,November,Sun,16,,,,,
+63,November,Mon,17,Regular Odd,Unit 02,14,,Chapter 1 Project
+64,November,Tue,18,Early Dismissal Even,Unit 02,14,,Chapter 1 Project
+65,November,Wed,19,Regular Odd,Unit 02,15,,Team Problem Solving
+66,November,Thu,20,Regular Even,Unit 02,15,,Team Problem Solving
+67,November,Fri,21,Regular Odd,Unit 02,16,,Sources and Research
+,November,Sat,22,,,,,
+,November,Sun,23,,,,,
+,November,Mon,24,Holiday,,,,
+,November,Tue,25,Holiday,,,,
+,November,Wed,26,Holiday,,,,
+,November,Thu,27,Holiday,,,,
+,November,Fri,28,Holiday,,,,
+,November,Sat,29,,,,,
+,November,Sun,30,,,,,
+68,December,Mon,1,Regular Even,Unit 02,16,,Sources and Research
+69,December,Tue,2,Early Dismissal Odd,Unit 02,17,,Linking Pages
+70,December,Wed,3,Regular Even,Unit 02,17,,Linking Pages
+71,December,Thu,4,Regular Odd,Unit 02,18,,CSS Pseudo-classes
+72,December,Fri,5,Regular Even,Unit 02,18,,CSS Pseudo-classes
+,December,Sat,6,,,,,
+,December,Sun,7,,,,,
+73,December,Mon,8,Regular Odd,Unit 02,19,,Planning a Multi-Page Site
+74,December,Tue,9,Early Dismissal Even,Unit 02,19,,Planning a Multi-Page Site
+75,December,Wed,10,Regular Odd,Unit 02,19,,Planning a Multi-Page Site
+76,December,Thu,11,Regular Even,Unit 02,19,,Planning a Multi-Page Site
+77,December,Fri,12,Regular Odd,Unit 02,20,,Project - Website for a Purpose
+,December,Sat,13,,,,,
+,December,Sun,14,,,,,
+78,December,Mon,15,Regular Even,Unit 02,20,,Project - Website for a Purpose
+79,December,Tue,16,Early Dismissal Odd,Unit 02,20,,Project - Website for a Purpose
+80,December,Wed,17,Regular Even,Unit 02,20,,Project - Website for a Purpose
+81,December,Thu,18,Regular Odd,Unit 02,21,,Peer Review and Final Touches
+82,December,Fri,19,Regular Even,Unit 02,21,,Peer Review and Final Touches
+,December,Sat,20,,,,,
+,December,Sun,21,,,,,
+,December,Mon,22,Holiday,,,,
+,December,Tue,23,Holiday,,,,
+,December,Wed,24,Holiday,,,,
+,December,Thu,25,Holiday,,,,
+,December,Fri,26,Holiday,,,,
+,December,Sat,27,,,,,
+,December,Sun,28,,,,,
+,December,Mon,29,Holiday,,,,
+,December,Tue,30,Holiday,,,,
+,December,Wed,31,Holiday,,,,
+,January,Thu,1,Holiday,,,,
+,January,Fri,2,Holiday,,,,
+,January,Sat,3,,,,,
+,January,Sun,4,,,,,
+,January,Mon,5,Holiday,,,,
+,January,Tue,6,Holiday,,,,
+,January,Wed,7,Holiday,,,,
+,January,Thu,8,Holiday,,,,
+,January,Fri,9,Holiday,,,,
+,January,Sat,10,,,,,
+,January,Sun,11,,,,,
+83,January,Mon,12,Regular Odd,Unit 03,1,,Introduction to Music Lab
+84,January,Tue,13,Early Dismissal Even,Unit 03,1,,Introduction to Music Lab
+85,January,Wed,14,Regular Odd,Unit 03,2,,Sequencing - Explore
+86,January,Thu,15,Regular Even,Unit 03,2,,Sequencing - Explore
+87,January,Fri,16,Regular Odd,Unit 03,3,,Sequencing - Practice
+,January,Sat,17,,,,,
+,January,Sun,18,,,,,
+,January,Mon,19,Holiday,,,,
+88,January,Tue,20,Regular Even,Unit 03,3,,Sequencing - Practice
+89,January,Wed,21,Regular Odd,Unit 03,4,,Sequencing - Synthesize
+90,January,Thu,22,Regular Even,Unit 03,4,,Sequencing - Synthesize
+91,January,Fri,23,Regular Odd,Unit 03,5,,Mini Project: Walk-Up Songs
+,January,Sat,24,,,,,
+,January,Sun,25,,,,,
+92,January,Mon,26,Regular Even,Unit 03,5,,Mini Project: Walk-Up Songs
+93,January,Tue,27,Early Dismissal Odd,Unit 03,6,,Loops - Explore
+94,January,Wed,28,Advisory/Awards Even,Unit 03,6,,Loops - Explore
+95,January,Thu,29,Regular Odd,Unit 03,7,,Loops - Practice
+96,January,Fri,30,Regular Even,Unit 03,7,,Loops - Practice
+,January,Sat,31,,,,,
+,February,Sun,1,,,,,
+97,February,Mon,2,Regular Odd,Unit 03,8,,Loops - Synthesize
+98,February,Tue,3,Early Dismissal Even,Unit 03,8,,Loops - Synthesize
+99,February,Wed,4,Regular Odd,Unit 03,9,,Mini Project: Cat GIF Loops
+100,February,Thu,5,Regular Even,Unit 03,9,,Mini Project: Cat GIF Loops
+101,February,Fri,6,Regular Odd,Unit 03,10,,Functions - Explore
+,February,Sat,7,,,,,
+,February,Sun,8,,,,,
+,February,Mon,9,Holiday,,,,
+102,February,Tue,10,Regular Even,Unit 03,10,,Functions - Explore
+103,February,Wed,11,Regular Odd,Unit 03,11,,Functions - Practice
+104,February,Thu,12,Regular Even,Unit 03,11,,Functions - Practice
+105,February,Fri,13,Regular Odd,Unit 03,12,,Functions - Synthesize
+,February,Sat,14,,,,,
+,February,Sun,15,,,,,
+,February,Mon,16,Holiday,,,,
+106,February,Tue,17,Regular Even,Unit 03,12,,Functions - Synthesize
+107,February,Wed,18,Regular Odd,Unit 03,13,,Project: Genre Mash-Up
+108,February,Thu,19,Regular Even,Unit 03,13,,Project: Genre Mash-Up
+109,February,Fri,20,Regular Odd,Unit 05,1,,Representation Matters
+,February,Sat,21,,,,,
+,February,Sun,22,,,,,
+110,February,Mon,23,Regular Even,Unit 05,1,,Representation Matters
+111,February,Tue,24,Early Dismissal Odd,Unit 05,2,,Patterns and Representation
+112,February,Wed,25,Regular Even,Unit 05,2,,Patterns and Representation
+113,February,Thu,26,Regular Odd,Unit 05,3,,ASCII and Binary Representation
+114,February,Fri,27,Regular Even,Unit 05,3,,ASCII and Binary Representation
+,February,Sat,28,,,,,
+,March,Sun,1,,,,,
+115,March,Mon,2,Golden Hour Odd,Unit 05,4,,Representing Images
+116,March,Tue,3,Early Dismissal Even,Unit 05,4,,Representing Images
+117,March,Wed,4,Regular Odd,Unit 05,5,,Representing Numbers
+118,March,Thu,5,Regular Even,Unit 05,5,,Representing Numbers
+119,March,Fri,6,Regular Odd,Unit 05,6,,Combining Representations
+,March,Sat,7,,,,,
+,March,Sun,8,,,,,
+120,March,Mon,9,Regular Even,Unit 05,6,,Combining Representations
+121,March,Tue,10,Regular Odd,Unit 05,7,,Keeping Data Secret
+122,March,Wed,11,Regular Even,Unit 05,7,,Keeping Data Secret
+123,March,Thu,12,Regular Odd,Unit 05,8,,Project - Create a Representation
+,March,Fri,13,,,,,
+,March,Sat,14,,,,,
+124,March,Sun,15,Regular Even,Unit 05,8,,Project - Create a Representation
+125,March,Mon,16,Early Dismissal Odd,Unit 05,9,,Problem Solving With Data
+126,March,Tue,17,Regular Even,Unit 05,9,,Problem Solving With Data
+127,March,Wed,18,Regular Odd,Unit 05,10,,Structuring Data
+128,March,Thu,19,Regular Even,Unit 05,10,,Structuring Data
+,March,Fri,20,,,,,
+,March,Sat,21,,,,,
+129,March,Sun,22,Regular Odd,Unit 05,11,,Interpreting Data
+130,March,Mon,23,Early Dismissal Even,Unit 05,11,,Interpreting Data
+131,March,Tue,24,Regular Odd,Unit 05,12,,Making Decisions with Data
+132,March,Wed,25,Regular Even,Unit 05,12,,Making Decisions with Data
+133,March,Thu,26,Regular Odd,Unit 05,13,,Automating Data Decisions
+,March,Fri,27,Holiday,,,,
+,March,Sat,28,,,,,
+,March,Sun,29,,,,,
+,March,Mon,30,Holiday,,,,
+,March,Tue,31,Holiday,,,,
+,April,Wed,1,Holiday,,,,
+,April,Thu,2,Holiday,,,,
+,April,Fri,3,Holiday,,,,
+,April,Sat,4,,,,,
+,April,Sun,5,,,,,
+,April,Mon,6,Holiday,,,,
+134,April,Tue,7,Regular Even,Unit 05,13,,Automating Data Decisions
+135,April,Wed,8,Regular Odd,Unit 05,14,,Problem Solving with Big Data
+136,April,Thu,9,Regular Even,Unit 05,14,,Problem Solving with Big Data
+137,April,Fri,10,Regular Odd,Unit 05,15,,Data and Machine Learning
+,April,Sat,11,,,,,
+,April,Sun,12,,,,,
+138,April,Mon,13,Regular Even,Unit 05,15,,Data and Machine Learning
+139,April,Tue,14,Early Dismissal Odd,Unit 05,16,,Project - Make a Recommendation
+140,April,Wed,15,Advisory/Awards Even,Unit 05,16,,Project - Make a Recommendation
+141,April,Thu,16,Regular Odd,Unit 05,16,,Project - Make a Recommendation
+142,April,Fri,17,Regular Even,Unit 05,16,,Project - Make a Recommendation
+,April,Sat,18,,,,,
+,April,Sun,19,,,,,
+143,April,Mon,20,Regular Odd,Unit 07,0,,Intro to App Lab
+144,April,Tue,21,Early Dismissal Even,Unit 07,0,,Intro to App Lab
+145,April,Wed,22,Regular Odd,Unit 07,1,,Introduction to Machine Learning
+146,April,Thu,23,Regular Even,Unit 07,1,,Introduction to Machine Learning
+147,April,Fri,24,Regular Odd,Unit 07,2,,Types of Machine Learning
+,April,Sat,25,,,,,
+,April,Sun,26,,,,,
+148,April,Mon,27,Regular Even,Unit 07,2,,Types of Machine Learning
+149,April,Tue,28,Early Dismissal Odd,Unit 07,3,,Innovations in AI
+150,April,Wed,29,Regular Even,Unit 07,3,,Innovations in AI
+151,April,Thu,30,Regular Odd,Unit 07,4,,Patterns in Data
+152,May,Fri,1,Regular Even,Unit 07,4,,Patterns in Data
+,May,Sat,2,,,,,
+,May,Sun,3,,,,,
+153,May,Mon,4,Advisory/Awards Odd,Unit 07,5,,Classification Models
+154,May,Tue,5,Early Dismissal Even,Unit 07,5,,Classification Models
+155,May,Wed,6,Regular Odd,Unit 07,6,,Introduction to AI Lab
+156,May,Thu,7,Regular Even,Unit 07,6,,Introduction to AI Lab
+157,May,Fri,8,Regular Odd,Unit 07,7,,Importing Models in App Lab
+,May,Sat,9,,,,,
+,May,Sun,10,,,,,
+158,May,Mon,11,Regular Even,Unit 07,7,,Importing Models in App Lab
+159,May,Tue,12,Early Dismissal Odd,Unit 07,8,,Model Cards
+160,May,Wed,13,Regular Even,Unit 07,8,,Model Cards
+161,May,Thu,14,Regular Odd,Unit 07,9,,Saving Models in AI Lab
+162,May,Fri,15,Regular Even,Unit 07,9,,Saving Models in AI Lab
+,May,Sat,16,,,,,
+,May,Sun,17,,,,,
+163,May,Mon,18,Testing Odd,Testing,Testing,,TESTING
+164,May,Tue,19,Testing Early Release Even,Testing,Testing,,TESTING
+165,May,Wed,20,Testing Odd,Testing,Testing,,TESTING
+166,May,Thu,21,Testing Even,Testing,Testing,,TESTING
+167,May,Fri,22,Testing Odd,Testing,Testing,,TESTING
+,May,Sat,23,,,,,
+,May,Sun,24,,,,,
+,May,Mon,25,Holiday,,,,
+168,May,Tue,26,Regular Even,Unit 07,10,,Model Cards in App Lab
+169,May,Wed,27,Regular Odd,Unit 07,10,,Model Cards in App Lab
+170,May,Thu,28,Regular Even,Unit 07,11,,Numerical Models
+171,May,Fri,29,Regular Odd,Unit 07,11,,Numerical Models
+,May,Sat,30,,,,,
+,May,Sun,31,,,,,
+172,June,Mon,1,Regular Even,Unit 07,12,,Numerical Data in AI Lab
+173,June,Tue,2,Early Dismissal Odd,Unit 07,12,,Numerical Data in AI Lab
+174,June,Wed,3,Regular Even,Unit 07,13,,Customizing Apps
+175,June,Thu,4,Regular Odd,Unit 07,13,,Customizing Apps
+176,June,Fri,5,Regular Even,Unit 07,14,,Minecraft Efficiency
+,June,Sat,6,,,,,
+,June,Sun,7,,,,,
+177,June,Mon,8,8-Period,Unit 07,14,,Minecraft Efficiency
+178,June,Tue,9,8-Period,Unit 07,15,,Advanced Minecraft Efficiency
+179,June,Wed,10,8-Period,Unit 07,15,,Advanced Minecraft Efficiency
+180,June,Thu,11,Minimum Day,Party,Party,,Party
+,June,Fri,12,Summer,,,,
+,June,Sat,13,,,,,
+,June,Sun,14,,,,,
+,June,Mon,15,Summer,,,,
+,June,Tue,16,Summer,,,,
+,June,Wed,17,Summer,,,,
+,June,Thu,18,Summer,,,,
+,June,Fri,19,Summer,,,,
+,June,Sat,20,,,,,
+,June,Sun,21,,,,,
+,June,Mon,22,Summer,,,,
+,June,Tue,23,Summer,,,,
+,June,Wed,24,Summer,,,,
+,June,Thu,25,Summer,,,,
+,June,Fri,26,Summer,,,,
+,June,Sat,27,,,,,
+,June,Sun,28,,,,,
+,June,Mon,29,Summer,,,,
+,June,Tue,30,Summer,,,,

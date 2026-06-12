@@ -1,0 +1,742 @@
+{
+  "battleMutaraNebula": {
+    "standards": {
+      "intro": "Battleship provides a rigorous model of probabilistic reasoning and information-driven decision-making. The requirement to infer hidden state from partial feedback — updating targeting strategy after each hit or miss — directly mirrors Bayesian reasoning and the scientific method. Fleet placement introduces students to concepts of spatial optimization and adversarial thinking, while the targeting phase demands systematic hypothesis testing and evidence synthesis across a constrained search space.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-11",
+          "text": "Students decompose the problem space by tracking known and unknown cells, modeling structured data representation and state management."
+        },
+        {
+          "code": "CSTA 1B-AP-10",
+          "text": "Targeting decisions require evaluating multiple possible outcomes and selecting actions based on probability and prior results."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Inferring ship locations from incomplete data models algorithmic pattern recognition and iterative refinement of search strategies."
+        },
+        {
+          "code": "CA CS Framework — Data & Analysis (Grades 6–8)",
+          "text": "Students naturally apply frequency analysis and spatial probability as they narrow the search field with each turn."
+        },
+        {
+          "code": "CCSS MP3 & MP6",
+          "text": "Players construct logical arguments for their targeting choices and attend to precision when tracking hit/miss data across the grid."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Battleship is played on two 10×10 grids between two players. Each player secretly places their fleet of 5 ships on their own grid, then players alternate firing shots at the opponent's grid. The first player to sink all of the opponent's ships wins.",
+      "items": [
+        {
+          "code": "Carrier",
+          "text": "5 cells long. The largest vessel in the fleet."
+        },
+        {
+          "code": "Battleship",
+          "text": "4 cells long."
+        },
+        {
+          "code": "Cruiser",
+          "text": "3 cells long."
+        },
+        {
+          "code": "Submarine",
+          "text": "3 cells long."
+        },
+        {
+          "code": "Destroyer",
+          "text": "2 cells long."
+        },
+        {
+          "code": "Placement",
+          "text": "Before battle begins, each player places all 5 ships on their grid. Ships may be oriented horizontally or vertically but may not overlap or extend off the grid. Click a ship to select it, then click the grid to place it. Press R to rotate before placing."
+        },
+        {
+          "code": "Battle",
+          "text": "Players alternate selecting a cell on the opponent's grid. A hit is marked in red; a miss is marked in white. When all cells of a ship are hit, it is sunk."
+        },
+        {
+          "code": "Victory",
+          "text": "The first player to sink all 5 of the opponent's ships wins the engagement."
+        },
+        {
+          "code": "Local Play",
+          "text": "On a shared screen, each player looks away while the other places ships. After both players confirm ready, the battle begins."
+        }
+      ]
+    }
+  },
+  "chess": {
+    "standards": {
+      "intro": "Chess provides one of the most structurally complete models of algorithmic and strategic thinking available in a game-based learning context. The requirement to evaluate multiple hypothetical futures simultaneously — anticipating opponent responses and selecting the highest-value branch — directly mirrors decision tree traversal and conditional logic structures foundational to computer science. Each game functions as a complete iterative design cycle: students form a strategy, execute it, receive feedback through board state changes, and revise their approach accordingly. The game's complexity scaling also makes it ideal for differentiated instruction, supporting both introductory pattern recognition and advanced strategic planning within the same activity.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-15",
+          "text": "Every game is an iterative loop of planning, execution, evaluation, and revision, directly modeling the feedback-driven design process."
+        },
+        {
+          "code": "CSTA 1B-AP-08",
+          "text": "Students naturally compare and evaluate multiple candidate moves, weighing trade-offs between approaches before selecting an optimal solution."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Forward planning requires students to construct and traverse mental decision trees, simulating algorithmic branching and outcome evaluation."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "Reinforces sequencing, conditionals, and the concept that a program (or strategy) must account for a range of possible inputs (opponent moves)."
+        },
+        {
+          "code": "CCSS MP1 & MP7",
+          "text": "Students persevere through complex, multi-step problem spaces while identifying and exploiting structural patterns such as piece relationships and board geometry."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Chess is played on an 8×8 grid between two players — White and Black — each commanding 16 pieces. White always moves first. The objective is to place the opponent's King in checkmate: a position where the King is under attack and has no legal escape.",
+      "items": [
+        {
+          "code": "King",
+          "text": "Moves one square in any direction. May not move into check."
+        },
+        {
+          "code": "Queen",
+          "text": "Moves any number of squares in any direction. The most powerful piece."
+        },
+        {
+          "code": "Rook",
+          "text": "Moves any number of squares horizontally or vertically."
+        },
+        {
+          "code": "Bishop",
+          "text": "Moves any number of squares diagonally. Each Bishop stays on its starting color."
+        },
+        {
+          "code": "Knight",
+          "text": "Moves in an L-shape: two squares in one direction, then one square perpendicular. The only piece that can jump over others."
+        },
+        {
+          "code": "Pawn",
+          "text": "Moves forward one square (or two from its starting position). Captures diagonally. Promotes to any piece upon reaching the opposite end of the board."
+        },
+        {
+          "code": "Castling",
+          "text": "A special King and Rook move: the King moves two squares toward a Rook, and the Rook jumps to the other side. Only legal if neither piece has moved and no squares between them are occupied or under attack."
+        },
+        {
+          "code": "En Passant",
+          "text": "If a Pawn advances two squares and lands beside an opponent's Pawn, the opponent may capture it as though it had only moved one square. Must be done immediately."
+        },
+        {
+          "code": "Check",
+          "text": "A King is in check when it is under direct attack. The player must resolve check immediately — by moving the King, blocking the attack, or capturing the attacking piece."
+        },
+        {
+          "code": "Checkmate",
+          "text": "The game ends when a King is in check with no legal moves available. The player who delivers checkmate wins."
+        },
+        {
+          "code": "Stalemate",
+          "text": "If a player has no legal moves but is not in check, the game ends in a draw."
+        }
+      ]
+    }
+  },
+  "jeopardy": {
+    "standards": {
+      "intro": "Jeopardy-style review games reinforce retrieval practice and metacognitive awareness, requiring students to assess their own confidence levels before committing to an answer. The category-and-value structure teaches students to evaluate the relative difficulty of problems and make strategic decisions about which to attempt — a direct analog to algorithmic prioritization and resource allocation. The format also models how information systems organize and retrieve data by topic and hierarchy.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-10",
+          "text": "Students engage with structured data organized by category and value, modeling how information systems index and retrieve content."
+        },
+        {
+          "code": "CSTA 1B-AP-08",
+          "text": "Strategic category and point selection requires students to evaluate trade-offs and sequence their decisions for maximum impact."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Students apply domain knowledge under time and scoring constraints, reinforcing the ability to quickly evaluate and act on available information."
+        },
+        {
+          "code": "CA CS Framework — Data & Analysis (Grades 6–8)",
+          "text": "The hierarchical category-value structure mirrors how databases organize records — students interact with a structured dataset each time they play."
+        },
+        {
+          "code": "CCSS MP1 & MP3",
+          "text": "Students must make sense of problems posed in question form, then construct and defend their answers, building mathematical argumentation alongside content knowledge."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Jeopardy is a team-based review game played on a category board. Teams select clues by category and point value, then provide the correct response to earn the points. The team with the most points at the end wins.",
+      "items": [
+        {
+          "code": "Game Board",
+          "text": "The board displays multiple categories, each with questions at increasing point values. Higher values indicate more challenging questions."
+        },
+        {
+          "code": "Team Selection",
+          "text": "A team selects a category and point value. The clue is revealed and all teams may buzz in to answer."
+        },
+        {
+          "code": "Answering",
+          "text": "The first team to respond correctly earns the displayed point value. An incorrect answer deducts those points from that team's score."
+        },
+        {
+          "code": "Scoring",
+          "text": "Use the score display to track team totals. Click any score to manually adjust it if needed."
+        },
+        {
+          "code": "Winning",
+          "text": "Play continues until all clues are revealed. The team with the highest score wins."
+        }
+      ]
+    }
+  },
+  "minesweeper": {
+    "standards": {
+      "intro": "Minesweeper functions as a rigorous exercise in deductive reasoning and constraint-based logic, requiring students to derive certainty from incomplete data sets and systematically eliminate impossibilities before committing to an action. The game operationalizes computational thinking at a fundamental level — each uncovered cell is a data point that must be cross-referenced against neighboring constraints, mirroring the way algorithms evaluate conditional logic in branching decision trees. Students naturally engage in iterative hypothesis testing, revising their mental models of the board state with each new piece of information, which directly reflects the design-test-debug cycle central to computer science education.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-10",
+          "text": "Students design and trace algorithms by mentally modeling how each number constrains its surrounding cells, practicing flowchart-style logical sequencing without a formal flowchart."
+        },
+        {
+          "code": "CSTA 2-AP-16",
+          "text": "The board is decomposed into isolated regions of certainty and uncertainty; students learn to solve tractable sub-problems before addressing ambiguous ones."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Students collect and analyze in-game data, identify patterns across board states, and iteratively refine their approach based on outcomes."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "Reinforces the practice of breaking complex problems into constituent parts and applying systematic strategies to resolve them."
+        },
+        {
+          "code": "CCSS MP1",
+          "text": "Students must make sense of an ambiguous problem space and persist through uncertainty toward a logical solution."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Minesweeper is a single-player logic puzzle. Your goal is to reveal every safe cell on the grid without triggering a mine. Use the number clues revealed on safe cells to deduce where mines are hidden.",
+      "items": [
+        {
+          "code": "Reveal a cell",
+          "text": "Click any unrevealed cell to uncover it. If it's a mine, the game ends. If it's safe, a number appears showing how many of the 8 adjacent cells contain mines."
+        },
+        {
+          "code": "Number clues",
+          "text": "A revealed number tells you exactly how many mines touch that cell (including diagonals). Use overlapping clues to pinpoint mine locations."
+        },
+        {
+          "code": "Flag a mine",
+          "text": "Toggle flag mode and click a cell to mark it as a suspected mine. Flagged cells cannot be accidentally revealed."
+        },
+        {
+          "code": "Blank cells",
+          "text": "A revealed cell with no number means none of its neighbors are mines — the board will auto-expand to reveal all adjacent safe cells."
+        },
+        {
+          "code": "Winning",
+          "text": "You win when every non-mine cell has been revealed. You do not need to flag all mines to win."
+        },
+        {
+          "code": "Difficulty",
+          "text": "Beginner (9×9, 10 mines), Intermediate (16×16, 40 mines), Expert (30×16, 99 mines)."
+        }
+      ]
+    }
+  },
+  "picardManeuver": {
+    "standards": {
+      "intro": "Othello is a premier classroom tool for teaching emergent complexity — the phenomenon by which simple, well-defined rules generate rich, unpredictable system behavior — a concept with profound implications across computer science, systems design, and software engineering. The game's strategic depth requires students to develop and continuously refine weighted decision-making heuristics, evaluating not just the legality of a move but its downstream effect on board state across multiple future turns. This mirrors how optimization algorithms evaluate and rank possible outputs, making Othello particularly effective as a precursor to discussions of search algorithms, greedy strategies, and game trees.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-11",
+          "text": "Students test and iteratively refine their strategic heuristics across multiple games, directly modeling the process of testing and debugging a computational artifact."
+        },
+        {
+          "code": "CSTA 2-AP-10",
+          "text": "Positional strategy requires algorithmic sequencing — students must execute moves in an order that accounts for cascading board state changes."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Students identify emergent patterns in board behavior, develop rule-based strategies, and refine those strategies based on observed outcomes."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "The concept of weighted outcomes and positional priority directly supports instruction on how algorithms rank and select from a set of possible operations."
+        },
+        {
+          "code": "CCSS MP7",
+          "text": "Corner and edge control strategies require students to perceive and leverage the structural properties of the board, a direct application of looking for and making use of structure."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "The Picard Maneuver (Othello) is played on an 8×8 grid. Two players — Black and White — take turns placing discs. Any opponent discs caught between your new disc and an existing disc of your color are flipped to your color. The player with the most discs when the board is full wins.",
+      "items": [
+        {
+          "code": "Starting position",
+          "text": "The board begins with two Black and two White discs in the center, arranged diagonally."
+        },
+        {
+          "code": "Legal moves",
+          "text": "You may only place a disc on a square that flanks at least one opponent disc — meaning your new disc and an existing disc of yours must sandwich one or more opponent discs in a straight line (horizontal, vertical, or diagonal)."
+        },
+        {
+          "code": "Flipping",
+          "text": "All opponent discs sandwiched by your move are flipped to your color immediately. A single move can flip discs in multiple directions at once."
+        },
+        {
+          "code": "Passing",
+          "text": "If you have no legal moves, your turn is passed to your opponent. If neither player has a legal move, the game ends."
+        },
+        {
+          "code": "Winning",
+          "text": "When the board is full or neither player can move, the player with the most discs of their color wins."
+        },
+        {
+          "code": "Strategy tip",
+          "text": "Corners are extremely valuable — a disc placed in a corner can never be flipped. Edges are similarly stable. Avoid giving your opponent access to corners."
+        }
+      ]
+    }
+  },
+  "rulesOfAcquisition": {
+    "standards": {
+      "intro": "Mancala provides an exceptionally accessible yet strategically rich model of state management and sequential data transformation, making it one of the most effective entry points for instruction on how programs store, modify, and respond to changing data. Each move constitutes a discrete function call that transforms the board's data structure in a predictable but consequential way — students can visually trace how a single action propagates through the system, triggering captures, redistribution, and turn changes. The game's transparent mechanics make it ideal for explicit instruction on conditionals, variables, and program flow, as students can map game rules directly onto programming constructs with minimal abstraction overhead.",
+      "items": [
+        {
+          "code": "CSTA 1B-AP-10",
+          "text": "The board is a live demonstration of variables and state: each pit holds a value that is read, modified, and written back with every move, directly modeling how programs use variables to store and transform data."
+        },
+        {
+          "code": "CSTA 2-AP-10",
+          "text": "Students design and execute multi-move strategies that require algorithmic sequencing, anticipating how the board state will change across several discrete steps."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Students analyze system behavior, identify cause-and-effect relationships between moves and outcomes, and develop rule-based strategies that account for conditional triggers."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "The capture and extra-turn rules serve as tangible, manipulable examples of conditional logic — \"if the last stone lands in an empty pit, then capture\" is a direct if/else construct students can observe and reason about."
+        },
+        {
+          "code": "CCSS MP1 & MP7",
+          "text": "Students must persevere through multi-step strategic planning while identifying structural patterns in pit distributions that signal high-value move opportunities."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Rules of Acquisition (Mancala) is played on a board with 12 small pits and 2 large stores. Players sit across from each other; each controls the 6 pits on their side and the store to their right. On your turn, pick up all stones from one of your pits and sow them one-by-one counterclockwise. The player who captures the most stones wins.",
+      "items": [
+        {
+          "code": "Sowing",
+          "text": "Pick up all stones from one of your 6 pits and distribute them one per pit moving counterclockwise, including your own store but skipping your opponent's store."
+        },
+        {
+          "code": "Scoring",
+          "text": "Any stone that lands in your store (the large pit on your right) scores a point for you."
+        },
+        {
+          "code": "Extra turn",
+          "text": "If the last stone you sow lands in your own store, you take another turn immediately."
+        },
+        {
+          "code": "Capture",
+          "text": "If the last stone lands in an empty pit on your side, and the pit directly across from it on your opponent's side contains stones, you capture all of those opponent stones plus your landing stone into your store."
+        },
+        {
+          "code": "Game end",
+          "text": "The game ends when one player's six pits are all empty. The other player captures all remaining stones on their own side into their store."
+        },
+        {
+          "code": "Winning",
+          "text": "The player with the most stones in their store wins. The board begins with 4 stones in each of the 12 small pits."
+        }
+      ]
+    }
+  },
+  "isolinearCascade": {
+    "standards": {
+      "intro": "Isolinear Cascade is a rigorous model of systems thinking and binary logic, requiring students to reason about how a single action propagates through an interconnected network of states. Because every toggle simultaneously affects multiple cells, the puzzle cannot be solved by local reasoning alone — students must hold a global model of the board in mind and reason about the cumulative effect of sequences of moves. This directly mirrors how programmers reason about side effects and state mutations in code. At a deeper level, each puzzle is a system of linear equations over GF(2), meaning the underlying mathematics connects directly to linear algebra, modular arithmetic, and the theory of error-correcting codes.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-10",
+          "text": "Students design and trace multi-step solution sequences, practicing algorithmic planning by predicting how each toggle propagates through the board's interconnected state."
+        },
+        {
+          "code": "CSTA 2-AP-16",
+          "text": "Effective strategies like 'chase the lights' require decomposing the board row by row, solving tractable sub-problems in sequence before resolving the final configuration."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Students model the board as a binary state system, identify invariant structures, and develop generalizable strategies that apply across different puzzle configurations."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "The observation that toggling a cell twice returns it to its original state introduces modular arithmetic and the concept that repeated operations can cancel — a foundational idea in both mathematics and computing."
+        },
+        {
+          "code": "CCSS MP1 & MP7",
+          "text": "Players must persevere through cascading, non-obvious consequences while identifying and exploiting the structural symmetry of the toggle neighborhood to develop efficient solution strategies."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Isolinear Cascade is a single-player logic puzzle. Every panel on the grid starts in a lit or dark state, and your goal is to toggle every panel to dark. The catch: pressing any panel also flips all of its immediate neighbours at the same time.",
+      "items": [
+        {
+          "code": "Toggling",
+          "text": "Click any panel to toggle it and all orthogonally adjacent panels (up, down, left, right) simultaneously. Corner panels affect 3 cells; edge panels affect 4; interior panels affect 5."
+        },
+        {
+          "code": "Goal",
+          "text": "Extinguish every illuminated panel on the grid. The puzzle is solved the moment the last lit panel goes dark."
+        },
+        {
+          "code": "Cancellation",
+          "text": "Pressing the same panel twice cancels out — it returns all affected cells to their previous state. Only presses applied an odd number of times have any net effect, so repeating yourself wastes moves."
+        },
+        {
+          "code": "Order doesn't matter",
+          "text": "The final board state depends only on which cells you press an odd number of times, not the order you press them. If a sequence of moves solves the board, any reordering of those same moves also solves it."
+        },
+        {
+          "code": "Par moves",
+          "text": "Each puzzle has a par score representing the optimal solution. Your move count is tracked — try to match or beat par. Finishing under par earns the top rating."
+        },
+        {
+          "code": "Strategy tip",
+          "text": "Try 'chasing the lights': work row by row, always pressing the cell in the next row that would extinguish each lit cell above it. After reaching the last row, any remaining lit cells reveal exactly which adjustments are needed in the first row."
+        }
+      ]
+    }
+  },
+  "shuttleBay": {
+    "standards": {
+      "intro": "Shuttle Bay (Rush Hour) is an ideal vehicle for instruction on state-space search and constraint satisfaction — two foundational concepts in artificial intelligence and algorithm design. Each puzzle presents a fixed set of constraints (the other vehicles) that must be reasoned about collectively to find a valid solution path. Students learn to think in terms of system state: the current configuration of all pieces is the state, a move transitions the state, and the goal is to find a sequence of transitions that reaches the target state. This directly models how pathfinding algorithms like BFS and A* navigate solution spaces.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-10",
+          "text": "Students design and mentally simulate multi-step solution sequences, practicing algorithmic planning and the concept of state transitions."
+        },
+        {
+          "code": "CSTA 2-AP-16",
+          "text": "Complex puzzles require students to decompose the blocking problem — identifying which vehicles block others and solving sub-chains of moves before the critical path clears."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Students model the puzzle as a constraint system, identify dependencies between pieces, and systematically eliminate dead-end move sequences."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "The puzzle directly models state-space search: students explore a tree of possible board configurations to find the shortest path to the goal state."
+        },
+        {
+          "code": "CCSS MP1 & MP8",
+          "text": "Students must persevere through multi-step logical sequences while recognizing repeated blocking structures and applying consistent solution strategies across puzzle variants."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Shuttle Bay is a sliding-block puzzle. Vehicles are packed into the cargo bay grid, and your shuttle is blocked from the exit. Slide vehicles horizontally or vertically to clear a path for the shuttle to escape through the right-side exit.",
+      "items": [
+        {
+          "code": "Movement",
+          "text": "Each vehicle can only move in the direction it is oriented — horizontal vehicles slide left and right; vertical vehicles slide up and down. Vehicles cannot move through or past other vehicles."
+        },
+        {
+          "code": "The shuttle",
+          "text": "The highlighted shuttle must reach the exit on the right side of the grid. It travels horizontally and must have a clear path all the way to the edge."
+        },
+        {
+          "code": "Other vehicles",
+          "text": "All other vehicles in the bay are obstacles. Move them out of the way to open a corridor for the shuttle."
+        },
+        {
+          "code": "Solving",
+          "text": "Think several moves ahead — moving one vehicle may create space for another, which then frees the path for the shuttle. Look for chain reactions."
+        },
+        {
+          "code": "Winning",
+          "text": "The puzzle is solved when the shuttle slides out through the exit. Your move count is recorded — try to solve each puzzle in as few moves as possible."
+        },
+        {
+          "code": "Difficulty",
+          "text": "Puzzles are rated Easy, Medium, and Hard. Harder puzzles require longer solution chains and more interdependent vehicle movements."
+        }
+      ]
+    }
+  },
+  "warpCoreBreach": {
+    "standards": {
+      "intro": "Warp Core Breach models constraint-based spatial planning and sequential decision-making under time pressure, requiring students to reason about connectivity and path construction before a deterministic process — the flow front — exposes the consequences of their choices. The game operationalizes the concept of a graph traversal: students must construct a valid path through a node network before an automated agent traverses it. This makes it a uniquely effective bridge between puzzle-solving intuition and foundational computer science concepts like graph theory, greedy algorithms, and real-time system constraints.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-10",
+          "text": "Students design and execute multi-step pipe sequences, practicing algorithmic planning by anticipating how each placed piece extends or redirects the flow path through the grid."
+        },
+        {
+          "code": "CSTA 2-AP-16",
+          "text": "Complex puzzles require students to decompose the routing problem — identifying locked waypoints and solving sub-paths between them before assembling the complete pipeline."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Students model the board as a directed graph, reason about connectivity constraints, and iteratively revise their path plan in response to the advancing flow front."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "The flow simulation directly models graph traversal: the deuterium front performs a real-time breadth-first search of the pipe network, rewarding students who construct valid connected paths in advance."
+        },
+        {
+          "code": "CCSS MP1 & MP6",
+          "text": "Players must persevere through spatially complex routing challenges while attending precisely to pipe orientation and connection validity — a single misaligned joint breaks the entire path."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Warp Core Breach is a pipe-routing puzzle set aboard the C.S.S. Curiosity. Connect the deuterium source to the warp drive intake by placing pipe sections on the grid before the flow front advances and exposes any unconnected junction.",
+      "items": [
+        {
+          "code": "Pipe Queue",
+          "text": "Pipe sections are drawn from a queue displayed on the left. The next piece to be placed is always shown at the top. You cannot skip or reorder pieces in the queue."
+        },
+        {
+          "code": "Placing Pipes",
+          "text": "Click any empty cell on the grid to place the current pipe piece there. Locked pipes (marked with a triangle) are pre-placed and cannot be replaced."
+        },
+        {
+          "code": "Countdown",
+          "text": "A countdown timer is shown before each puzzle. When it reaches zero, the deuterium begins flowing from the source. Use this time to lay as much pipe as possible."
+        },
+        {
+          "code": "Flow",
+          "text": "Once flowing, the deuterium advances one cell per tick through any connected, correctly-oriented pipe. If the flow reaches a cell with no valid connecting pipe, the conduit breaks and the mission fails."
+        },
+        {
+          "code": "Winning",
+          "text": "Guide the flow all the way to the drain (warp drive intake) to complete the mission. The warp core temperature gauge shows how close you are to a breach — keep the flow connected."
+        },
+        {
+          "code": "Scoring",
+          "text": "Earn 50 points per pipe the flow successfully traverses, plus a 500-point bonus for reaching the drain. Solve under par pipes to earn an additional 300-point commendation bonus."
+        },
+        {
+          "code": "Par",
+          "text": "Each puzzle has a par pipe count representing an efficient solution. Your placed pipe total is tracked — try to match or beat par while still successfully connecting source to drain."
+        }
+      ]
+    }
+  },
+  "chess960": {
+    "standards": {
+      "intro": "Chess provides one of the most structurally complete models of algorithmic and strategic thinking available in a game-based learning context. The requirement to evaluate multiple hypothetical futures simultaneously — anticipating opponent responses and selecting the highest-value branch — directly mirrors decision tree traversal and conditional logic structures foundational to computer science. Each game functions as a complete iterative design cycle: students form a strategy, execute it, receive feedback through board state changes, and revise their approach accordingly. The game's complexity scaling also makes it ideal for differentiated instruction, supporting both introductory pattern recognition and advanced strategic planning within the same activity.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-15",
+          "text": "Every game is an iterative loop of planning, execution, evaluation, and revision, directly modeling the feedback-driven design process."
+        },
+        {
+          "code": "CSTA 1B-AP-08",
+          "text": "Students naturally compare and evaluate multiple candidate moves, weighing trade-offs between approaches before selecting an optimal solution."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Forward planning requires students to construct and traverse mental decision trees, simulating algorithmic branching and outcome evaluation."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "Reinforces sequencing, conditionals, and the concept that a program (or strategy) must account for a range of possible inputs (opponent moves)."
+        },
+        {
+          "code": "CCSS MP1 & MP7",
+          "text": "Students persevere through complex, multi-step problem spaces while identifying and exploiting structural patterns such as piece relationships and board geometry."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Chess 960 (Fischer Random Chess) uses the same rules as standard chess — identical piece movements, check, checkmate, stalemate, en passant, and pawn promotion. The key difference is the starting position: all 16 pieces on the back rank are randomly shuffled at the start of each game, removing the advantage of memorized opening theory. The one constraint: bishops must start on opposite-colored squares, and the king must start between the two rooks. Note: castling is not available in this digital implementation.",
+      "items": [
+        {
+          "code": "Starting Position",
+          "text": "The back-rank pieces are placed randomly at the start of each game. There are 960 distinct legal configurations — hence the name. Pawns always begin in their standard positions."
+        },
+        {
+          "code": "Bishops on Opposite Colors",
+          "text": "One bishop starts on a light square and one on a dark square. This is the only hard constraint on the random placement."
+        },
+        {
+          "code": "King Between Rooks",
+          "text": "The king is always placed somewhere between the two rooks. This is required so that queenside and kingside are still meaningful directions."
+        },
+        {
+          "code": "No Opening Theory",
+          "text": "Because the starting position changes every game, memorized opening sequences give no advantage. Every decision must be reasoned from first principles."
+        },
+        {
+          "code": "Piece Movements",
+          "text": "All pieces move exactly as in standard chess: King, Queen, Rook, Bishop, Knight, and Pawn rules are unchanged."
+        },
+        {
+          "code": "Check & Checkmate",
+          "text": "The objective is the same: place the opponent's King in checkmate. A King in check must escape by moving, blocking the attack, or capturing the attacker."
+        },
+        {
+          "code": "Stalemate",
+          "text": "If a player has no legal moves but is not in check, the game is a draw."
+        },
+        {
+          "code": "En Passant",
+          "text": "Available under the same conditions as standard chess: a pawn that advanced two squares can be captured by an adjacent enemy pawn as though it only moved one."
+        },
+        {
+          "code": "Pawn Promotion",
+          "text": "A pawn reaching the opposite end of the board promotes to any piece (Queen, Rook, Bishop, or Knight), just as in standard chess."
+        }
+      ]
+    }
+  },
+  "crazyhouse": {
+    "standards": {
+      "intro": "Chess provides one of the most structurally complete models of algorithmic and strategic thinking available in a game-based learning context. The requirement to evaluate multiple hypothetical futures simultaneously — anticipating opponent responses and selecting the highest-value branch — directly mirrors decision tree traversal and conditional logic structures foundational to computer science. Each game functions as a complete iterative design cycle: students form a strategy, execute it, receive feedback through board state changes, and revise their approach accordingly. The game's complexity scaling also makes it ideal for differentiated instruction, supporting both introductory pattern recognition and advanced strategic planning within the same activity.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-15",
+          "text": "Every game is an iterative loop of planning, execution, evaluation, and revision, directly modeling the feedback-driven design process."
+        },
+        {
+          "code": "CSTA 1B-AP-08",
+          "text": "Students naturally compare and evaluate multiple candidate moves, weighing trade-offs between approaches before selecting an optimal solution."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Forward planning requires students to construct and traverse mental decision trees, simulating algorithmic branching and outcome evaluation."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "Reinforces sequencing, conditionals, and the concept that a program (or strategy) must account for a range of possible inputs (opponent moves)."
+        },
+        {
+          "code": "CCSS MP1 & MP7",
+          "text": "Students persevere through complex, multi-step problem spaces while identifying and exploiting structural patterns such as piece relationships and board geometry."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Crazyhouse uses the same piece movements, check, checkmate, en passant, and pawn promotion as standard chess — with one revolutionary addition: every piece you capture goes into your pocket, and on any future turn you may drop it back onto the board instead of making a regular move. A single captured rook can swing a losing position into a winning one. Dropped pieces can give check or even checkmate immediately.",
+      "items": [
+        {
+          "code": "The Pocket",
+          "text": "Each player has a pocket that holds captured enemy pieces. Captured pieces are immediately available to drop on any future turn. The pocket display is shown beside the board."
+        },
+        {
+          "code": "Dropping a Piece",
+          "text": "Instead of moving a piece on the board, select a piece from your pocket, then click a valid empty square to drop it. The dropped piece is now yours and acts like any other piece."
+        },
+        {
+          "code": "Drop Restrictions",
+          "text": "Pawns may not be dropped on rank 1 (White's back rank) or rank 8 (Black's back rank), since a pawn on those squares could never move. All other pieces may be dropped on any empty square."
+        },
+        {
+          "code": "Dropping into Check",
+          "text": "You may drop a piece to give check or checkmate immediately. However, you may not drop a piece if doing so would leave your own king in check."
+        },
+        {
+          "code": "Checkmate in Crazyhouse",
+          "text": "You are only checkmated if you have no legal regular moves AND no legal drops that would resolve the check. A pocket full of pieces can rescue you from seemingly hopeless positions."
+        },
+        {
+          "code": "Stalemate",
+          "text": "Stalemate is rare: it only occurs if you have no legal moves and no drops anywhere on the board. Drops almost always prevent stalemate."
+        },
+        {
+          "code": "Pawn Promotion",
+          "text": "Pawns still promote when reaching the back rank. Choose Queen, Rook, Bishop, or Knight. Note: in this implementation, if a promoted piece is captured, it enters the opponent's pocket at its promoted type (not reverted to a pawn)."
+        },
+        {
+          "code": "Strategy Shift",
+          "text": "Material is never permanently lost — every capture strengthens the opponent's hand. Sacrificing a piece for positional advantage is risky; maintaining tempo and threatening drops is often more effective than material gains."
+        }
+      ]
+    }
+  },
+  "orbitalBombardment": {
+    "standards": {
+      "intro": "Fractured Frontier is a turn-based artillery duel built on parabolic projectile motion — every shot is a live experiment in vectors, trigonometry, and iterative estimation. Choosing an angle and a power level and watching the resulting arc connects abstract trigonometric ratios to a visible, physical outcome, while environmental variables like solar wind force players to model and compensate for an external force acting on their trajectory. Because the terrain is destructible and persistent, each round changes the problem space the very next player must reason about — rewarding adaptive, model-revising thinking over rote repetition.",
+      "items": [
+        {
+          "code": "CSTA 2-AP-13",
+          "text": "Aiming a shot requires decomposing a single decision (where will this projectile land?) into component variables — launch angle, power, gravity, and wind — and reasoning about how each one independently affects the outcome."
+        },
+        {
+          "code": "CCSS HSF-TF.A (Trigonometric Functions)",
+          "text": "Launch angle and power map directly onto sine and cosine components of an initial velocity vector — the same decomposition used to analyze any periodic or directional motion."
+        },
+        {
+          "code": "CCSS MP4 (Model with Mathematics)",
+          "text": "Players build an informal mental model of projectile motion under gravity and wind, test it by firing, and revise the model based on where the shot actually lands — the scientific method compressed into a single turn."
+        },
+        {
+          "code": "ISTE 1c (Computational Thinker)",
+          "text": "Because terrain is destructibly altered every round, students must continually re-evaluate the problem space and adapt their targeting strategy rather than relying on a single fixed solution."
+        },
+        {
+          "code": "CA CS Framework — Algorithms & Programming (Grades 6–8)",
+          "text": "Selecting a weapon involves weighing trade-offs between blast radius, damage, limited ammunition, and special effects (like splitting warheads or terrain-shifting charges) — a direct exercise in algorithmic resource management and cost/benefit analysis."
+        }
+      ]
+    },
+    "rules": {
+      "intro": "Fractured Frontier is a turn-based artillery duel between the U.S.S. Enterprise (Federation) and the I.R.W. Haakona (Romulan Star Empire), fought across a destructible orbital battlefield. On your turn, choose a launch angle, a power level, and a weapon, then fire — gravity and the ever-shifting solar wind carry your shot the rest of the way. Both sides have access to the exact same arsenal, so victory comes down to skill, not which faction you're flying. Reduce the enemy ship's hull to zero, or have more hull remaining than your opponent when the round limit is reached, to win the engagement.",
+      "items": [
+        {
+          "code": "Angle & Power",
+          "text": "Angle (1°–179°) sets your launch direction; Power (10–100) sets how hard you fire. Together with gravity, they determine the full arc your shot will travel."
+        },
+        {
+          "code": "Solar Wind",
+          "text": "A persistent crosswind nudges every projectile left or right as it flies. It changes at the start of each new round — watch the wind readout and adjust your aim to compensate."
+        },
+        {
+          "code": "Destructible Terrain",
+          "text": "Impacts carve craters into (or, for some weapons, dump debris onto) the battlefield. The terrain you see at the start of your turn was shaped by everyone's shots before it — and yours will shape what comes next."
+        },
+        {
+          "code": "Photon Torpedo",
+          "text": "Your standard-issue weapon — unlimited ammunition, reliable mid-range damage. When in doubt, you can always fall back on the torpedo."
+        },
+        {
+          "code": "Tricobalt Charge / Plasma Charge",
+          "text": "Heavier ordnance with a larger blast radius and significantly more damage than the torpedo — but limited ammunition, so use them when a shot really counts."
+        },
+        {
+          "code": "Disruptor Spread",
+          "text": "Fires a fan of several projectiles at once in a single shot — covers a wide area, useful when you're not certain of the exact range."
+        },
+        {
+          "code": "Graviton Charge",
+          "text": "An unusual charge that piles terrain UP instead of carving it away — a useful way to build cover for your own ship or block your opponent's line of fire."
+        },
+        {
+          "code": "Multi-Warhead Torpedo",
+          "text": "Splits into four independent warheads mid-flight, each one striking a different spot — devastating against a ship that's run out of places to hide, but you only carry one."
+        },
+        {
+          "code": "Shields",
+          "text": "Some engagements grant temporary shields that absorb incoming damage before your hull takes any losses. Once a shield is depleted, every additional point of damage comes straight off your hull."
+        },
+        {
+          "code": "Victory & Scoring",
+          "text": "An engagement lasts up to 10 rounds. Every match — won or lost — adds the total damage you dealt to your opponent to your cumulative Tactical Standings score, and a victory adds a substantial bonus on top. Keep flying; every engagement counts."
+        }
+      ]
+    }
+  }
+}

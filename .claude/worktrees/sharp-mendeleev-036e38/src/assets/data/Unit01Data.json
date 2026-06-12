@@ -1,0 +1,225 @@
+{
+	"unit01": {
+		"title": "Unit 1 - Problem Solving and Computing",
+		"summary": "An interactive intro to computer science where students solve problems and design a simple app.",
+		"description": "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You'll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you'll learn how computers input, output, store, and process information to help humans solve problems. The unit concludes with a project in which you design an application that helps solve a problem of your choosing.",
+		"chapters": [
+			{
+				"chapter": "Chapter 00",
+				"description": "A quick warm-up chapter to get students oriented and hands-on by debugging a simple robot — a playful prelude to the unit.",
+				"goal01": "Practice reading instructions and debugging step by step.",
+				"goal02": "Build confidence by fixing a simple, tangible problem.",
+				"goal03": "",
+				"goal04": "",
+				"goal05": "",
+				"big questions 01": "How do we approach a broken system and figure out what to fix?",
+				"big questions 02": "",
+				"big questions 03": "",
+				"lessons": [
+					{
+						"id": "00",
+						"longId": "Lesson00",
+						"title": "Fix the Broken Bot",
+						"overview": "In this lesson, students follow clues to debug a simple 'bot' scenario. It's a short, engaging activity that introduces the idea of iterative testing and improvement before the main unit begins.",
+						"question": "What steps can we take to find and fix what's broken?",
+						"content": "You will use a simple checklist to find what's broken and fix it.",
+						"objective1": "Identify symptoms and form simple hypotheses.",
+						"objective2": "Test changes one at a time to isolate issues.",
+						"objective3": "Reflect on what worked and why.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					}
+				]
+			},
+			{
+				"chapter": "Chapter 01",
+				"description": "This chapter guides students to develop and adopt a more formal structured problem solving process by reflecting on problems they have encountered, both in the classroom and everyday life. By working through a diverse set of problems, such as logic puzzles, engineering challenges, and planning a trip, students learn to identify different classes of problems, decompose large problems, and develop their personal problem solving skills.",
+				"goal01": "Learn how to use a structured problem solving process and apply it to address various problems.",
+				"goal02": "Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering.",
+				"goal03": "",
+				"goal04": "",
+				"goal05": "",
+				"big questions 01": "What strategies and processes can I use to become a more effective problem solver?",
+				"big questions 02": "",
+				"big questions 03": "",
+				"lessons": [
+					{
+						"id": "01",
+						"longId": "Lesson01",
+						"title": "Intro to Problem Solving – Paper Tower",
+						"overview": "Students work in groups to design paper towers that stand as high as possible, iterating between two rounds and reflecting on their strategies.",
+						"question": "What can help us to work together and solve problems as a team?",
+						"content": "Plan, build, test, and iterate on a free-standing paper tower.",
+						"objective1": "Brainstorm and compare structural ideas.",
+						"objective2": "Iterate on the design after testing.",
+						"objective3": "Reflect on collaboration and strategy.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "02",
+						"longId": "Lesson02",
+						"title": "The Problem Solving Process",
+						"overview": "This lesson introduces the formal problem-solving process students will use all year: Define → Prepare → Try → Reflect. Students connect these steps to real experiences and collect generally useful strategies for each step.",
+						"question": "What are some common steps we can use to solve many different types of problems?",
+						"content": "Relate the four steps (Define, Prepare, Try, Reflect) to prior activities and everyday problems; contribute strategies to a class poster for each step.",
+						"objective1": "Given a problem, identify actions that fit each step of the problem-solving process.",
+						"objective2": "Generate strategies within each step of the process.",
+						"objective3": "",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "03",
+						"longId": "Lesson03",
+						"title": "Exploring Problem Solving",
+						"overview": "Students apply the problem-solving process to three problems that increase in complexity and ambiguity, then reflect on the value of each step and on strategies for defining open-ended problems.",
+						"question": "How can we apply the problem-solving process to many different kinds of problems?",
+						"content": "Apply Define → Prepare → Try → Reflect to multiple problems and discuss how problem definition affects your approach.",
+						"objective1": "Apply the problem solving process to approach a variety of problems.",
+						"objective2": "Assess how well-defined a problem is and use strategies to define the problem more precisely.",
+						"objective3": "",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					}
+				]
+			},
+			{
+				"chapter": "Chapter 02",
+				"description": "This chapter presents computers as machines that solve information problems. Students begin by building a common definition for a computer that focuses on functionality instead of specific hardware. They then explore the ways that computers approach problems. For their final project, students propose an app that could be used to solve a problem of their choosing.",
+				"goal01": "Identify the defined characteristics of a computer and how it is used to solve information problems.",
+				"goal02": "Use a structured problem solving process to design solutions that use computing technology.",
+				"goal03": "Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering.",
+				"goal04": "",
+				"goal05": "",
+				"big questions 01": "How do computers help people to solve problems?",
+				"big questions 02": "How do people and computers approach problems differently?",
+				"big questions 03": "What does a computer need from people in order to solve problems effectively?",
+				"lessons": [
+					{
+						"id": "04",
+						"longId": "Lesson04",
+						"title": "What is a Computer?",
+						"overview": "Students brainstorm and sort examples to build a functional definition of a computer, then revisit and refine that definition.",
+						"question": "What is a computer?",
+						"content": "Collaborate to sort items into 'is a computer' or 'is not a computer,' justify edge cases, and refine a shared definition.",
+						"objective1": "Choose problems that can be solved with computing and justify those choices.",
+						"objective2": "Identify a computer as a machine that works with information.",
+						"objective3": "Reason about whether particular objects are or are not computers.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuide", "file": "ActivityGuideB", "label": "Activity Guide B" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "05",
+						"longId": "Lesson05",
+						"title": "Input and Output",
+						"overview": "Students examine how computers get information from users and the world (input) and return information (output), identifying I/O in sample apps and scenarios.",
+						"question": "How do computers use input and output to get and give the information that they need to solve problems?",
+						"content": "Identify inputs and outputs for thinking problems and compare to how apps perform similar tasks.",
+						"objective1": "Explain the role that input and output take when computers are used to solve information problems.",
+						"objective2": "Select the inputs and outputs used to perform common computing tasks.",
+						"objective3": "",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "06",
+						"longId": "Lesson06",
+						"title": "Processing",
+						"overview": "Students explore common processing patterns—conditionals, searching for a match, counting, and comparing—and map them to how apps transform inputs into outputs.",
+						"question": "What are the different ways computers can process information?",
+						"content": "Investigate sample apps to identify processing types; propose an app and the processing it would need.",
+						"objective1": "Define processing as the work done (possibly by a computer) to turn an input into an output.",
+						"objective2": "Determine which types of processing are appropriate for a particular computing problem.",
+						"objective3": "Identify several common types of processing used in computing.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "07",
+						"longId": "Lesson07",
+						"title": "Storage",
+						"overview": "Students decide what information an app should store versus ask for each time, then review the full IOSP model (input, output, storage, processing).",
+						"question": "Why is storage an important part of the computing process?",
+						"content": "Try an 'outfit picker' app, then generalize guidelines for when to store information.",
+						"objective1": "Determine which information in a computing problem should be stored for later use.",
+						"objective2": "Identify guidelines regarding what information should and should not be stored as part of the computing process.",
+						"objective3": "Use the input-output-storage-processing model to describe a computing process.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" }
+						],
+						"type": "lesson"
+					},
+					{
+						"id": "08",
+						"longId": "Lesson08",
+						"title": "Propose an App",
+						"overview": "Across multiple days, students design and present a poster for an app that uses input, output, storage, and processing to address a real-world problem.",
+						"question": "How can the IOSP model help us to design an app that solves a problem?",
+						"content": "In pairs, identify a problem and propose an app that applies the IOSP model; present the proposal to classmates.",
+						"objective1": "Design an app that inputs, outputs, stores, and processes information in order to solve a problem.",
+						"objective2": "Identify and define a problem that could be solved using computing.",
+						"objective3": "Provide and incorporate targeted peer feedback to improve a computing artifact.",
+						"objective4": "",
+						"objective5": "",
+						"resources": [
+							{ "type": "activityGuide" },
+							{ "type": "activityGuideExemplar" },
+							{ "type": "slides" },
+							{ "type": "handoutPeerReview" },
+							{ "type": "rubric" },
+							{ "type": "checklist", "label": "Student Checklist" }
+						],
+						"type": "project"
+					}
+				]
+			}
+		]
+	}
+}

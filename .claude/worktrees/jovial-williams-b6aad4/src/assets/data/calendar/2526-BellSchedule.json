@@ -1,0 +1,273 @@
+{
+	"regular_schedule": {
+		"category": "Regular",
+		"odd": {
+			"1st_bell": "8:32 AM",
+			"periods": {
+				"passing1": ["08:32 AM", "08:35 AM"],
+				"Period 1": ["8:35 AM", "10:04 AM"],
+				"passing3": ["10:04 AM", "10:07 AM"],
+				"Period 3": ["10:07 AM", "11:39 AM"],
+				"Lunch": ["11:39 AM", "12:14 PM"],
+				"passing5": ["12:14 PM", "12:17 PM"],
+				"Period 5": ["12:17 PM", "1:46 PM"],
+				"passing7": ["01:46 PM", "01:49 PM"],
+				"Period 7": ["1:49 PM", "3:18 PM"]
+			},
+			"dismissal": ["03:18 PM", "03:25 PM"],
+			"after_school": ["03:25 PM", "04:10 PM"]
+		},
+		"even": {
+			"1st_bell": "8:32 AM",
+			"periods": {
+				"passing2": ["08:32 AM", "08:35 AM"],
+				"Period 2": ["8:35 AM", "10:04 AM"],
+				"passing4": ["10:04 AM", "10:07 AM"],
+				"Period 4": ["10:07 AM", "11:39 AM"],
+				"Lunch": ["11:39 AM", "12:14 PM"],
+				"passing6": ["12:14 PM", "12:17 PM"],
+				"Period 6": ["12:17 PM", "1:46 PM"],
+				"passing8": ["01:46 PM", "01:49 PM"],
+				"Period 8": ["1:49 PM", "3:18 PM"]
+			},
+			"dismissal": ["03:18 PM", "03:25 PM"],
+			"after_school": ["03:25 PM", "04:10 PM"]
+		}
+	},
+	"early_dismissal": {
+		"category": "Early Dismissal",
+		"odd": {
+			"1st_bell": "8:32 AM",
+			"periods": {
+				"passing1": ["08:32 AM", "08:35 AM"],
+				"Period 1": ["8:35 AM", "9:49 AM"],
+				"passing3": ["09:49 AM", "09:52 AM"],
+				"Period 3": ["9:52 AM", "11:09 AM"],
+				"Lunch": ["11:09 AM", "11:44 AM"],
+				"passing5": ["11:44 AM", "11:47 AM"],
+				"Period 5": ["11:47 AM", "1:01 PM"],
+				"passing7": ["01:01 PM", "01:04 PM"],
+				"Period 7": ["1:04 PM", "2:18 PM"]
+			},
+			"dismissal": ["02:18 PM", "02:25 PM"],
+			"after_school": [
+				"02:25 PM",
+				"03:10 PM"
+			]
+		},
+		"even": {
+			"1st_bell": "8:32 AM",
+			"periods": {
+				"passing2": ["08:32 AM", "08:35 AM"],
+				"Period 2": ["8:35 AM", "9:49 AM"],
+				"passing4": ["09:49 AM", "09:52 AM"],
+				"Period 4": ["9:52 AM", "11:09 AM"],
+				"Lunch": ["11:09 AM", "11:44 AM"],
+				"passing6": ["11:44 AM", "11:47 AM"],
+				"Period 6": ["11:47 AM", "1:01 PM"],
+				"passing8": ["01:01 PM", "01:04 PM"],
+				"Period 8": ["1:04 PM", "2:18 PM"]
+			},
+			"dismissal": ["02:18 PM", "02:25 PM"],
+			"after_school": ["02:25 PM", "03:10 PM"]
+		}
+	},
+	"advisory_awards_schedule": {
+		"category": "Advisory/Awards",
+		"odd": {
+			"1st_bell": "8:32 AM",
+			"periods": {
+				"passingA": ["08:32 AM", "08:35 AM"],
+				"Advisory": ["8:35 AM", "10:35 AM"],
+				"passing1": ["10:35 AM", "10:38 AM"],
+				"Period 1": ["10:38 AM", "11:37 AM"],
+				"passing3": ["11:37 AM", "11:40 AM"],
+				"Period 3": ["11:40 AM", "12:39 PM"],
+				"Lunch": ["12:39 PM", "1:14 PM"],
+				"passing5": ["01:14 PM", "01:17 PM"],
+				"Period 5": ["1:17 PM", "2:16 PM"],
+				"passing7": ["02:16 PM", "02:19 PM"],
+				"Period 7": ["2:19 PM", "3:18 PM"]
+			},
+			"dismissal": ["03:18 PM", "03:25 PM"],
+			"after_school": ["03:25 PM", "04:10 PM"]
+		},
+		"even": {
+			"1st_bell": "8:32 AM",
+			"periods": {
+				"passingA": ["08:32 AM", "08:35 AM"],
+				"Advisory": ["8:35 AM", "10:35 AM"],
+				"passing2": ["10:35 AM", "10:38 AM"],
+				"Period 2": ["10:38 AM", "11:37 AM"],
+				"passing4": ["11:37 AM", "11:40 AM"],
+				"Period 4": ["11:40 AM", "12:39 PM"],
+				"Lunch": ["12:39 PM", "1:14 PM"],
+				"passing6": ["01:14 PM", "01:17 PM"],
+				"Period 6": ["1:17 PM", "2:16 PM"],
+				"passing8": ["02:16 PM", "02:19 PM"],
+				"Period 8": ["2:19 PM", "3:18 PM"]
+			},
+			"dismissal": ["03:18 PM", "03:25 PM"],
+			"after_school": ["03:25 PM", "04:10 PM"]
+		}
+	},
+	"eight_period_schedule": {
+		"category": "8-Period",
+		"1st_bell": "8:32 AM",
+		"periods": {
+			"passing1": ["08:32 AM", "08:35 AM"],
+			"Period 1": ["8:35 AM", "9:18 AM"],
+			"passing2": ["09:18 AM", "09:21 AM"],
+			"Period 2": ["9:21 AM", "10:04 AM"],
+			"passing3": ["10:04 AM", "10:07 AM"],
+			"Period 3": ["10:07 AM", "10:50 AM"],
+			"passing4": ["10:50 AM", "10:53 AM"],
+			"Period 4": ["10:53 AM", "11:39 AM"],
+			"Lunch": ["11:39 AM", "12:14 PM"],
+			"passing5": ["12:14 PM", "12:17 PM"],
+			"Period 5": ["12:17 PM", "1:00 PM"],
+			"passing6": ["01:00 PM", "01:03 PM"],
+			"Period 6": ["1:03 PM", "1:46 PM"],
+			"passing7": ["01:46 PM", "01:49 PM"],
+			"Period 7": ["1:49 PM", "2:32 PM"],
+			"passing8": ["02:32 PM", "02:35 PM"],
+			"Period 8": ["2:35 PM", "3:18 PM"]
+		},
+		"dismissal": ["03:18 PM", "03:25 PM"],
+		"after_school": ["03:25 PM", "04:10 PM"]
+	},
+	"minimum_day": {
+		"category": "Minimum Day",
+		"1st_bell": "8:32 AM",
+		"periods": {
+			"passing1": ["08:32 AM", "08:35 AM"],
+			"Period 1": ["8:35 AM", "9:05 AM"],
+			"passing2": ["09:05 AM", "09:08 AM"],
+			"Period 2": ["9:08 AM", "9:35 AM"],
+			"passing3": ["09:35 AM", "09:38 AM"],
+			"Period 3": ["9:38 AM", "10:05 AM"],
+			"passing4": ["10:05 AM", "10:08 AM"],
+			"Period 4": ["10:08 AM", "10:35 AM"],
+			"passing5": ["10:35 AM", "10:38 AM"],
+			"Period 5": ["10:38 AM", "11:05 AM"],
+			"passing6": ["11:05 AM", "11:08 AM"],
+			"Period 6": ["11:08 AM", "11:35 AM"],
+			"passing7": ["11:35 AM", "11:38 AM"],
+			"Period 7": ["11:38 AM", "12:05 PM"],
+			"passing8": ["12:05 PM", "12:08 PM"],
+			"Period 8": ["12:08 PM", "12:35 PM"],
+			"Lunch": ["12:35 PM", "12:50 PM"]},
+		"dismissal": ["12:50 PM", "12:57 PM"],
+		"after_school": ["12:57 PM", "01:42 PM"]
+	},
+	"rally_schedule": {
+		"category": "Rally",
+		"odd": {
+			"1st_bell": "8:32 AM",
+			"periods": {
+				"passing1": ["08:32 AM", "08:35 AM"],
+				"Period 1": ["8:35 AM", "9:34 AM"],
+				"passing3": ["09:34 AM", "09:37 AM"],
+				"Period 3": ["9:37 AM", "10:36 AM"],
+				"passingA": ["10:36 AM", "10:39 AM"],
+				"Advisory": ["10:39 AM", "10:44 AM"],
+				"Rally/Assembly": ["10:44 AM", "12:39 PM"],
+				"Lunch": ["12:39 PM", "1:14 PM"],
+				"passing5": ["01:14 PM", "01:17 PM"],
+				"Period 5": ["1:17 PM", "2:16 PM"],
+				"passing7": ["02:16 PM", "02:19 PM"],
+				"Period 7": ["2:19 PM", "3:18 PM"]
+			},
+			"dismissal": ["03:18 PM", "03:25 PM"],
+			"after_school": ["03:25 PM", "04:10 PM"]
+		},
+		"even": {
+			"1st_bell": "8:32 AM",
+			"periods": {
+				"passing2": ["08:32 AM", "08:35 AM"],
+				"Period 2": ["8:35 AM", "9:34 AM"],
+				"passing4": ["09:34 AM", "09:37 AM"],
+				"Period 4": ["9:37 AM", "10:36 AM"],
+				"passingA": ["10:36 AM", "10:39 AM"],
+				"Advisory": ["10:39 AM", "10:44 AM"],
+				"Rally/Assembly": ["10:44 AM", "12:39 PM"],
+				"Lunch": ["12:39 PM", "1:14 PM"],
+				"passing6": ["01:14 PM", "01:17 PM"],
+				"Period 6": ["1:17 PM", "2:16 PM"],
+				"passing8": ["02:16 PM", "02:19 PM"],
+				"Period 8": ["2:19 PM", "3:18 PM"]
+			},
+			"dismissal": ["03:18 PM", "03:25 PM"],
+			"after_school": ["03:25 PM", "04:10 PM"]
+		}
+	},
+	"testing_schedule": {
+		"category": "Testing",
+		"silentPeriods": ["Session #1", "Break", "Session #2"],
+		"1st_bell": "9:05 AM",
+		"periods": {
+			"Session #1": ["9:08 AM", "10:15 AM"],
+			"Break": ["10:15 AM", "10:25 AM"],
+			"Session #2": ["10:28 AM", "11:39 AM"],
+			"Lunch": ["11:39 AM", "12:14 PM"],
+			"Period 1-2": ["12:17 PM", "1:00 PM"],
+			"Period 3-4": ["1:03 PM", "1:46 PM"],
+			"Period 5-6": ["1:49 PM", "2:32 PM"],
+			"Period 7-8": ["2:35 PM", "3:18 PM"]
+		},
+		"dismissal": ["03:18 PM", "03:25 PM"],
+		"after_school": ["03:25 PM", "04:10 PM"]
+	},
+	"testing_early_release": {
+		"category": "Testing Early Release",
+		"silentPeriods": ["Session #1", "Break", "Session #2"],
+		"1st_bell": "9:05 AM",
+		"periods": {
+			"Session #1": ["9:08 AM", "10:15 AM"],
+			"Break": ["10:15 AM", "10:25 AM"],
+			"Session #2": ["10:28 AM", "11:39 AM"],
+			"Lunch": ["11:39 AM", "12:14 PM"],
+			"Period 1-2": ["12:17 PM", "12:45 PM"],
+			"Period 3-4": ["12:48 PM", "1:16 PM"],
+			"Period 5-6": ["1:19 PM", "1:47 PM"],
+			"Period 7-8": ["1:50 PM", "2:18 PM"]
+		},
+		"dismissal": ["02:18 PM", "02:25 PM"],
+		"after_school": ["02:25 PM", "03:10 PM"]
+	},
+	"interstellar_gas_day": {
+		"category": "Interstellar Gas Day",
+		"odd": {
+			"1st_bell": "9:32 AM",
+			"periods": {
+				"passing1": ["09:32 AM", "09:35 AM"],
+				"Period 1": ["9:35 AM", "10:49 AM"],
+				"passing3": ["10:49 AM", "10:52 AM"],
+				"Period 3": ["10:52 AM", "12:09 PM"],
+				"Lunch": ["12:09 PM", "12:44 PM"],
+				"passing5": ["12:44 PM", "12:47 PM"],
+				"Period 5": ["12:47 PM", "2:01 PM"],
+				"passing7": ["02:01 PM", "02:04 PM"],
+				"Period 7": ["2:04 PM", "3:18 PM"]
+			},
+			"dismissal": ["03:18 PM", "03:25 PM"],
+			"after_school": ["03:25 PM", "04:10 PM"]
+		},
+		"even": {
+			"1st_bell": "9:32 AM",
+			"periods": {
+				"passing2": ["09:32 AM", "09:35 AM"],
+				"Period 2": ["9:35 AM", "10:49 AM"],
+				"passing4": ["10:49 AM", "10:52 AM"],
+				"Period 4": ["10:52 AM", "12:09 PM"],
+				"Lunch": ["12:09 PM", "12:44 PM"],
+				"passing6": ["12:44 PM", "12:47 PM"],
+				"Period 6": ["12:47 PM", "2:01 PM"],
+				"passing8": ["02:01 PM", "02:04 PM"],
+				"Period 8": ["2:04 PM", "3:18 PM"]
+			},
+			"dismissal": ["03:18 PM", "03:25 PM"],
+			"after_school": ["03:25 PM", "04:10 PM"]
+		}
+	}
+}

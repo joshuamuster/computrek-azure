@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"useGameScores\\\\|const DIFFICULTIES\" /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/games/*.vue)",
+      "Bash(grep -E \"DIFFICULTIES|useGameScores\" /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/games/*.vue)",
+      "Skill(update-config)",
+      "Skill(update-config:*)"
+    ]
+  }
+}

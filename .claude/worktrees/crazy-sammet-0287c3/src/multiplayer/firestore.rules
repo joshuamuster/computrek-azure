@@ -1,0 +1,259 @@
+rules_version = '2';
+service cloud.firestore {
+    match /databases/{database}/documents {
+
+        // ── Helpers ───────────────────────────────────────────────────
+        function isSignedIn() {
+            return request.auth != null;
+        }
+
+        // Reads role from approvedUsers (real-email accounts: staff, sub, admin)
+        function role() {
+            return get(/databases/$(database)/documents/approvedUsers/$(request.auth.token.email)).data.role;
+        }
+
+        function isAdmin() {
+            return isSignedIn() && role() == 'admin';
+        }
+
+        function isStaff() {
+            return isSignedIn() && role() in ['admin', 'staff'];
+        }
+
+        function isSub() {
+            return isSignedIn() && role() == 'sub';
+        }
+
+        function isAudit() {
+            return isSignedIn() && role() == 'audit';
+        }
+
+
+        // ── EXISTING: game rooms (unchanged) ─────────────────────────
+        match /game_rooms/{roomId} {
+            allow read: if true;
+            allow create: if true;
+            allow update: if request.resource.data.status != 'expired'
+                && (resource.data.players.white == request.resource.data.players.white
+                    || resource.data.players.black == request.resource.data.players.black)
+                && (request.resource.data.lastMoveAt > resource.data.lastMoveAt);
+            allow delete: if false;
+        }
+
+
+        // ── UPDATED: approved users (real-email staff/admin/sub/public)
+        match /approvedUsers/{email} {
+            // Any signed-in user can check their own allowlist entry
+            allow read: if isSignedIn();
+
+            // Bootstrap UID and admins can write anything
+            allow write: if request.auth.uid == 'TbmeeecVcsTPSuKRULukSAE7H5J3'
+                || isAdmin();
+
+            // Staff (teachers) may update conductScore on their own cadets — nothing else
+            allow update: if isStaff()
+                && resource.data.role == 'cadet'
+                && resource.data.teacherEmail == request.auth.token.email
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['conductScore']);
+
+            // Cadets can backfill their own Firebase Auth uid at first login.
+            // deployMission() uses sData.uid to stamp submissions; without this rule
+            // the backfill silently fails and submissions get the email as studentId instead.
+            allow update: if isSignedIn()
+                && email == request.auth.token.email
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['uid']);
+        }
+
+
+        // ── NEW: student profiles (fake-email LMS accounts) ──────────
+        match /users/{uid} {
+            // Student reads their own doc; staff/sub/admin can read any
+            allow read: if isSignedIn()
+                && (request.auth.uid == uid || isStaff() || isSub());
+
+            // Only admin provisions student accounts
+            allow create: if isAdmin();
+
+            // Admin can update any field (including role — intentional,
+            // since only admins reach this rule)
+            allow update: if isAdmin();
+
+            allow delete: if isAdmin();
+        }
+
+
+        // ── NEW: assignments ──────────────────────────────────────────
+        match /assignments/{assignmentId} {
+            // Staff/sub/audit see all; students see assignments for their period.
+            // Two pathways: approvedUsers (real-email cadets) or users (LMS/uid cadets).
+            allow read: if isStaff() || isSub() || isAudit()
+                || (isSignedIn()
+                    && get(/databases/$(database)/documents/approvedUsers/$(request.auth.token.email)).data.periodId
+                    == resource.data.periodId)
+                || (isSignedIn()
+                    && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.periodId
+                    == resource.data.periodId);
+
+            allow create, delete: if isStaff();
+            allow update:         if isStaff() || isSub();
+        }
+
+
+        // ── NEW: submissions ──────────────────────────────────────────
+        match /submissions/{submissionId} {
+            // Staff/sub see all; student sees only their own
+            allow read: if isStaff() || isSub()
+                || (isSignedIn() && resource.data.studentId == request.auth.uid);
+
+            // Staff can create submissions on behalf of students (fan-out at deploy time).
+            // Students can create their own (fallback), but studentId MUST equal their uid.
+            allow create: if isStaff()
+                || (isSignedIn()
+                    && request.resource.data.studentId == request.auth.uid);
+
+            // Student can update their own ungraded submission;
+            // staff/sub can update any (for grading + feedback)
+            allow update: if isStaff() || isSub()
+                || (isSignedIn()
+                    && resource.data.studentId == request.auth.uid
+                    && resource.data.status != 'graded');
+
+            // Only staff can delete (cleanup, end-of-year purge)
+            allow delete: if isStaff();
+        }
+
+        // ── NEW: game scores ──────────────────────────────────────────
+        match /gameScores/{scoreId} {
+            // Any signed-in user can read scores (leaderboards)
+            allow read: if isSignedIn();
+
+            // A user can only write a score doc where uid matches their own —
+            // prevents students from spoofing each other's scores
+            allow write: if isSignedIn()
+                && request.resource.data.uid == request.auth.uid;
+        }
+
+        // ── NEW: mission library ──────────────────────────────────────────────
+        match /missions/{missionId} {
+            // Staff, admin, sub, and audit can browse; students can read to display assigned missions
+            allow read: if isSignedIn();
+
+            // Staff (includes admin) can create and edit missions
+            allow create, update: if isStaff();
+
+            // Only admin can hard-delete (app uses soft-delete via archived flag)
+            allow delete: if isAdmin();
+        }
+
+
+        // ── NEW: mission card handling ──────────────────────────────────────────
+        match /missionCards/{docId} {
+            allow read: if isSignedIn();
+            allow write: if isStaff();
+        }
+
+
+        // ── NEW: ship status (computed health scores per period) ──────────────
+        // Any signed-in user can read (students see the ship on the /systems page)
+        // Only staff can write (recalculateShipHealth runs in teacher sessions only)
+        match /shipStatus/{periodId} {
+            allow read: if isSignedIn();
+            allow write: if isStaff();
+        }
+
+        // ── NEW: CHAMPS broadcast state (per teacher+period) ──────────────────
+        // Any signed-in user can read — students subscribe to their teacher's doc
+        // Only teachers (role 'staff') can write — admins intentionally excluded
+        match /champsState/{docId} {
+            allow read: if isSignedIn();
+            allow write: if isSignedIn() && role() == 'staff';
+        }
+
+        // ── NEW: timer state (countdown timers synced teacher → students) ────────
+        // Doc key: {teacherEmail}__{periodId}
+        // Students subscribe to their teacher's doc; teachers write their own.
+        match /timerState/{docId} {
+            allow read:  if isSignedIn();
+            allow write: if isStaff();
+        }
+
+        // ── NEW: active test sessions (typing tests opened by teachers) ──────────
+        // Doc key: {periodId} — staff open/close sessions; students read to gate entry
+        match /activeTestSessions/{docId} {
+            allow read:  if isSignedIn();
+            allow write: if isStaff();
+        }
+
+        // ── NEW: period stats counters (mission turn-in / acceptance rates) ────
+        // Any signed-in user can read (students see class stats in the HUD)
+        // Only signed-in users can write (atomic increments fired by student/teacher actions)
+        match /periodStats/{docId} {
+            allow read: if isSignedIn();
+            allow write: if isSignedIn();
+        }
+
+        // --- Typing Club
+
+        match /typingLessons/{id} {
+            allow read: if request.auth != null;
+            allow write: if request.auth != null;
+        }
+
+        match /typingResults/{resultId} {
+            // Students write their own results; staff can write on behalf of students (e.g. demo seed)
+            allow create: if request.auth != null
+                && (request.resource.data.uid == request.auth.uid || isStaff());
+            allow read:   if request.auth != null;
+            // Staff can update/delete (grading, demo cleanup); students cannot modify past results
+            allow update, delete: if isStaff();
+        }
+
+        match /typingCustomTexts/{id} {
+            allow read: if request.auth != null;
+            allow write: if request.auth != null;
+        }
+
+
+        // ── Conduct entries (anecdotal mid-class notes) ───────────────────────
+        // Staff can read/write entries they own (teacherEmail matches).
+        // Admin can read/write all. Students cannot access.
+        match /conductEntries/{entryId} {
+            allow read: if isStaff() || isAudit();
+            allow create: if isStaff()
+                && (isAdmin() || request.resource.data.teacherEmail == request.auth.token.email);
+            allow update, delete: if isAdmin();
+        }
+
+
+        // ── Conduct ratings (end-of-period structured ratings) ────────────────
+        match /conductRatings/{ratingId} {
+            allow read: if isStaff() || isAudit();
+            allow create: if isStaff()
+                && (isAdmin() || request.resource.data.teacherEmail == request.auth.token.email);
+            allow update, delete: if isAdmin();
+        }
+
+
+        // ── Seating charts ────────────────────────────────────────────────────
+        // Staff and audit can read any chart.
+        // Cadets can read the chart for their own period + teacher only.
+        // Staff can write their own charts (teacherEmail must match their auth email);
+        // admin can write any chart regardless of teacherEmail.
+        match /seatingCharts/{chartId} {
+            allow read: if isStaff() || isAudit()
+                || (isSignedIn()
+                    && get(/databases/$(database)/documents/approvedUsers/$(request.auth.token.email)).data.periodId
+                       == resource.data.periodId
+                    && get(/databases/$(database)/documents/approvedUsers/$(request.auth.token.email)).data.teacherEmail
+                       == resource.data.teacherEmail);
+
+            allow create, update: if isStaff()
+                && (isAdmin()
+                    || request.resource.data.teacherEmail == request.auth.token.email);
+
+            allow delete: if isAdmin();
+        }
+
+
+    }
+}

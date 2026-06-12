@@ -1,0 +1,356 @@
+{
+	"unit01": {
+		"title": "Module 1 - Design History & Foundations",
+		"summary": "From hand-lettered manuscripts to movable type and modern design. Students learn how visual communication evolved and how form serves function.",
+		"description": "A fast-paced overview of design’s evolution — illuminated manuscripts, printing, Bauhaus, and the digital era — emphasizing how designers solve communication problems through structure, hierarchy, and clarity.",
+		"chapters": [
+			{
+				"chapter": "Chapter 01",
+				"description": "Before Print — hierarchy, illuminated letters, and how designers communicated meaning without type.",
+				"lessons": [
+					{
+						"id": "00",
+						"longId": "Lesson00",
+						"title": "What Is Graphic Design?",
+						"slidesUrl": "",
+						"overview": "Students explore what graphic design really means, identify examples in daily life, and discuss how designers communicate through visuals.",
+						"objective1": "Define graphic design as visual communication.",
+						"objective2": "Identify examples of design in everyday life.",
+						"objective3": "Discuss how visuals can convey tone and message.",
+						"type": "lesson"
+					},
+					{
+						"id": "01",
+						"longId": "Lesson01",
+						"title": "Design Detective",
+						"slidesUrl": "",
+						"overview": "Students analyze real designs to uncover how color, type, and layout communicate meaning. They learn to see like a designer.",
+						"objective1": "Identify visual elements that communicate emotion or tone.",
+						"objective2": "Describe how composition influences meaning.",
+						"objective3": "Use vocabulary of design principles in discussion.",
+						"type": "lesson"
+					},
+					{
+						"id": "02",
+						"longId": "Lesson02",
+						"title": "Mood Poster Challenge",
+						"slidesUrl": "",
+						"overview": "Students create a poster that conveys a mood or theme using imagery, color, and composition—no words allowed.",
+						"objective1": "Use visual hierarchy and balance to guide attention.",
+						"objective2": "Apply color and imagery to express emotion.",
+						"objective3": "Collaborate and critique effectively.",
+						"type": "lesson"
+					},
+					{
+						"id": "03",
+						"longId": "Lesson03",
+						"title": "Elements of Design: CARP Principles",
+						"slidesUrl": "",
+						"overview": "Students learn Contrast, Alignment, Repetition, and Proximity (CARP) and apply these principles in layout and design analysis.",
+						"objective1": "Explain each CARP principle with examples.",
+						"objective2": "Apply design principles to improve composition.",
+						"objective3": "Evaluate peer designs for clarity and balance.",
+						"type": "lesson"
+					}
+				]
+			},
+			{
+				"chapter": "Chapter 02",
+				"description": "Foundations of Visual Design — building the designer’s toolkit.",
+				"lessons": [
+					{
+						"id": "04",
+						"longId": "Lesson04",
+						"title": "Color Theory",
+						"slidesUrl": "",
+						"overview": "Students explore color relationships and psychology, learning how hue, saturation, and value shape mood and readability.",
+						"objective1": "Identify primary, secondary, and complementary colors.",
+						"objective2": "Create a color palette that communicates mood.",
+						"objective3": "Apply color harmony to a simple design.",
+						"type": "lesson"
+					},
+					{
+						"id": "05",
+						"longId": "Lesson05",
+						"title": "Typography Basics: Serif vs Sans Serif",
+						"slidesUrl": "",
+						"overview": "Students explore type classifications, readability, and how font choice changes the tone of a design.",
+						"objective1": "Differentiate serif and sans-serif typefaces.",
+						"objective2": "Select fonts appropriate for a given purpose.",
+						"objective3": "Analyze how typography affects brand perception.",
+						"type": "lesson"
+					},
+					{
+						"id": "06",
+						"longId": "Lesson06",
+						"title": "Typography Basics: House Identity",
+						"slidesUrl": "",
+						"overview": "Students create a consistent personal type style (house style) to represent their creative identity.",
+						"objective1": "Select fonts that express personal or brand identity.",
+						"objective2": "Maintain consistent font use across multiple designs.",
+						"objective3": "Explain stylistic choices using design vocabulary.",
+						"type": "lesson"
+					},
+					{
+						"id": "07",
+						"longId": "Lesson07",
+						"title": "Typography Basics: Hierarchy",
+						"slidesUrl": "",
+						"overview": "Students learn how font size, weight, and spacing create structure and guide the viewer’s eye.",
+						"objective1": "Use typographic scale to establish hierarchy.",
+						"objective2": "Apply spacing and alignment for visual flow.",
+						"objective3": "Design a layout emphasizing readable hierarchy.",
+						"type": "lesson"
+					}
+				]
+			}
+		]
+	},
+	"unit02": {
+		"title": "Module 2 - Branding, Heraldry, and Identity",
+		"summary": "Students explore how symbols, color, and structure communicate identity—from medieval crests to modern brands.",
+		"description": "This module connects history, symbolism, and branding. Students study heraldry, analyze modern logo systems, and create identity designs through research, iteration, and reflection.",
+		"chapters": [
+			{
+				"chapter": "Chapter 01",
+				"description": "The Language of Logos — from symbols of heritage to symbols of commerce.",
+				"lessons": [
+					{
+						"id": "08",
+						"longId": "Lesson08",
+						"title": "Logos & Branding",
+						"slidesUrl": "",
+						"overview": "Students learn the Four Qualities of Effective Logo Design—simplicity, memorability, versatility, and appropriateness—and explore how logos communicate personality and values.",
+						"objective1": "Identify characteristics of strong logo design.",
+						"objective2": "Analyze brand personality through visual cues.",
+						"objective3": "Compare logos using the four-qualities framework.",
+						"type": "lesson"
+					},
+					{
+						"id": "09",
+						"longId": "Lesson09",
+						"title": "The Art of Logo Design",
+						"slidesUrl": "",
+						"overview": "Students study the five types of logos (Wordmark, Lettermark, Symbol/Icon, Combination Mark, Emblem) and sketch their own brand concepts.",
+						"objective1": "Differentiate between logo types and purposes.",
+						"objective2": "Generate design concepts inspired by the five types.",
+						"objective3": "Apply typography and color choices to reinforce brand identity.",
+						"type": "lesson"
+					},
+					{
+						"id": "10",
+						"longId": "Lesson10",
+						"title": "Logo Design Challenge",
+						"slidesUrl": "",
+						"overview": "Students design a logo for a fictional coffee shop, creating five logo types with two iterations each to show feedback and refinement.",
+						"objective1": "Create five logo variations for a single brand.",
+						"objective2": "Demonstrate iteration and peer feedback.",
+						"objective3": "Evaluate designs using the four logo qualities.",
+						"type": "lesson"
+					}
+				]
+			},
+			{
+				"chapter": "Chapter 02",
+				"description": "Heraldry & Symbolism — the history of graphic design through identity and storytelling.",
+				"lessons": [
+					{
+						"id": "11",
+						"longId": "Lesson11",
+						"title": "The Origins of Design: Heraldry and the Birth of Logos",
+						"slidesUrl": "",
+						"overview": "Students trace the evolution of identity design from medieval family crests to modern brands, exploring how early symbols represented values and allegiance.",
+						"objective1": "Explain how heraldry influenced modern branding.",
+						"objective2": "Identify parallels between coats of arms and logo design.",
+						"objective3": "Analyze symbols as forms of visual storytelling.",
+						"type": "lesson"
+					},
+					{
+						"id": "12",
+						"longId": "Lesson12",
+						"title": "Anatomy of a Coat of Arms",
+						"slidesUrl": "",
+						"overview": "Students learn the traditional parts of a coat of arms and how arrangement and symbolism communicate meaning.",
+						"objective1": "Identify the core components of a heraldic crest.",
+						"objective2": "Interpret how arrangement and shape convey hierarchy.",
+						"objective3": "Label and describe real-world crests and their symbolism.",
+						"type": "lesson"
+					},
+					{
+						"id": "13",
+						"longId": "Lesson13",
+						"title": "Symbolism & Color in Heraldry",
+						"slidesUrl": "",
+						"overview": "Students study the meanings behind heraldic colors and symbols, learning how visual language encodes values and traits.",
+						"objective1": "Match heraldic colors and symbols with their meanings.",
+						"objective2": "Select colors and icons to represent personal values.",
+						"objective3": "Apply symbolic thinking to design decisions.",
+						"type": "lesson"
+					},
+					{
+						"id": "14",
+						"longId": "Lesson14",
+						"title": "Create Your Own Crest: Sketch & Symbol Plan",
+						"slidesUrl": "",
+						"overview": "Students brainstorm, sketch, and plan a personal or family crest that represents their values, interests, and identity.",
+						"objective1": "Plan a crest layout with meaningful symbols and color.",
+						"objective2": "Justify design choices in writing and discussion.",
+						"objective3": "Refine sketches based on peer feedback.",
+						"type": "project"
+					},
+					{
+						"id": "15",
+						"longId": "Lesson15",
+						"title": "Create Your Own Crest: Digital Design",
+						"slidesUrl": "",
+						"overview": "Students recreate their crest digitally using Canva or Adobe Express, applying CARP principles, color theory, and typography.",
+						"objective1": "Digitally render a complete heraldic crest design.",
+						"objective2": "Apply alignment, contrast, and spacing for balance.",
+						"objective3": "Maintain symbolic consistency in final design.",
+						"type": "project"
+					},
+					{
+						"id": "16",
+						"longId": "Lesson16",
+						"title": "Crest Gallery & Reflection",
+						"slidesUrl": "",
+						"overview": "Students present their completed crests in a gallery walk and reflect on how their design represents identity and visual storytelling.",
+						"objective1": "Present and explain personal design decisions.",
+						"objective2": "Reflect on how symbolism communicates identity.",
+						"objective3": "Provide constructive feedback during peer review.",
+						"type": "lesson"
+					}
+				]
+			},
+			{
+				"chapter": "Chapter 03",
+				"description": "Brand Implementation — extend identity across print and digital touchpoints.",
+				"lessons": [
+					{
+						"id": "17",
+						"longId": "Lesson17",
+						"title": "Brand Board & Visual Identity Kit",
+						"slidesUrl": "",
+						"overview": "Students build a Brand Board that unifies logo, color palette, typography, and imagery to ensure consistency across designs.",
+						"objective1": "Assemble a cohesive brand board.",
+						"objective2": "Document color, type, and usage rules.",
+						"objective3": "Demonstrate consistency across mockups.",
+						"type": "lesson"
+					},
+					{
+						"id": "18",
+						"longId": "Lesson18",
+						"title": "Advertisement Design Basics",
+						"slidesUrl": "",
+						"overview": "Students learn composition and layout principles used in posters, flyers, and social media ads (balance, white space, focal point).",
+						"objective1": "Design layouts emphasizing focal point and flow.",
+						"objective2": "Use whitespace and alignment effectively.",
+						"objective3": "Prepare assets for different sizes/ratios.",
+						"type": "lesson"
+					},
+					{
+						"id": "19",
+						"longId": "Lesson19",
+						"title": "Social Media Branding Challenge",
+						"slidesUrl": "",
+						"overview": "Students adapt their brand for social media by designing matching post, story, and banner graphics.",
+						"objective1": "Maintain brand consistency across formats.",
+						"objective2": "Optimize designs for multiple aspect ratios.",
+						"objective3": "Export correctly for digital distribution.",
+						"type": "lesson"
+					},
+					{
+						"id": "20",
+						"longId": "Lesson20",
+						"title": "Print vs Digital Design",
+						"slidesUrl": "",
+						"overview": "Students compare design considerations for print (CMYK, bleed, resolution) vs digital (RGB, screen ratio) and redesign an ad for both.",
+						"objective1": "Explain key differences between print and digital.",
+						"objective2": "Prepare files with correct color spaces and bleed.",
+						"objective3": "Adapt one design to both mediums.",
+						"type": "lesson"
+					},
+					{
+						"id": "21",
+						"longId": "Lesson21",
+						"title": "Mini Brand Campaign Project",
+						"slidesUrl": "",
+						"overview": "Students create a 3-piece ad campaign (poster, banner, social post) for their brand or a real school club.",
+						"objective1": "Apply color, type, hierarchy, and branding cohesively.",
+						"objective2": "Demonstrate consistency across multiple deliverables.",
+						"objective3": "Reflect on audience and message effectiveness.",
+						"type": "project"
+					}
+				]
+			}
+		]
+	},
+	"unit03": {
+		"title": "Module 3 - Visual Storytelling & Multimedia Production",
+		"summary": "Students integrate narrative, motion, and sound to produce short multimedia pieces.",
+		"description": "This module introduces story structure, storyboarding, motion graphics fundamentals, and multimedia production culminating in a short promotional video.",
+		"chapters": [
+			{
+				"chapter": "Chapter 01",
+				"description": "From static to motion — plan, animate, and present.",
+				"lessons": [
+					{
+						"id": "22",
+						"longId": "Lesson22",
+						"title": "Introduction to Visual Storytelling",
+						"slidesUrl": "",
+						"overview": "Students explore how images, text, and sound combine to tell a story and draft a storyboard for a short promo.",
+						"objective1": "Identify components of a simple visual narrative.",
+						"objective2": "Plan a sequence using a storyboard.",
+						"objective3": "Align message and audience in concepting.",
+						"type": "lesson"
+					},
+					{
+						"id": "23",
+						"longId": "Lesson23",
+						"title": "Storyboard & Layout Design",
+						"slidesUrl": "",
+						"overview": "Students plan camera angles, text placement, and scene transitions for a simple animation or ad.",
+						"objective1": "Use frames to communicate timing and flow.",
+						"objective2": "Plan on-screen text for clarity and impact.",
+						"objective3": "Refine storyboard with feedback.",
+						"type": "lesson"
+					},
+					{
+						"id": "24",
+						"longId": "Lesson24",
+						"title": "Motion Graphics Basics",
+						"slidesUrl": "",
+						"overview": "Students learn animation fundamentals (keyframes, transitions, timing) and animate a logo or tagline.",
+						"objective1": "Animate simple movements using keyframes.",
+						"objective2": "Use easing and timing to improve feel.",
+						"objective3": "Export short animations correctly.",
+						"type": "lesson"
+					},
+					{
+						"id": "25",
+						"longId": "Lesson25",
+						"title": "Multimedia Ad Project (Quarter Capstone)",
+						"slidesUrl": "",
+						"overview": "Students combine branding, layout, and animation to produce a 15–30 second advertisement with sound, text, and motion.",
+						"objective1": "Produce a short branded video with titles.",
+						"objective2": "Integrate sound and motion coherently.",
+						"objective3": "Revise based on peer and teacher feedback.",
+						"type": "project"
+					},
+					{
+						"id": "26",
+						"longId": "Lesson26",
+						"title": "Gallery Showcase & Reflection",
+						"slidesUrl": "",
+						"overview": "Students present finished multimedia projects, reflect on the design process, and give/receive peer feedback.",
+						"objective1": "Present work and articulate design choices.",
+						"objective2": "Evaluate peers using a clear rubric.",
+						"objective3": "Reflect on growth and next steps.",
+						"type": "lesson"
+					}
+				]
+			}
+		]
+	}
+}

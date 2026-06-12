@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "types": ["vite/client"],
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
+    "src/types/**/*.d.ts"
+  ]
+}

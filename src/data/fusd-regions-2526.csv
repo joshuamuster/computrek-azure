@@ -1,0 +1,80 @@
+Elementary,Middle,High,Boundaried,Region,School Type,Notes
+Addams,Gaston,Edison High,Yes,Edison,Elementary,
+Columbia,Gaston,Edison High,Yes,Edison,Elementary,
+King,Gaston,Edison High,Yes,Edison,Elementary,
+Kirk,Gaston,Edison High,Yes,Edison,Elementary,
+Lincoln,Gaston,Edison High,Yes,Edison,Elementary,
+Anthony,Tehipite,Roosevelt High,Yes,Roosevelt,Elementary,
+Jackson,Tehipite,Roosevelt High,Yes,Roosevelt,Elementary,
+Jefferson,Tehipite,Roosevelt High,Yes,Roosevelt,Elementary,
+Lowell,Tehipite,Roosevelt High,Yes,Roosevelt,Elementary,
+Webster,Tehipite,Roosevelt High,Yes,Roosevelt,Elementary,
+Yokomi,Tehipite,Roosevelt High,Yes,Roosevelt,Elementary,
+Balderas,Sequoia,Roosevelt High,Yes,Roosevelt,Elementary,
+Calwa,Sequoia,Roosevelt High,Yes,Roosevelt,Elementary,
+Lane,Sequoia,Roosevelt High,Yes,Roosevelt,Elementary,
+Vang Pao,Sequoia,Roosevelt High,Yes,Roosevelt,Elementary,
+Winchell,Sequoia,Roosevelt High,Yes,Roosevelt,Elementary,
+Bakman,Kings Canyon,Sunnyside High,Yes,Sunnyside,Elementary,
+Burroughs,Kings Canyon,Sunnyside High,Yes,Sunnyside,Elementary,
+Easterby,Kings Canyon,Sunnyside High,Yes,Sunnyside,Elementary,
+Greenberg,Kings Canyon,Sunnyside High,Yes,Sunnyside,Elementary,
+Ayer,Terronez,Sunnyside High,Yes,Sunnyside,Elementary,
+Aynesworth,Terronez,Sunnyside High,Yes,Sunnyside,Elementary,
+Herrera,Terronez,Sunnyside High,Yes,Sunnyside,Elementary,
+Olmos,Terronez,Sunnyside High,Yes,Sunnyside,Elementary,
+Storey,Terronez,Sunnyside High,Yes,Sunnyside,Elementary,
+Birney,Scandinavian,McLane High,Yes,McLane,Elementary,
+Ericson,Scandinavian,McLane High,Yes,McLane,Elementary,
+Ewing,Scandinavian,McLane High,Yes,McLane,Elementary,
+Norseman,Scandinavian,McLane High,Yes,McLane,Elementary,
+Turner,Scandinavian,McLane High,Yes,McLane,Elementary,
+Wishon,Scandinavian,McLane High,Yes,McLane,Elementary,
+Hidalgo,Yosemite,McLane High,Yes,McLane,Elementary,
+Leavenworth,Yosemite,McLane High,Yes,McLane,Elementary,
+Mayfair,Yosemite,McLane High,Yes,McLane,Elementary,
+Rowell,Yosemite,McLane High,Yes,McLane,Elementary,
+Eaton,Ahwahnee,Hoover High,Yes,Hoover,Elementary,
+McCardle,Ahwahnee,Hoover High,Yes,Hoover,Elementary,
+Robinson,Ahwahnee,Hoover High,Yes,Hoover,Elementary,
+Viking,Ahwahnee,Hoover High,Yes,Hoover,Elementary,
+Wolters,Ahwahnee,Hoover High,Yes,Hoover,Elementary,
+Centennial,Tioga,Hoover High,Yes,Hoover,Elementary,
+Holland,Tioga,Hoover High,Yes,Hoover,Elementary,
+Pyle,Tioga,Hoover High,Yes,Hoover,Elementary,
+Thomas,Tioga,Hoover High,Yes,Hoover,Elementary,
+Vinland,Tioga,Hoover High,Yes,Hoover,Elementary,
+Figarden,Tenaya,Bullard High,Yes,Bullard,Elementary,
+Gibson,Tenaya,Bullard High,Yes,Bullard,Elementary,
+Kratt,Tenaya,Bullard High,Yes,Bullard,Elementary,
+Lawless,Tenaya,Bullard High,Yes,Bullard,Elementary,
+Malloch,Tenaya,Bullard High,Yes,Bullard,Elementary,
+Starr,Tenaya,Bullard High,Yes,Bullard,Elementary,
+Tatarian,Tenaya,Bullard High,Yes,Bullard,Elementary,
+Powers-Ginsburg,Wawona,Bullard High,Yes,Bullard,Elementary,
+Slater,Wawona,Bullard High,Yes,Bullard,Elementary,
+Del Mar,Fort Miller,Fresno High,Yes,Fresno High,Elementary,
+Fremont,Fort Miller,Fresno High,Yes,Fresno High,Elementary,
+Heaton,Fort Miller,Fresno High,Yes,Fresno High,Elementary,
+Homan,Fort Miller,Fresno High,Yes,Fresno High,Elementary,
+Muir,Fort Miller,Fresno High,Yes,Fresno High,Elementary,
+Roeding,Fort Miller,Fresno High,Yes,Fresno High,Elementary,
+Williams,Fort Miller,Fresno High,Yes,Fresno High,Elementary,
+Wilson,Fort Miller,Fresno High,Yes,Fresno High,Elementary,
+Hamilton (K-6),Hamilton (7-8),Fresno High,Yes,Fresno High,K-8,
+Wawona (K-8),Wawona (7-8),Bullard High,Yes,Bullard,K-8,
+,Baird Middle (Magnet 5-8),,No,Districtwide,Middle (Magnet),Non-boundaried middle; districtwide option
+,Computech Middle School,,No,Districtwide,Middle (Magnet),Magnet middle; districtwide application
+,Cooper Academy (Magnet),,No,Districtwide,Middle (Magnet),Magnet middle; districtwide application
+Bullard Talent K-8 School,,,No,Districtwide,K-8 (Magnet),K-8 magnet; no boundaried feeder
+,,Design Science Middle College High School,No,Districtwide,High (Specialty),Non-boundaried high; application
+,,DeWolf High School (Continuation),No,Districtwide,High (Continuation),Non-boundaried high; continuation
+,,Duncan Polytechnical High School,No,Districtwide,High (CTE),Non-boundaried high; CTE focus
+,,Farber Educational Campus,No,Districtwide,9-12 / Online / Independent Studies,Credit attainment / independent studies / online
+,,Patiño School of Entrepreneurship,No,Districtwide,High (Specialty),Non-boundaried high; entrepreneurship
+,,Phoenix Secondary (7-12),No,Districtwide,7-12 (Alternative),Non-boundaried; grades 7-12
+,,RATA Special Ed (9-12),No,Districtwide,High (Special Education),Non-boundaried; special education
+,,CART (Center for Advanced Research & Technology),No,Districtwide,Regional CTE,Regional CTE center (FUSD/CUSD); not boundaried
+,,Fresno Adult School,No,Districtwide,Adult Education,Adult education; not boundaried
+,,ATP Trailblazers (Adult Transition Program),No,Districtwide,Adult Transition,Adult transition program; not feeder-based
+,,Fulton School,No,Districtwide,Special Program,Special program campus; not boundaried

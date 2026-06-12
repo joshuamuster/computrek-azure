@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"useGameScores\\\\|const DIFFICULTIES\" /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/games/*.vue)",
+      "Bash(grep -E \"DIFFICULTIES|useGameScores\" /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/games/*.vue)",
+      "Bash(npx vue-tsc *)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 status)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 log --oneline main..HEAD)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 log --oneline origin/main..HEAD)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 diff --stat)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 add src/composables/useAssignments.ts src/multiplayer/firestore.rules src/pages/MissionLibrary.vue src/pages/StudentDashboard.vue)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/crazy-sammet-0287c3 commit -m ' *)",
+      "Bash(find /Users/joshuamuster/Documents/Github/computrekcs-vue -type f -name \"*.vue\" | grep -i report | head -20)",
+      "Bash(grep -E \"\\\\.\\(ts|json\\)$\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(find /Users/joshuamuster/Documents/Github/computrekcs-vue/src -name \"useCountdownTimer*\" -o -name \"useTimerState*\" | head -10)",
+      "Bash(cp /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/jovial-williams-b6aad4/src/components/AdminNav.vue /Users/joshuamuster/Documents/Github/computrekcs-vue/src/components/AdminNav.vue)",
+      "Bash(cp /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/LandingPage.vue /Users/joshuamuster/Documents/Github/computrekcs-vue/.claude/worktrees/jovial-williams-b6aad4/src/pages/LandingPage.vue)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('functions' in d\\)\")",
+      "Bash(npm run *)",
+      "Bash(firebase functions:log --only resetCadetPassword)",
+      "Bash(git -C /Users/joshuamuster/Documents/Github/computrekcs-vue show 161d515:src/pages/BroadcastPage.vue)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git stash *)",
+      "Bash(sed -n '240,275p' /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/games/PicardManeuverGame.vue)",
+      "Bash(sed -n '161,205p' /Users/joshuamuster/Documents/Github/computrekcs-vue/src/pages/games/RulesOfAcquisitionGame.vue)"
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+	"section01": {
+		"sectionId": "Section 1",
+		"title": "Foundations",
+		"summary": "Core knowledge that makes everything else work: history, vocabulary, type, color, layout.",
+		"units": {
+			"unit01": {
+				"unitId": "Unit 1",
+				"title": "Design History & Foundations",
+				"summary": "From hand-lettered manuscripts to movable type and modern design. Students learn core vocabulary and how design solves communication problems.",
+				"description": "A fast, engaging survey: illuminated manuscripts, the printing press, early typesetting, Arts & Crafts, Bauhaus/Swiss styles, and the digital era. Emphasis on how form serves function and how to talk about design choices.",
+				"chapters": [
+					{"title": "Before Print", "summary": "Scribes, illuminated letters, hierarchy by scale and color."},
+					{"title": "Movable Type", "summary": "Gutenberg, typesetting basics, early page layout."},
+					{"title": "Modern Movements", "summary": "Bauhaus/Swiss—grids, clarity, universal type ideals."},
+					{"title": "Design Vocabulary", "summary": "Elements & principles; critique language and norms."}
+				]
+			},
+			"unit02": {
+				"unitId": "Unit 2",
+				"title": "Typography Fundamentals",
+				"summary": "Students learn type anatomy, serif vs. sans, spacing, pairing, and readability—then apply hierarchy on a grid.",
+				"description": "Paper-first drills on x-height, cap height, kerning, tracking, leading; serif vs. sans; expressive vs. functional type. Students build clear Title→Subhead→Body hierarchy and practice peer critique using the squint test.",
+				"chapters": [
+					{"title": "Type Anatomy & Families", "summary": "Baseline, x-height, ascenders/descenders; serif vs. sans."},
+					{"title": "Spacing Systems", "summary": "Kerning, tracking, leading—optical vs. equal spacing."},
+					{"title": "Hierarchy on a Grid", "summary": "Size/weight/space to control first, second, third read."},
+					{"title": "Type Pairing", "summary": "Role-based pairing; contrast without conflict."}
+				]
+			},
+			"unit03": {
+				"unitId": "Unit 3",
+				"title": "Color & Contrast",
+				"summary": "Students use hue, value, saturation, and limited palettes to support mood and readability.",
+				"description": "Hands-on with color schemes, value contrast, and accessibility-minded choices. Students build small brand palettes and test legibility with squint and distance checks.",
+				"chapters": [
+					{"title": "Hue/Value/Saturation", "summary": "How value drives readability more than hue."},
+					{"title": "Palettes & Schemes", "summary": "Analogous, complementary, split-complementary, triads."},
+					{"title": "Contrast for Clarity", "summary": "Light/dark control; avoiding low-contrast traps."}
+				]
+			},
+			"unit04": {
+				"unitId": "Unit 4",
+				"title": "Layout, Grids & Visual Hierarchy",
+				"summary": "Students organize information with margins, columns, and alignment patterns that guide the eye.",
+				"description": "Grids (single column to simple modular), margin discipline, alignment, whitespace, F/Z patterns. Students create multi-level layouts that pass a one-second squint test.",
+				"chapters": [
+					{"title": "Margins & Alignment", "summary": "Rag quality, left align vs. center pitfalls."},
+					{"title": "Simple Grids", "summary": "Columns, gutters, modules—when and why."},
+					{"title": "First-Read Patterns", "summary": "Scale, contrast, and placement to direct attention."}
+				]
+			}
+		}
+	},
+	
+	"section02": {
+		"sectionId": "Section 2",
+		"title": "Identity & Branding",
+		"summary": "Create a simple, legible logo and turn it into a small, consistent identity.",
+		"units": {
+			"unit05": {
+				"unitId": "Unit 5",
+				"title": "Logo Design: Marks & Wordmarks",
+				"summary": "Students design simple, legible logos that still read when tiny or squinted.",
+				"description": "Logo types (wordmark, lettermark, symbol), reduction and simplicity, consistent stroke modules. B/W first, then small-size tests.",
+				"chapters": [
+					{"title": "Idea Thumbnails", "summary": "20-in-10 divergent sketching for quantity of ideas."},
+					{"title": "Reduction & Consistency", "summary": "Stroke modules, counters, corner logic."},
+					{"title": "Black & White Master", "summary": "Clarity without color; min-size and squint tests."}
+				]
+			},
+			"unit06": {
+				"unitId": "Unit 6",
+				"title": "Brand Kit Basics",
+				"summary": "Students turn a logo into a small identity system with color, clear space, and usage rules.",
+				"description": "Build a mini brand guide: primary mark, clear-space rule, minimum size, two-color palette (+ neutral), and simple do/don’t guidelines with examples.",
+				"chapters": [
+					{"title": "Clear Space & Minimum Size", "summary": "Protecting the mark; grid-based rules."},
+					{"title": "Color Application", "summary": "Primary/accent color; when to use B/W."},
+					{"title": "Do/Don’t System", "summary": "Avoid stretching, outlines, busy backgrounds; good placement."}
+				]
+			}
+		}
+	},
+	
+	"section03": {
+		"sectionId": "Section 3",
+		"title": "Communication & Production",
+		"summary": "Apply hierarchy and brand rules to print and digital deliverables; practice clean information design.",
+		"units": {
+			"unit07": {
+				"unitId": "Unit 7",
+				"title": "Print Communication: Poster & Flyer",
+				"summary": "Students apply hierarchy and brand rules to a print piece that communicates clearly.",
+				"description": "Poster or flyer with strong title, clean body copy, and visible CTA. Basics of print sizing, margins/bleed concepts, and export mindsets (even if final is paper).",
+				"chapters": [
+					{"title": "Purpose & Audience", "summary": "Briefs that define who, what, where, when, why."},
+					{"title": "Composition & CTA", "summary": "Space priority; getting the action noticed."},
+					{"title": "Refine & Crit", "summary": "Peer review with squint, distance, and checklist."}
+				]
+			},
+			"unit08": {
+				"unitId": "Unit 8",
+				"title": "Digital Communication: Social Graphics",
+				"summary": "Students adapt designs to common aspect ratios and keep identity consistent across posts.",
+				"description": "Square/post/story/header formats, safe areas, text sizing for mobile, and rapid series design while maintaining brand voice.",
+				"chapters": [
+					{"title": "Format & Scale", "summary": "What changes across sizes; what must stay consistent."},
+					{"title": "Series & Tempo", "summary": "3-post sets with consistent hierarchy and style."},
+					{"title": "Alt Text & Clarity", "summary": "Writing concise, helpful alt text and captions."}
+				]
+			},
+			"unit09": {
+				"unitId": "Unit 9",
+				"title": "Information Design: Icons & Infographics",
+				"summary": "Students translate data and ideas into simple visuals that are quick to read.",
+				"description": "Icon sketching with basic geometry, simple charts and comparisons, and layout that favors scanning.",
+				"chapters": [
+					{"title": "Icon Basics", "summary": "Stroke consistency; pixel/graph logic; recognizable silhouettes."},
+					{"title": "Visualizing Data", "summary": "When to use bars, pies, pictograms; labeling that helps."},
+					{"title": "Clutter Control", "summary": "Remove decoration; emphasize meaning."}
+				]
+			}
+		}
+	},
+	
+	"section04": {
+		"sectionId": "Section 4",
+		"title": "Professional Practice & Portfolio",
+		"summary": "Work ethically, credit sources, and present a portfolio that explains choices and results.",
+		"units": {
+			"unit10": {
+				"unitId": "Unit 10",
+				"title": "Ethics, Sourcing & Credits",
+				"summary": "Students learn to use images, type, and symbols responsibly and give proper credit.",
+				"description": "Copyright & fair use at a middle-school level, Creative Commons basics, citing sources, and avoiding distortion or misuse of school marks.",
+				"chapters": [
+					{"title": "Copyright & CC", "summary": "What’s allowed; how to attribute simply."},
+					{"title": "School Identity Use", "summary": "Clear rules for logos, colors, and spirit graphics."},
+					{"title": "Reflections on Impact", "summary": "Design fairness, accessibility, and audience respect."}
+				]
+			},
+			"unit11": {
+				"unitId": "Unit 11",
+				"title": "Portfolio & Showcase",
+				"summary": "Students curate, explain, and present their best work to show growth and skill.",
+				"description": "Select projects, write short reflections (purpose, decisions, outcomes), and prepare a simple exhibit or slide deck—emphasis on vocabulary and critique readiness.",
+				"chapters": [
+					{"title": "Curate & Sequence", "summary": "Pick pieces that show range and improvement."},
+					{"title": "Write Captions", "summary": "Purpose, choices, results—in 2–3 sentences each."},
+					{"title": "Present & Reflect", "summary": "Peer critique, revisions, and final share-out."}
+				]
+			}
+		}
+	}
+}

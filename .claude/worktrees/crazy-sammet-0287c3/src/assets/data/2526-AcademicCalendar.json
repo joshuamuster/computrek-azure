@@ -1,0 +1,2432 @@
+[
+	{
+		"Day Types": {
+			"0": "Weekend",
+			"1": "Normal",
+			"2": "Early Release",
+			"3": "Awards/Advisory",
+			"4": "Rally",
+			"5": "Golden Hour",
+			"6": "Testing",
+			"7": "Testing Early Release",
+			"8": "8-Period Day",
+			"9": "Minimum Day",
+			"10": "Holiday"
+		}
+	},
+	{
+		"Day Colors": {
+			"0": "#FFFFFF",
+			"1": "#FAE500",
+			"2": "#72B043",
+			"3": "#6C97D9",
+			"4": "#FF3131",
+			"5": "#FBB603",
+			"6": "#F1AAFC",
+			"7": "#B701CA",
+			"8": "#C6DFB3",
+			"9": "#FFD6BC",
+			"10": "#555"
+		}
+	},
+	{
+		"Day of School": 1,
+		"Month": "August",
+		"Date": "2025-08-18T00:00:00.000",
+		"Schedule Type": 3,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 2,
+		"Month": "August",
+		"Date": "2025-08-19T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 3,
+		"Month": "August",
+		"Date": "2025-08-20T00:00:00.000",
+		"Schedule Type": 3,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 4,
+		"Month": "August",
+		"Date": "2025-08-21T00:00:00.000",
+		"Schedule Type": 3,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 5,
+		"Month": "August",
+		"Date": "2025-08-22T00:00:00.000",
+		"Schedule Type": 4,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "August",
+		"Date": "2025-08-23T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "August",
+		"Date": "2025-08-24T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 6,
+		"Month": "August",
+		"Date": "2025-08-25T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 7,
+		"Month": "August",
+		"Date": "2025-08-26T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 8,
+		"Month": "August",
+		"Date": "2025-08-27T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 9,
+		"Month": "August",
+		"Date": "2025-08-28T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 10,
+		"Month": "August",
+		"Date": "2025-08-29T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "August",
+		"Date": "2025-08-30T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "August",
+		"Date": "2025-08-31T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-01T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 11,
+		"Month": "September",
+		"Date": "2025-09-02T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 12,
+		"Month": "September",
+		"Date": "2025-09-03T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 13,
+		"Month": "September",
+		"Date": "2025-09-04T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 14,
+		"Month": "September",
+		"Date": "2025-09-05T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-06T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-07T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 15,
+		"Month": "September",
+		"Date": "2025-09-08T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 16,
+		"Month": "September",
+		"Date": "2025-09-09T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 17,
+		"Month": "September",
+		"Date": "2025-09-10T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 18,
+		"Month": "September",
+		"Date": "2025-09-11T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 19,
+		"Month": "September",
+		"Date": "2025-09-12T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-13T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-14T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 20,
+		"Month": "September",
+		"Date": "2025-09-15T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 21,
+		"Month": "September",
+		"Date": "2025-09-16T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 22,
+		"Month": "September",
+		"Date": "2025-09-17T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 23,
+		"Month": "September",
+		"Date": "2025-09-18T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 24,
+		"Month": "September",
+		"Date": "2025-09-19T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-20T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-21T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 25,
+		"Month": "September",
+		"Date": "2025-09-22T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 26,
+		"Month": "September",
+		"Date": "2025-09-23T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 27,
+		"Month": "September",
+		"Date": "2025-09-24T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 28,
+		"Month": "September",
+		"Date": "2025-09-25T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 29,
+		"Month": "September",
+		"Date": "2025-09-26T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-27T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "September",
+		"Date": "2025-09-28T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 30,
+		"Month": "September",
+		"Date": "2025-09-29T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 31,
+		"Month": "September",
+		"Date": "2025-09-30T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 32,
+		"Month": "October",
+		"Date": "2025-10-01T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 33,
+		"Month": "October",
+		"Date": "2025-10-02T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 34,
+		"Month": "October",
+		"Date": "2025-10-03T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-04T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-05T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 35,
+		"Month": "October",
+		"Date": "2025-10-06T00:00:00.000",
+		"Schedule Type": 5,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 36,
+		"Month": "October",
+		"Date": "2025-10-07T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 37,
+		"Month": "October",
+		"Date": "2025-10-08T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 38,
+		"Month": "October",
+		"Date": "2025-10-09T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 39,
+		"Month": "October",
+		"Date": "2025-10-10T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-11T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-12T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 40,
+		"Month": "October",
+		"Date": "2025-10-13T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 41,
+		"Month": "October",
+		"Date": "2025-10-14T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 42,
+		"Month": "October",
+		"Date": "2025-10-15T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 43,
+		"Month": "October",
+		"Date": "2025-10-16T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-17T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-18T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-19T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 44,
+		"Month": "October",
+		"Date": "2025-10-20T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 45,
+		"Month": "October",
+		"Date": "2025-10-21T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 46,
+		"Month": "October",
+		"Date": "2025-10-22T00:00:00.000",
+		"Schedule Type": 3,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 47,
+		"Month": "October",
+		"Date": "2025-10-23T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 48,
+		"Month": "October",
+		"Date": "2025-10-24T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-25T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "October",
+		"Date": "2025-10-26T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 49,
+		"Month": "October",
+		"Date": "2025-10-27T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 50,
+		"Month": "October",
+		"Date": "2025-10-28T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 51,
+		"Month": "October",
+		"Date": "2025-10-29T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 52,
+		"Month": "October",
+		"Date": "2025-10-30T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 53,
+		"Month": "October",
+		"Date": "2025-10-31T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-01T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-02T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 54,
+		"Month": "November",
+		"Date": "2025-11-03T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 55,
+		"Month": "November",
+		"Date": "2025-11-04T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 56,
+		"Month": "November",
+		"Date": "2025-11-05T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 57,
+		"Month": "November",
+		"Date": "2025-11-06T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 58,
+		"Month": "November",
+		"Date": "2025-11-07T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-08T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-09T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 59,
+		"Month": "November",
+		"Date": "2025-11-10T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-11T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 60,
+		"Month": "November",
+		"Date": "2025-11-12T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 61,
+		"Month": "November",
+		"Date": "2025-11-13T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 62,
+		"Month": "November",
+		"Date": "2025-11-14T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-15T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-16T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 63,
+		"Month": "November",
+		"Date": "2025-11-17T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 64,
+		"Month": "November",
+		"Date": "2025-11-18T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 65,
+		"Month": "November",
+		"Date": "2025-11-19T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 66,
+		"Month": "November",
+		"Date": "2025-11-20T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 67,
+		"Month": "November",
+		"Date": "2025-11-21T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-22T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-23T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-24T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-25T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-26T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-27T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-28T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-29T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "November",
+		"Date": "2025-11-30T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 68,
+		"Month": "December",
+		"Date": "2025-12-01T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 69,
+		"Month": "December",
+		"Date": "2025-12-02T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 70,
+		"Month": "December",
+		"Date": "2025-12-03T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 71,
+		"Month": "December",
+		"Date": "2025-12-04T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 72,
+		"Month": "December",
+		"Date": "2025-12-05T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-06T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-07T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 73,
+		"Month": "December",
+		"Date": "2025-12-08T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 74,
+		"Month": "December",
+		"Date": "2025-12-09T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 75,
+		"Month": "December",
+		"Date": "2025-12-10T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 76,
+		"Month": "December",
+		"Date": "2025-12-11T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 77,
+		"Month": "December",
+		"Date": "2025-12-12T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-13T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-14T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 78,
+		"Month": "December",
+		"Date": "2025-12-15T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 79,
+		"Month": "December",
+		"Date": "2025-12-16T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 80,
+		"Month": "December",
+		"Date": "2025-12-17T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 81,
+		"Month": "December",
+		"Date": "2025-12-18T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 82,
+		"Month": "December",
+		"Date": "2025-12-19T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-20T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-21T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-22T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-23T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-24T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-25T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-26T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-27T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-28T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-29T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-30T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": null,
+		"Month": "December",
+		"Date": "2025-12-31T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-01T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-02T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-03T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-04T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-05T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-06T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-07T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-08T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-09T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-10T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-11T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 83,
+		"Month": "January",
+		"Date": "2026-01-12T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 84,
+		"Month": "January",
+		"Date": "2026-01-13T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 85,
+		"Month": "January",
+		"Date": "2026-01-14T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 86,
+		"Month": "January",
+		"Date": "2026-01-15T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 87,
+		"Month": "January",
+		"Date": "2026-01-16T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-17T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-18T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-19T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 88,
+		"Month": "January",
+		"Date": "2026-01-20T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 89,
+		"Month": "January",
+		"Date": "2026-01-21T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 90,
+		"Month": "January",
+		"Date": "2026-01-22T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 91,
+		"Month": "January",
+		"Date": "2026-01-23T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-24T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-25T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 92,
+		"Month": "January",
+		"Date": "2026-01-26T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 93,
+		"Month": "January",
+		"Date": "2026-01-27T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 94,
+		"Month": "January",
+		"Date": "2026-01-28T00:00:00.000",
+		"Schedule Type": 3,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 95,
+		"Month": "January",
+		"Date": "2026-01-29T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 96,
+		"Month": "January",
+		"Date": "2026-01-30T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "January",
+		"Date": "2026-01-31T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-01T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 97,
+		"Month": "February",
+		"Date": "2026-02-02T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 98,
+		"Month": "February",
+		"Date": "2026-02-03T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 99,
+		"Month": "February",
+		"Date": "2026-02-04T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 100,
+		"Month": "February",
+		"Date": "2026-02-05T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 101,
+		"Month": "February",
+		"Date": "2026-02-06T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-07T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-08T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-09T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 102,
+		"Month": "February",
+		"Date": "2026-02-10T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 103,
+		"Month": "February",
+		"Date": "2026-02-11T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 104,
+		"Month": "February",
+		"Date": "2026-02-12T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 105,
+		"Month": "February",
+		"Date": "2026-02-13T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-14T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-15T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-16T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 106,
+		"Month": "February",
+		"Date": "2026-02-17T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 107,
+		"Month": "February",
+		"Date": "2026-02-18T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 108,
+		"Month": "February",
+		"Date": "2026-02-19T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 109,
+		"Month": "February",
+		"Date": "2026-02-20T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-21T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-22T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 110,
+		"Month": "February",
+		"Date": "2026-02-23T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 111,
+		"Month": "February",
+		"Date": "2026-02-24T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 112,
+		"Month": "February",
+		"Date": "2026-02-25T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 113,
+		"Month": "February",
+		"Date": "2026-02-26T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 114,
+		"Month": "February",
+		"Date": "2026-02-27T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "February",
+		"Date": "2026-02-28T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-01T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 115,
+		"Month": "March",
+		"Date": "2026-03-02T00:00:00.000",
+		"Schedule Type": 5,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 116,
+		"Month": "March",
+		"Date": "2026-03-03T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 117,
+		"Month": "March",
+		"Date": "2026-03-04T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 118,
+		"Month": "March",
+		"Date": "2026-03-05T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 119,
+		"Month": "March",
+		"Date": "2026-03-06T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-07T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-08T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 120,
+		"Month": "March",
+		"Date": "2026-03-09T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 121,
+		"Month": "March",
+		"Date": "2026-03-10T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 122,
+		"Month": "March",
+		"Date": "2026-03-11T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 123,
+		"Month": "March",
+		"Date": "2026-03-12T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-13T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-14T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-15T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 124,
+		"Month": "March",
+		"Date": "2026-03-16T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 125,
+		"Month": "March",
+		"Date": "2026-03-17T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 126,
+		"Month": "March",
+		"Date": "2026-03-18T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 127,
+		"Month": "March",
+		"Date": "2026-03-19T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 128,
+		"Month": "March",
+		"Date": "2026-03-20T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-21T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-22T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 129,
+		"Month": "March",
+		"Date": "2026-03-23T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 130,
+		"Month": "March",
+		"Date": "2026-03-24T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 131,
+		"Month": "March",
+		"Date": "2026-03-25T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 132,
+		"Month": "March",
+		"Date": "2026-03-26T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 133,
+		"Month": "March",
+		"Date": "2026-03-27T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-28T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-29T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-30T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": null,
+		"Month": "March",
+		"Date": "2026-03-31T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-01T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-02T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-03T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-04T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-05T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-06T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 134,
+		"Month": "April",
+		"Date": "2026-04-07T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 135,
+		"Month": "April",
+		"Date": "2026-04-08T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 136,
+		"Month": "April",
+		"Date": "2026-04-09T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 137,
+		"Month": "April",
+		"Date": "2026-04-10T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-11T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-12T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 138,
+		"Month": "April",
+		"Date": "2026-04-13T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 139,
+		"Month": "April",
+		"Date": "2026-04-14T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 140,
+		"Month": "April",
+		"Date": "2026-04-15T00:00:00.000",
+		"Schedule Type": 3,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 141,
+		"Month": "April",
+		"Date": "2026-04-16T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 142,
+		"Month": "April",
+		"Date": "2026-04-17T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-18T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-19T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 143,
+		"Month": "April",
+		"Date": "2026-04-20T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 144,
+		"Month": "April",
+		"Date": "2026-04-21T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 145,
+		"Month": "April",
+		"Date": "2026-04-22T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 146,
+		"Month": "April",
+		"Date": "2026-04-23T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 147,
+		"Month": "April",
+		"Date": "2026-04-24T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-25T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "April",
+		"Date": "2026-04-26T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 148,
+		"Month": "April",
+		"Date": "2026-04-27T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 149,
+		"Month": "April",
+		"Date": "2026-04-28T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 150,
+		"Month": "April",
+		"Date": "2026-04-29T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 151,
+		"Month": "April",
+		"Date": "2026-04-30T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 152,
+		"Month": "May",
+		"Date": "2026-05-01T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-02T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-03T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 153,
+		"Month": "May",
+		"Date": "2026-05-04T00:00:00.000",
+		"Schedule Type": 4,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 154,
+		"Month": "May",
+		"Date": "2026-05-05T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 155,
+		"Month": "May",
+		"Date": "2026-05-06T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 156,
+		"Month": "May",
+		"Date": "2026-05-07T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 157,
+		"Month": "May",
+		"Date": "2026-05-08T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-09T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-10T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 158,
+		"Month": "May",
+		"Date": "2026-05-11T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 159,
+		"Month": "May",
+		"Date": "2026-05-12T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 160,
+		"Month": "May",
+		"Date": "2026-05-13T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 161,
+		"Month": "May",
+		"Date": "2026-05-14T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 162,
+		"Month": "May",
+		"Date": "2026-05-15T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-16T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-17T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 163,
+		"Month": "May",
+		"Date": "2026-05-18T00:00:00.000",
+		"Schedule Type": 6,
+		"Parity": "odd",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 164,
+		"Month": "May",
+		"Date": "2026-05-19T00:00:00.000",
+		"Schedule Type": 7,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 165,
+		"Month": "May",
+		"Date": "2026-05-20T00:00:00.000",
+		"Schedule Type": 6,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 166,
+		"Month": "May",
+		"Date": "2026-05-21T00:00:00.000",
+		"Schedule Type": 6,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 167,
+		"Month": "May",
+		"Date": "2026-05-22T00:00:00.000",
+		"Schedule Type": 6,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-23T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-24T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-25T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 168,
+		"Month": "May",
+		"Date": "2026-05-26T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 169,
+		"Month": "May",
+		"Date": "2026-05-27T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 170,
+		"Month": "May",
+		"Date": "2026-05-28T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 171,
+		"Month": "May",
+		"Date": "2026-05-29T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-30T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "May",
+		"Date": "2026-05-31T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 172,
+		"Month": "June",
+		"Date": "2026-06-01T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 173,
+		"Month": "June",
+		"Date": "2026-06-02T00:00:00.000",
+		"Schedule Type": 2,
+		"Parity": "odd",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 174,
+		"Month": "June",
+		"Date": "2026-06-03T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 175,
+		"Month": "June",
+		"Date": "2026-06-04T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "odd",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 176,
+		"Month": "June",
+		"Date": "2026-06-05T00:00:00.000",
+		"Schedule Type": 1,
+		"Parity": "even",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": null,
+		"Month": "June",
+		"Date": "2026-06-06T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	},
+	{
+		"Day of School": null,
+		"Month": "June",
+		"Date": "2026-06-07T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sun"
+	},
+	{
+		"Day of School": 177,
+		"Month": "June",
+		"Date": "2026-06-08T00:00:00.000",
+		"Schedule Type": 8,
+		"Parity": "neutral",
+		"Day": "Mon"
+	},
+	{
+		"Day of School": 178,
+		"Month": "June",
+		"Date": "2026-06-09T00:00:00.000",
+		"Schedule Type": 8,
+		"Parity": "neutral",
+		"Day": "Tue"
+	},
+	{
+		"Day of School": 179,
+		"Month": "June",
+		"Date": "2026-06-10T00:00:00.000",
+		"Schedule Type": 8,
+		"Parity": "neutral",
+		"Day": "Wed"
+	},
+	{
+		"Day of School": 180,
+		"Month": "June",
+		"Date": "2026-06-11T00:00:00.000",
+		"Schedule Type": 9,
+		"Parity": "neutral",
+		"Day": "Thu"
+	},
+	{
+		"Day of School": 181,
+		"Month": "June",
+		"Date": "2026-06-12T00:00:00.000",
+		"Schedule Type": 10,
+		"Parity": "neutral",
+		"Day": "Fri"
+	},
+	{
+		"Day of School": 182,
+		"Month": "June",
+		"Date": "2026-06-13T00:00:00.000",
+		"Schedule Type": 0,
+		"Parity": "neutral",
+		"Day": "Sat"
+	}
+]

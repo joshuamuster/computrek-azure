@@ -1,0 +1,106 @@
+{
+	"champs": {
+		"conversation": {
+			"levels": {
+				"0": {
+					"description": "Silent, no talking at all"
+				},
+				"1": {
+					"description": "Whisper, partner only"
+				},
+				"2": {
+					"description": "Table Talk, YOUR table."
+				},
+				"3": {
+					"description": "Whole group discourse"
+				}
+			}
+		},
+		"help": {
+			"levels": {
+				"0": {
+					"description": "Raise hand & wait"
+				},
+				"1": {
+					"description": "Partner, just yours"
+				},
+				"2": {
+					"description": "Peer Help, your table"
+				},
+				"3": {
+					"description": "Ask Teacher or peers"
+				}
+			}
+		},
+		"activity": {
+			"levels": {
+				"0": {
+					"description": "Listen, laptop closed"
+				},
+				"1": {
+					"description": "Work independently"
+				},
+				"2": {
+					"description": "Work with your partner"
+				},
+				"3": {
+					"description": "Free to work as a class"
+				}
+			}
+		},
+		"movement": {
+			"levels": {
+				"0": {
+					"description": "Stay seated at all times"
+				},
+				"1": {
+					"description": "Hand up & ask to move"
+				},
+				"2": {
+					"description": "Pencils, tissue, etc."
+				},
+				"3": {
+					"description": "Free around stations"
+				}
+			}
+		},
+		"participation": {
+			"levels": {
+				"0": {
+					"description": "Observer – Watch demo or listen only"
+				},
+				"1": {
+					"description": "Responder – Answer when called on"
+				},
+				"2": {
+					"description": "Partner – Work together, stay on task"
+				},
+				"3": {
+					"description": "Driver/Sharer – Take lead or share ideas"
+				},
+				"4": {
+					"description": "Testing – Quietly "
+				}
+			}
+		},
+		"success": {
+			"levels": {
+				"0": {
+					"description": "Complete & submit code and activity guide(s)"
+				},
+				"1": {
+					"description": "Complete & submit personal project(s)"
+				},
+				"2": {
+					"description": "Continue or extend project(s)"
+				},
+				"3": {
+					"description": "Complete & submit group project(s)"
+				},
+				"4": {
+					"description": "Complete the challenge(s) for the day"
+				}
+			}
+		}
+	}
+}
