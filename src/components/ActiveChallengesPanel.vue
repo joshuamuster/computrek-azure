@@ -71,7 +71,7 @@
 
 <script setup lang="ts">
 import { ref, computed, watch, onUnmounted } from 'vue'
-import { collection, query, where, onSnapshot } from 'firebase/firestore'
+import { collection, query, where, onSnapshot } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { usePeriodSelector } from '@/composables/usePeriodSelector'

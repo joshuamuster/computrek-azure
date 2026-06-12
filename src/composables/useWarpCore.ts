@@ -26,7 +26,7 @@ import { ref, onUnmounted } from 'vue'
 import type { Ref } from 'vue'
 import {
   collection, query, where, getDocs,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID } from '@/config/schoolYear'
 import type { WarpPhase } from '@/composables/useAssignments'

@@ -160,7 +160,7 @@ import { ref, onMounted } from 'vue'
 import {
   collection, addDoc, setDoc, doc, getDocs, deleteDoc,
   query, where, writeBatch, serverTimestamp, Timestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { SCHOOL_YEAR_ID } from '@/config/schoolYear'

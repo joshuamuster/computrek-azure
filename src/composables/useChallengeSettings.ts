@@ -19,7 +19,7 @@ import { ref, computed } from 'vue'
 import {
   doc, onSnapshot, setDoc, getDocs,
   query, collection, where, serverTimestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 
 // ── Singleton state ───────────────────────────────────────────────────────────

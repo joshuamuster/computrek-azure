@@ -28,7 +28,7 @@ import {
   onSnapshot,
   serverTimestamp,
   Timestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth'
 import { usePeriodSelector } from '@/composables/usePeriodSelector'

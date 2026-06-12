@@ -18,7 +18,7 @@
  * in classic.css :root must also be kept in sync for scoped-style rules.
  */
 
-import { doc, updateDoc } from 'firebase/firestore'
+import { doc, updateDoc } from '@/data/db'
 import { db } from '@/firebase'
 
 // ── Color palette (single source of truth for JS / template :style bindings) ──

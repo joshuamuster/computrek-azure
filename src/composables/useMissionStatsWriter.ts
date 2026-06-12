@@ -15,7 +15,7 @@
 //                      — ungradeSubmission       → onGraded(-1)
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { doc, setDoc, updateDoc, increment, serverTimestamp } from 'firebase/firestore'
+import { doc, setDoc, updateDoc, increment, serverTimestamp } from '@/data/db'
 import { db } from '@/firebase'
 
 // ── Key helper ────────────────────────────────────────────────────────────────

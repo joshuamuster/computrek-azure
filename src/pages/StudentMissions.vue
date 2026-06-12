@@ -459,7 +459,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { doc, getDoc, updateDoc, serverTimestamp, collection, getDocs, onSnapshot, query, where } from 'firebase/firestore'
+import { doc, getDoc, updateDoc, serverTimestamp, collection, getDocs, onSnapshot, query, where } from '@/data/db'
 import { db, storage } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useAssignments } from '@/composables/useAssignments'

@@ -38,12 +38,36 @@ Student PII (real names, district emails) never enters the Azure database. Each 
 - [ ] Set `VITE_AZURE_TENANT_ID` and `VITE_AZURE_CLIENT_ID` in `.env`
 - [ ] In Firebase Console → Authentication → Sign-in providers → add Microsoft with the Client ID/Secret
 
-### Phase 2 — Database (largest lift)
-- [ ] Provision Azure Cosmos DB account + `computrek` database
-- [ ] Create containers mirroring current Firestore collections (see inventory below)
-- [ ] Replace `src/firebase.ts` imports with `src/azure.ts` Cosmos client across all composables
-- [ ] Rewrite all ~50 composables to use `@azure/cosmos` SDK instead of Firestore SDK
-- [ ] Set `AZURE_DATABASE: true` in featureFlags.ts when complete
+### Phase 2 — Database (largest lift) ✅ (live on Cosmos DB as of June 12, 2026)
+
+Implemented as a **dual-backend data access layer** instead of rewriting composable
+logic: every composable/page/service now imports its database functions from
+`src/data/db.ts`, which presents the exact Firestore API surface the app uses
+(`query/where/orderBy/limit`, doc CRUD, `onSnapshot`, `writeBatch`,
+`runTransaction`, `serverTimestamp`/`Timestamp`, `increment`,
+`arrayUnion`/`arrayRemove`) and routes to one of two backends:
+
+- `src/data/firestoreBackend.ts` — re-exports the Firestore SDK (active while `AZURE_DATABASE: false`)
+- `src/data/cosmosBackend.ts` — the same API on `@azure/cosmos` (lazy-loaded; zero bundle cost until activated)
+
+Cosmos backend notes: timestamps are stored as `{ "__ts": <epoch ms> }` and revived
+to `Timestamp` instances on read; `orderBy`/`limit` are applied client-side
+(classroom-scale data); `onSnapshot` polls every 4 s until Phase 3's SignalR;
+`writeBatch` is sequential (all existing batches are re-runnable fan-outs);
+`runTransaction` uses etag optimistic concurrency with retry.
+
+- [x] All 50 Firestore-importing files migrated to `src/data/db.ts` (one-line import change each)
+- [x] Cosmos backend implemented with full container/partition-key registry (25 collections)
+- [x] `@azure/cosmos` installed (dynamically imported — bundle-neutral while flag is off)
+- [x] Data migration script: `scripts/migrate-firestore-to-cosmos.mjs` (dry-run verified against live Firestore: 18,027 docs / 25 collections)
+- [x] Provision Azure Cosmos DB account (**Serverless** capacity mode — a provisioned account would cost ~$580/mo for 25 containers at the 400 RU/s default); set `VITE_COSMOS_ENDPOINT` + `VITE_COSMOS_KEY` in `.env`; enable CORS for the app origin — account: `computrek-fusd`, West US
+- [x] Run the migration script — 18,027 docs / 25 collections migrated June 12, 2026
+- [x] Smoke-test with `AZURE_DATABASE: true` against live Cosmos (demo login, dashboard, CHAMPS, HUD all verified) — flag is now ON
+
+> **Before deploying to students:** the deployed production app still runs on
+> Firestore, so any data written there after June 12 is not in Cosmos. Re-run
+> `node scripts/migrate-firestore-to-cosmos.mjs` (it's an idempotent upsert)
+> right before the real cutover deploy — per the summer-break plan below.
 
 ### Phase 3 — Real-time
 - [ ] Provision Azure SignalR Service
@@ -90,6 +114,19 @@ Every Firestore collection maps 1:1 to a Cosmos DB container.
 | `shipStatus` | `shipStatus` | `/id` |
 | `periods` | `periods` | `/schoolYearId` |
 | `seatingCharts` | `seatingCharts` | `/periodId` |
+| `challengeSettings` | `challengeSettings` | `/id` |
+| `timerState` | `timerState` | `/id` |
+| `champsState` | `champsState` | `/id` |
+| `periodStats` | `periodStats` | `/id` |
+| `missionCards` | `missionCards` | `/id` |
+| `gradebookSnapshots` | `gradebookSnapshots` | `/id` |
+| `gradebookOrder` | `gradebookOrder` | `/id` |
+| `activeTestSessions` | `activeTestSessions` | `/id` |
+| `demo` | `demo` | `/id` |
+
+The canonical registry lives in `CONTAINER_REGISTRY` in `src/data/cosmosBackend.ts`
+(mirrored in `scripts/migrate-firestore-to-cosmos.mjs`). Collections not listed
+default to partition key `/id`, which is always safe.
 
 ## What Does NOT Change
 
@@ -110,7 +147,8 @@ Every Firestore collection maps 1:1 to a Cosmos DB container.
 | `src/azure.ts` | New file — Azure SDK stubs, activated phase by phase |
 | `src/config/featureFlags.ts` | Phase gates; `MICROSOFT_AUTH` always true in this repo |
 | `src/composables/useAuth.js` | Auth provider swap in Phase 6 |
-| All `src/composables/use*.ts` | SDK calls only — business logic unchanged (Phase 2) |
+| All `src/composables/use*.ts` | Import from `@/data/db` instead of `firebase/firestore` ✅ |
+| `src/data/db.ts` + backends | New — dual-backend data access layer (Phase 2) ✅ |
 | `src/multiplayer/gameRoomService.ts` | Cosmos DB + SignalR (Phase 4) |
 | `src/multiplayer/moveSyncService.ts` | SignalR (Phase 4) |
 | `src/multiplayer/reconnectService.ts` | SignalR (Phase 4) |
@@ -120,4 +158,4 @@ Every Firestore collection maps 1:1 to a Cosmos DB container.
 
 ## Data Migration (when cutting over)
 
-Run a migration script during summer break. Script reads every Firestore collection and writes to the corresponding Cosmos DB container. Student codes and PINs stay unchanged — cadets log in the same way, just backed by a different database.
+Run `node scripts/migrate-firestore-to-cosmos.mjs` during summer break (use `--dry-run` first). It reads every Firestore collection via firebase-admin and upserts into the corresponding Cosmos DB container, creating the database and containers with correct partition keys automatically. Re-runnable — writes are upserts keyed by the original doc IDs. Student codes and PINs stay unchanged — cadets log in the same way, just backed by a different database.

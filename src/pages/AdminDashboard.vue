@@ -234,7 +234,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { collection, query, where, onSnapshot, type QueryConstraint } from 'firebase/firestore'
+import { collection, query, where, onSnapshot, type QueryConstraint } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useShipStatus } from '@/composables/useShipStatus'

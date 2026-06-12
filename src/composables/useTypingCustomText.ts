@@ -18,7 +18,7 @@ import { ref } from 'vue'
 import {
   collection, addDoc, updateDoc, getDocs,
   doc, query, orderBy, where, serverTimestamp, Timestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 
 // ── Types ─────────────────────────────────────────────────────────────────────

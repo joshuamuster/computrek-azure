@@ -539,7 +539,7 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import GradebookTab from '@/components/grading/GradebookTab.vue'
-import { collection, query, where, getDocs } from 'firebase/firestore'
+import { collection, query, where, getDocs } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useAssignments, type Assignment } from '@/composables/useAssignments'

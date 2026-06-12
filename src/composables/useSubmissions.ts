@@ -14,7 +14,7 @@ import { ref } from 'vue'
 import {
 	collection, getDocs, doc, updateDoc, deleteDoc,
 	query, where, orderBy, Timestamp, serverTimestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID } from '@/config/schoolYear'
 import { onGraded } from '@/composables/useMissionStatsWriter'

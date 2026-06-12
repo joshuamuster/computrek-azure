@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { collection, getDocs, query, where, orderBy, limit } from 'firebase/firestore'
+import { collection, getDocs, query, where, orderBy, limit } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import {

@@ -17,7 +17,7 @@ import {
   collection, addDoc, updateDoc,
   doc, getDocs, query, where, orderBy, documentId,
   serverTimestamp, Timestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 
 // ── Types ─────────────────────────────────────────────────────────────────────

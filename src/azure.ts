@@ -29,36 +29,25 @@ export const AZURE_TENANT_ID = import.meta.env.VITE_AZURE_TENANT_ID || 'common'
 export const AZURE_CLIENT_ID = import.meta.env.VITE_AZURE_CLIENT_ID || ''
 
 
-// ── Phase 2: Cosmos DB ─────────────────────────────────────────────────────────
-// Uncomment and run `npm install @azure/cosmos` when Phase 2 composable
-// rewrites begin.
+// ── Phase 2: Cosmos DB ── ✅ implemented in src/data/ ──────────────────────────
+// The database layer now lives in src/data/:
 //
-// import { CosmosClient } from '@azure/cosmos'
+//   src/data/db.ts              — facade every composable/page imports from;
+//                                 selects the backend via FEATURE_FLAGS.AZURE_DATABASE
+//   src/data/firestoreBackend.ts — re-exports the Firestore SDK (current backend)
+//   src/data/cosmosBackend.ts    — same API implemented on @azure/cosmos,
+//                                  including the full container/partition-key
+//                                  registry (CONTAINER_REGISTRY)
 //
-// const cosmosClient = new CosmosClient({
-//   endpoint: import.meta.env.VITE_COSMOS_ENDPOINT,
-//   key:      import.meta.env.VITE_COSMOS_KEY,
-// })
+// The Cosmos client is created lazily inside cosmosBackend via dynamic import,
+// so it costs nothing in the bundle until AZURE_DATABASE is flipped to true.
 //
-// export const cosmosDb = cosmosClient.database('computrek')
-//
-// Container references (one per Firestore collection being migrated):
-//   cosmosDb.container('approvedUsers')   — partition key: /periodId
-//   cosmosDb.container('missions')        — partition key: /teacherEmail
-//   cosmosDb.container('assignments')     — partition key: /periodId
-//   cosmosDb.container('submissions')     — partition key: /studentId
-//   cosmosDb.container('typingResults')   — partition key: /uid
-//   cosmosDb.container('typingLessons')   — partition key: /section
-//   cosmosDb.container('typingCustomTexts') — partition key: /teacherEmail
-//   cosmosDb.container('gameScores')      — partition key: /periodId
-//   cosmosDb.container('gameRooms')       — partition key: /gameType
-//   cosmosDb.container('challenges')      — partition key: /periodId
-//   cosmosDb.container('conductEntries')  — partition key: /studentId
-//   cosmosDb.container('conductRatings')  — partition key: /studentId
-//   cosmosDb.container('activityLogs')    — partition key: /uid
-//   cosmosDb.container('shipStatus')      — partition key: /id
-//   cosmosDb.container('periods')         — partition key: /schoolYearId
-//   cosmosDb.container('seatingCharts')   — partition key: /periodId
+// Cutover procedure:
+//   1. Provision a Cosmos DB account; set VITE_COSMOS_ENDPOINT and
+//      VITE_COSMOS_KEY in .env. Enable CORS for the app's origin on the account.
+//   2. node scripts/migrate-firestore-to-cosmos.mjs --dry-run   (sanity check)
+//   3. node scripts/migrate-firestore-to-cosmos.mjs             (copy the data)
+//   4. Set AZURE_DATABASE = true in src/config/featureFlags.ts.
 
 
 // ── Phase 3: Azure SignalR ────────────────────────────────────────────────────

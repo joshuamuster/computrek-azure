@@ -17,7 +17,7 @@ import { ref } from 'vue'
 import {
   collection, query, where, getDocs, getDoc, updateDoc,
   doc, arrayUnion, serverTimestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID } from '@/config/schoolYear'
 import { getCalendarDay, getNextClassDay } from '@/composables/useAcademicCalendar'

@@ -20,7 +20,7 @@ import {
   collection, query, where, getDocs,
   setDoc, doc, onSnapshot, serverTimestamp,
   documentId,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID } from '@/config/schoolYear'
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { signInWithPopup, signInWithRedirect, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithEmailAndPassword, signOut, updatePassword } from 'firebase/auth'
-import { doc, getDoc, updateDoc, setDoc, disableNetwork, enableNetwork } from 'firebase/firestore'
+import { doc, getDoc, updateDoc, setDoc, disableNetwork, enableNetwork } from '@/data/db'
 import { auth, db } from '@/firebase'
 import { AZURE_TENANT_ID } from '@/azure'
 

@@ -99,7 +99,22 @@
       "Bash(node_modules/.bin/vue-tsc --noEmit)",
       "Bash(node_modules/.bin/vite build *)",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('project_id:', d.get\\('project_id'\\)\\); print\\('client_email:', d.get\\('client_email'\\)\\); print\\('type:', d.get\\('type'\\)\\); print\\('has private_key:', bool\\(d.get\\('private_key'\\)\\)\\)\")",
-      "Bash(git merge *)"
+      "Bash(git merge *)",
+      "Bash(perl -0ne \"print \\\\$1 while /import\\\\s*\\\\{\\([^}]*\\)\\\\}\\\\s*from\\\\s*'firebase\\\\/firestore'/gs\" src/composables/*.ts src/composables/*.js src/components/*.vue src/components/grading/*.vue src/pages/*.vue src/multiplayer/*.ts)",
+      "Bash(xargs -I{} sed -i '' \"s|'firebase/firestore'|'@/data/db'|g\" {})",
+      "Bash(xargs -I{} sh -c 'echo {}; grep -c \"CosmosClient\" {} || true')",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(sort -k5 -h)",
+      "Bash(node scripts/migrate-firestore-to-cosmos.mjs --dry-run)",
+      "Bash(az account *)",
+      "Bash(az --version)",
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(node scripts/migrate-firestore-to-cosmos.mjs)",
+      "Bash(tee /tmp/cosmos-migration.log)",
+      "Bash(curl -s http://localhost:1701)",
+      "Bash(break)",
+      "Bash(grep -iE \"serviceAccount|\\\\.env$\")",
+      "Bash(git fetch *)"
     ],
     "deny": []
   }

@@ -20,7 +20,7 @@ import { ref } from 'vue'
 import {
   collection, query, where, orderBy, limit,
   getDocs, Timestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID, QUARTERS, getQuarterIdForDate } from '@/config/schoolYear'
 

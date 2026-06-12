@@ -15,7 +15,7 @@
 import { ref } from 'vue'
 import {
   collection, query, where, orderBy, limit, getDocs,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID } from '@/config/schoolYear'
 

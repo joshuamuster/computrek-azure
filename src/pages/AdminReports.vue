@@ -726,7 +726,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import { collection, query, where, getDocs } from 'firebase/firestore'
+import { collection, query, where, getDocs } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { usePeriodSelector } from '@/composables/usePeriodSelector'

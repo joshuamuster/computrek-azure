@@ -234,7 +234,7 @@
 
 <script setup>
 import { reactive, ref, watch, computed, onUnmounted } from 'vue';
-import { doc, setDoc, onSnapshot, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, onSnapshot, serverTimestamp } from '@/data/db';
 import { db } from '@/firebase';
 import champsData from '@/assets/data/ChampsData.json';
 import soundFile from '@/assets/sounds/SFX-Computer/keyok3.wav';

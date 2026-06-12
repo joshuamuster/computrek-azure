@@ -12,7 +12,7 @@ import { ref } from 'vue'
 import {
   collection, doc, getDocs, setDoc, updateDoc,
   query, where, arrayRemove, Timestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID, PERIOD_IDS } from '@/config/schoolYear'
 

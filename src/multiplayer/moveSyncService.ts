@@ -4,7 +4,7 @@ import {
   updateDoc, 
   arrayUnion,
   getDoc
-} from 'firebase/firestore';
+} from '@/data/db';
 import { db } from '../firebase';
 import { GameRoom } from './gameRoomService';
 import { isRoomExpired, sanitizeForFirestore } from './utils';

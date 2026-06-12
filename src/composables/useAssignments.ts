@@ -26,7 +26,7 @@ import {
   collection, addDoc, updateDoc, deleteDoc, writeBatch,
   doc, getDocs, query, where, orderBy,
   serverTimestamp, Timestamp, documentId,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID, getQuarterIdForDate } from '@/config/schoolYear'
 import type { MissionType, DeliveryItem } from '@/composables/useMissions'

@@ -80,7 +80,7 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { collection, getDocs, query, where } from 'firebase/firestore'
+import { collection, getDocs, query, where } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 

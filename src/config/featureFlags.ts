@@ -40,7 +40,7 @@ export const MICROSOFT_TENANT = import.meta.env.VITE_AZURE_TENANT_ID || 'common'
  * Firestore. Flip to true once every composable has been rewritten and
  * tested against a live Cosmos DB instance.
  */
-export const AZURE_DATABASE = false
+export const AZURE_DATABASE = true
 
 /**
  * Phase 3: Use Azure SignalR Service for real-time updates instead of

@@ -1,4 +1,4 @@
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc } from '@/data/db';
 import { db } from '../firebase';
 import { GameRoom } from './gameRoomService';
 import { isRoomExpired } from './utils';

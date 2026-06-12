@@ -9,7 +9,7 @@
 // effectiveDueDate = sub.dueDateOverride ?? assignment.dueDate (YYYY-MM-DD).
 // "Late" is defined as submitted AFTER 11:59 PM on the due date.
 
-import type { Timestamp } from 'firebase/firestore'
+import type { Timestamp } from '@/data/db'
 
 export interface LatePenaltyResult {
   daysLate:       number          // 0 if on time or no config

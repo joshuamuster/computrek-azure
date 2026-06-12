@@ -30,7 +30,7 @@ import {
   onSnapshot,
   serverTimestamp,
   getDoc,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 

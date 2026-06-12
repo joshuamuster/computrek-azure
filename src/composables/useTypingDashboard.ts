@@ -9,7 +9,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { ref } from 'vue'
-import { collection, query, where, orderBy, getDocs } from 'firebase/firestore'
+import { collection, query, where, orderBy, getDocs } from '@/data/db'
 import { db } from '@/firebase'
 
 // ── Types ─────────────────────────────────────────────────────────────────────

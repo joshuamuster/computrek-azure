@@ -24,7 +24,7 @@ import {
   limit,
   getDocs,
   serverTimestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useActivityLog } from '@/composables/useActivityLog.js'

@@ -28,7 +28,7 @@ import {
 	getDocs,
 	serverTimestamp,
 	runTransaction,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useActivityLog } from '@/composables/useActivityLog.js'

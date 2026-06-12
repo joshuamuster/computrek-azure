@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router'
 import {
   collection, doc, addDoc, updateDoc, query, where,
   onSnapshot, serverTimestamp, Timestamp, getDocs,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { createOnlineGame, joinOnlineGame } from '@/multiplayer/gameRoomService'
 import { getInitialBoard as picardInit, boardToString as picardStr } from '@/components/games/PicardManeuver/engine'

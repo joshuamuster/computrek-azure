@@ -10,7 +10,7 @@
  *   await logEvent('game_complete',   { gameId: 'chess', score: 5 })
  *   await logEvent('typing_complete', { mode: 'lesson', lessonId: 'L03', wpm: 62, accuracy: 97 })
  */
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
+import { addDoc, collection, serverTimestamp } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { SCHOOL_YEAR_ID } from '@/config/schoolYear'

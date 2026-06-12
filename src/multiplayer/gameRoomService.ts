@@ -9,7 +9,7 @@ import {
   getDocs, 
   serverTimestamp,
   type DocumentData
-} from 'firebase/firestore';
+} from '@/data/db';
 import { db } from '../firebase';
 import { generateJoinCode, getPersistentPlayerId, isRoomExpired } from './utils';
 

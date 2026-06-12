@@ -401,7 +401,7 @@
 
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
-import { collection, getDocs, doc, setDoc, deleteDoc, serverTimestamp, query, where } from 'firebase/firestore'
+import { collection, getDocs, doc, setDoc, deleteDoc, serverTimestamp, query, where } from '@/data/db'
 import { getIdToken } from 'firebase/auth'
 import { db, firebaseConfig, auth } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'

@@ -220,7 +220,7 @@ import { ref, computed, watch } from 'vue'
 import {
   collection, query, where, getDocs,
   addDoc, doc, setDoc, getDoc, serverTimestamp, type Timestamp,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import type { Assignment } from '@/composables/useAssignments'

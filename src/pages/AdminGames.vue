@@ -94,7 +94,7 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import {
   collection, query, where, orderBy, limit, getDocs,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useBroadcast } from '@/composables/useBroadcast'

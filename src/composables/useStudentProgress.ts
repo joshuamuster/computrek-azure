@@ -22,7 +22,7 @@ import {
   query,
   where,
   getDocs,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import type { TypingLesson } from '@/composables/useTypingContent'

@@ -15,7 +15,7 @@ import { ref } from 'vue'
 import {
   collection, addDoc, doc, query, where, orderBy,
   getDocs, serverTimestamp, limit, writeBatch,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { SCHOOL_YEAR_ID, QUARTERS, getQuarterIdForDate } from '@/config/schoolYear'
 import { clampScore } from '@/composables/useConductScore'

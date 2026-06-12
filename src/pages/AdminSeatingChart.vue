@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, watch, onUnmounted } from 'vue'
-import { collection, query, where, doc, getDoc, getDocs, onSnapshot } from 'firebase/firestore'
+import { collection, query, where, doc, getDoc, getDocs, onSnapshot } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useSeatingChart, PRESET_LAYOUTS, buildGridItems, buildGridStyle, type SeatStudent } from '@/composables/useSeatingChart'

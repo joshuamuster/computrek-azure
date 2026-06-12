@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { collection, query, where, orderBy, limit, getDocs, doc, updateDoc } from 'firebase/firestore'
+import { collection, query, where, orderBy, limit, getDocs, doc, updateDoc } from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useSubmissions, type StudentRecord } from '@/composables/useSubmissions'

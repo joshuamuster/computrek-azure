@@ -120,7 +120,7 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import {
   collection, query, where, onSnapshot, getDocs, orderBy, limit,
-} from 'firebase/firestore'
+} from '@/data/db'
 import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useStruggleDetection, type RiskLevel } from '@/composables/useStruggleDetection'

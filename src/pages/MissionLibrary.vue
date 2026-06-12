@@ -1016,7 +1016,7 @@ import { useAuth } from '@/composables/useAuth.js'
 import { useMissions, type Mission, type MissionDraft, type DeliveryItem } from '@/composables/useMissions'
 import RichTextEditor from '@/components/RichTextEditor.vue'
 import { useAssignments, type Assignment, type WarpPhase } from '@/composables/useAssignments'
-import { collection, getDocs, query, where } from 'firebase/firestore'
+import { collection, getDocs, query, where } from '@/data/db'
 import { db } from '@/firebase'
 import { PERIOD_IDS, UNITS } from '@/config/schoolYear'
 

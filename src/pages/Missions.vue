@@ -408,7 +408,7 @@
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import {
   collection, addDoc, doc, updateDoc, setDoc, getDoc, serverTimestamp,
-} from 'firebase/firestore';
+} from '@/data/db';
 import { db } from '@/firebase';
 import { useAuth } from '@/composables/useAuth.js';
 import { PERIOD_IDS, SCHOOL_YEAR_ID, getQuarterIdForDate } from '@/config/schoolYear';
