@@ -402,8 +402,8 @@
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { collection, getDocs, doc, setDoc, deleteDoc, serverTimestamp, query, where } from '@/data/db'
-import { getIdToken } from 'firebase/auth'
-import { db, firebaseConfig, auth } from '@/firebase'
+import { msalGetIdToken } from '@/data/msalAuth'
+import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { PERIOD_IDS } from '@/config/schoolYear'
 
@@ -520,13 +520,19 @@ watch(currentUserEmail, (email) => {
   }
 }, { immediate: true })
 
+const API_BASE = import.meta.env.VITE_SIGNALR_URL || '/api'
+
+async function staffAuthHeader() {
+  const token = await msalGetIdToken()
+  return { 'content-type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) }
+}
+
 const addUser = async () => {
   formError.value   = ''
   formSuccess.value = ''
 
-  // Non-admin staff can only add cadets to their own class — enforce server-side.
   if (!isAdmin.value) {
-    newUser.value.role        = 'cadet'
+    newUser.value.role         = 'cadet'
     newUser.value.teacherEmail = currentUserEmail.value
   }
 
@@ -541,7 +547,7 @@ const addUser = async () => {
 
     if (!username)             { formError.value = 'Username is required.'; return }
     if (!/^[a-z0-9._-]+$/.test(username)) { formError.value = 'Username may only contain letters, numbers, dots, hyphens, and underscores.'; return }
-    if (!password || password.length < 6) { formError.value = 'Password must be at least 6 characters.'; return }
+    if (!password || password.length < 4) { formError.value = 'PIN must be at least 4 characters.'; return }
     if (!periodId)             { formError.value = 'Please select a period.'; return }
     if (!teacherEmail)         { formError.value = 'Please select a teacher.'; return }
 
@@ -550,38 +556,24 @@ const addUser = async () => {
 
     isSaving.value = true
     try {
-      // Create Firebase Auth account via the REST API instead of the SDK.
-      // Using createUserWithEmailAndPassword from the SDK would auto-sign-in
-      // as the new cadet, displacing the admin session and breaking the
-      // Firestore write that follows. The REST API creates the user without
-      // touching the browser's auth state at all.
-      const signUpRes = await fetch(
-        `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${firebaseConfig.apiKey}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: cadetEmail, password, returnSecureToken: false }),
-        }
-      )
-      if (!signUpRes.ok) {
-        const err = await signUpRes.json()
-        const code = err?.error?.message ?? 'UNKNOWN'
-        if (code === 'EMAIL_EXISTS') throw Object.assign(new Error(), { code: 'auth/email-already-in-use' })
-        throw new Error(`Auth error: ${code}`)
-      }
+      // Route cadet creation through the Functions app so the PIN is bcrypt-hashed
+      // server-side — the browser never needs the bcrypt library.
+      const res = await fetch(`${API_BASE}/auth`, {
+        method: 'POST',
+        headers: await staffAuthHeader(),
+        body: JSON.stringify({
+          action:       'createCadet',
+          code:         username,
+          pin:          password,
+          displayName:  name || username,
+          periodId,
+          teacherEmail,
+          studentId:    String(Math.floor(100000 + Math.random() * 900000)),
+        }),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(data?.error ?? `Failed to create cadet (${res.status})`)
 
-      // Save to Firestore
-      const cadetDoc = {
-        displayName:  name || username,
-        role:         'cadet',
-        periodId,
-        teacherEmail,
-        autoApproved: false,
-        requiresPasswordChange: true,
-        createdAt:    serverTimestamp(),
-      }
-      cadetDoc.studentId = String(Math.floor(100000 + Math.random() * 900000))
-      await setDoc(doc(db, 'approvedUsers', cadetEmail), cadetDoc)
       const teacherName = teacherOptions.value.find(t => t.email === teacherEmail)?.displayName ?? teacherEmail
       formSuccess.value = `${name || username} has been enrolled in ${PERIOD_IDS.find(p => p.id === periodId)?.label} under ${teacherName}.`
       newUser.value = {
@@ -592,52 +584,21 @@ const addUser = async () => {
       await fetchUsers()
     } catch (e) {
       console.error(e)
-      if (e.code === 'auth/email-already-in-use') {
-        formError.value = 'That username is already taken in Firebase Auth.'
-      } else {
-        formError.value = 'Failed to add cadet. ' + (e.message ?? '')
-      }
+      formError.value = 'Failed to add cadet. ' + (e.message ?? '')
     } finally {
       isSaving.value = false
     }
 
   } else {
-    const email    = newUser.value.email.trim().toLowerCase()
-    const isAudit  = newUser.value.role === 'audit'
-    const password = newUser.value.password
+    const email = newUser.value.email.trim().toLowerCase()
 
     if (!email)                                     { formError.value = 'Email address is required.'; return }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { formError.value = 'Please enter a valid email.'; return }
     if (users.value.find(u => u.email === email))   { formError.value = 'That email is already approved.'; return }
 
-    // Only audit accounts need a password — they use email/password login.
-    // Staff and admin use Google OAuth, so no Firebase Auth account is created here.
-    if (isAudit && (!password || password.length < 6)) {
-      formError.value = 'Password is required and must be at least 6 characters for Audit accounts.'
-      return
-    }
-
     isSaving.value = true
     try {
-      // Audit accounts need a Firebase Auth record for email/password login.
-      // Staff/admin sign in via Google OAuth — no Auth record needed here.
-      if (isAudit) {
-        const signUpRes = await fetch(
-          `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${firebaseConfig.apiKey}`,
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password, returnSecureToken: false }),
-          }
-        )
-        if (!signUpRes.ok) {
-          const err  = await signUpRes.json()
-          const code = err?.error?.message ?? 'UNKNOWN'
-          if (code === 'EMAIL_EXISTS') throw Object.assign(new Error(), { code: 'auth/email-already-in-use' })
-          throw new Error(`Auth error: ${code}`)
-        }
-      }
-
+      // Staff, admin, and audit accounts authenticate via MSAL — just the Cosmos record is needed.
       const staffDoc = {
         displayName:  name || email,
         role:         newUser.value.role,
@@ -653,11 +614,7 @@ const addUser = async () => {
       await fetchUsers()
     } catch (e) {
       console.error(e)
-      if (e.code === 'auth/email-already-in-use') {
-        formError.value = 'That email already has a Firebase Auth account.'
-      } else {
-        formError.value = 'Failed to add user. ' + (e.message ?? 'Check your permissions.')
-      }
+      formError.value = 'Failed to add user. ' + (e.message ?? 'Check your permissions.')
     } finally {
       isSaving.value = false
     }
@@ -727,21 +684,22 @@ const executePwReset = async () => {
   isPwResetting.value = true
   pwResetError.value  = ''
   try {
-    const token = await getIdToken(auth.currentUser)
-    const res   = await fetch(
-      `https://us-central1-${firebaseConfig.projectId}.cloudfunctions.net/resetCadetPassword`,
-      {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
-        body:    JSON.stringify({ email: pwResetTarget.value.email }),
-      }
-    )
-    const data = await res.json()
-    if (!res.ok) throw new Error(data.error ?? 'Reset failed.')
-    pwResetResult.value = data
+    // Generate a random 6-char alphanumeric PIN (no ambiguous chars) to share with the student.
+    const chars  = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'
+    const newPin = Array.from(crypto.getRandomValues(new Uint8Array(6)))
+      .map(b => chars[b % chars.length]).join('')
+
+    const res = await fetch(`${API_BASE}/auth`, {
+      method:  'POST',
+      headers: await staffAuthHeader(),
+      body:    JSON.stringify({ action: 'resetPin', cadetEmail: pwResetTarget.value.email, newPin }),
+    })
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(data?.error ?? 'Reset failed.')
+    pwResetResult.value = { displayName: pwResetTarget.value.displayName, defaultPassword: newPin }
     await fetchUsers()
   } catch (e) {
-    console.error('resetCadetPassword error:', e)
+    console.error('resetPin error:', e)
     pwResetError.value = e?.message ?? 'Reset failed. Please try again.'
   } finally {
     isPwResetting.value = false

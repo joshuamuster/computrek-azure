@@ -68,7 +68,7 @@ export const AZURE_STORAGE = true
  * Firebase SDK is removed from package.json when this is true.
  * Only flip this after ALL other AZURE_* flags are true and tested.
  */
-export const AZURE_AUTH_STANDALONE = false
+export const AZURE_AUTH_STANDALONE = true
 
 
 export const FEATURE_FLAGS = {

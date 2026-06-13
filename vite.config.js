@@ -24,21 +24,16 @@ export default defineConfig({
   },
   assetsInclude: ['**/*.pptx'],
   build: {
-    chunkSizeWarningLimit: 650, // Firebase Firestore is inherently ~600 kB minified
+    chunkSizeWarningLimit: 500,
     rollupOptions: {
       output: {
         manualChunks: {
-          // Firebase split into its own chunk — large but only loaded once and cached
-          'vendor-firebase': [
-            'firebase/app',
-            'firebase/auth',
-            'firebase/firestore',
-            'firebase/storage',
-          ],
           // Chess libs only needed on chess routes
           'vendor-chess': ['chessground', 'chessops'],
           // Vue core
           'vendor-vue': ['vue', 'vue-router'],
+          // Azure auth (MSAL is ~400 kB — split so it's cached separately)
+          'vendor-msal': ['@azure/msal-browser'],
         },
       },
     },

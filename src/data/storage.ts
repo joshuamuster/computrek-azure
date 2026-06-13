@@ -1,41 +1,22 @@
 /**
- * storage.ts — student file uploads (Phase 5 of the Azure migration).
+ * storage.ts — student file uploads via Azure Blob Storage (Phase 5+).
  *
- * Two backends behind FEATURE_FLAGS.AZURE_STORAGE:
- *
- *   false → Firebase Storage (uploadBytes + getDownloadURL), original behavior.
- *   true  → Azure Blob Storage. The client asks the Functions app
- *           (/api/uploadSas) for a pair of SAS URLs: a short-lived write URL
- *           for the exact blob path, and a long-lived read URL that gets
- *           stored on the submission (equivalent trust model to Firebase's
- *           tokened download URLs — unguessable, no account keys in the
- *           browser). The storage account itself stays private; no public
- *           blob access is enabled.
- *
- * Both backends return the URL to store in the submission's data.url field.
+ * The client requests a pair of SAS URLs from the Functions app
+ * (/api/uploadSas): a short-lived write URL for the exact blob path, and a
+ * long-lived read URL stored on the submission (same unguessable-URL trust
+ * model as Firebase's tokened download URLs). The storage account stays
+ * private — no public blob access.
  */
-import { AZURE_STORAGE } from '../config/featureFlags'
+import { authHeaders } from './sessionAuth'
 
 const API_BASE = import.meta.env.VITE_SIGNALR_URL || '/api'
 
 export async function uploadFile(path: string, file: File | Blob): Promise<string> {
-  return AZURE_STORAGE ? uploadToBlob(path, file) : uploadToFirebase(path, file)
-}
-
-async function uploadToFirebase(path: string, file: File | Blob): Promise<string> {
-  const { ref: storageRef, uploadBytes, getDownloadURL } = await import('firebase/storage')
-  const { storage } = await import('../firebase')
-  const fileRef = storageRef(storage, path)
-  await uploadBytes(fileRef, file)
-  return getDownloadURL(fileRef)
-}
-
-async function uploadToBlob(path: string, file: File | Blob): Promise<string> {
   const contentType = (file as File).type || 'application/octet-stream'
 
   const sasRes = await fetch(`${API_BASE}/uploadSas`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers: authHeaders(),
     body: JSON.stringify({ path, contentType }),
   })
   if (!sasRes.ok) throw new Error(`uploadSas failed: ${sasRes.status}`)

@@ -1,7 +1,7 @@
 {
   "name": "computrek-realtime",
   "version": "1.0.0",
-  "description": "CompuTrek Phase 3 — Cosmos DB change feed → Azure SignalR broadcast",
+  "description": "CompuTrek Phase 3-6 — Cosmos change feed → SignalR broadcast + JWT auth",
   "main": "src/index.js",
   "engines": {
     "node": ">=20"
@@ -12,6 +12,8 @@
   "dependencies": {
     "@azure/cosmos": "^4.9.3",
     "@azure/functions": "^4.5.0",
-    "@azure/storage-blob": "^12.32.0"
+    "@azure/storage-blob": "^12.32.0",
+    "bcryptjs": "^3.0.3",
+    "jsonwebtoken": "^9.0.3"
   }
 }

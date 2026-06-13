@@ -16,6 +16,8 @@
  * until AZURE_REALTIME is flipped on.
  */
 
+import { getAnyAuthToken, getAuthToken } from './sessionAuth'
+
 type DocHandler = (rawDoc: Record<string, unknown>) => void
 export type ConnectionEvent = 'connected' | 'reconnected' | 'failed'
 type StateHandler = (event: ConnectionEvent) => void
@@ -43,7 +45,10 @@ async function ensureConnected(): Promise<boolean> {
           // withCredentials must be false for cross-origin negotiate: auth is
           // header-token based (no cookies), and the Function App's CORS
           // correctly refuses credentialed requests.
-          .withUrl(SIGNALR_URL, { withCredentials: false })
+          .withUrl(SIGNALR_URL, {
+            withCredentials: false,
+            accessTokenFactory: () => getAnyAuthToken().then(t => t ?? ''),
+          })
           .withAutomaticReconnect([0, 2000, 5000, 10000, 30000])
           .configureLogging(signalR.LogLevel.Warning)
           .build()
@@ -135,9 +140,10 @@ export function subscribeContainer(
  * live-game channel so per-frame aim updates don't fan out school-wide).
  */
 export function pushDocBroadcast(container: string, doc: Record<string, unknown>, group?: string): void {
+  const token = getAuthToken()
   fetch(`${SIGNALR_URL}/broadcast`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers: { 'content-type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
     body: JSON.stringify({ container, docs: [doc], ...(group ? { group } : {}) }),
   }).catch(() => {
     // Best-effort only — the change feed delivers the doc regardless.
@@ -149,9 +155,10 @@ export function pushDocBroadcast(container: string, doc: Record<string, unknown>
 function sendGroupAction(group: string, action: 'add' | 'remove'): void {
   const connectionId = connection?.connectionId
   if (!connectionId) return
+  const token = getAuthToken()
   fetch(`${SIGNALR_URL}/group`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers: { 'content-type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
     body: JSON.stringify({ connectionId, group, action }),
   }).catch(() => { /* best-effort; rejoin happens on reconnect anyway */ })
 }

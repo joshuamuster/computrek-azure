@@ -1,6 +1,4 @@
 import { ref, computed } from 'vue'
-import { signOut } from 'firebase/auth'
-import { auth } from '@/firebase'
 
 // Global authentication state
 const isAuthenticated = ref(false)
@@ -67,8 +65,14 @@ export function useAuth() {
   }
   
   const logout = async () => {
-    // Sign out of Firebase Auth (covers both Google and email/password sessions)
-    try { await signOut(auth) } catch (e) { console.warn('Firebase signOut error:', e) }
+    const role = userRole.value
+    if (role === 'staff' || role === 'admin' || role === 'audit') {
+      const { msalSignOut } = await import('@/data/msalAuth')
+      await msalSignOut().catch(() => {})
+    } else {
+      const { clearAuthToken } = await import('@/data/sessionAuth')
+      clearAuthToken()
+    }
 
     isAuthenticated.value = false
     userRole.value        = ''

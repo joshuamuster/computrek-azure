@@ -320,7 +320,7 @@ type WhereOp = '==' | 'in' | '<' | '<=' | '>' | '>=' | '!='
 interface WhereConstraint  { kind: 'where'; field: string | typeof DOCUMENT_ID; op: WhereOp; value: unknown }
 interface OrderByConstraint{ kind: 'orderBy'; field: string; dir: 'asc' | 'desc' }
 interface LimitConstraint  { kind: 'limit'; n: number }
-type QueryConstraint = WhereConstraint | OrderByConstraint | LimitConstraint
+export type QueryConstraint = WhereConstraint | OrderByConstraint | LimitConstraint
 
 export function where(field: string | typeof DOCUMENT_ID, op: WhereOp, value: unknown): QueryConstraint {
   return { kind: 'where', field, op, value }
