@@ -61,6 +61,10 @@ const REGISTRY = {
   gradebookOrder:     { container: 'gradebookOrder',     pk: '/id' },
   activeTestSessions: { container: 'activeTestSessions', pk: '/id' },
   demo:               { container: 'demo',               pk: '/id' },
+  // Phase 5: presence heartbeats live only in Cosmos (nothing to migrate from
+  // Firestore — RTDB presence was ephemeral). TTL enabled so stale docs
+  // self-delete.
+  presence:           { container: 'presence',           pk: '/id', ttl: -1, skipCopy: true },
 }
 
 // ── CLI args ───────────────────────────────────────────────────────────────────
@@ -151,7 +155,20 @@ async function main() {
 
   let grandTotal = 0
   for (const coll of collections) {
-    const { container: containerName, pk } = REGISTRY[coll]
+    const { container: containerName, pk, ttl, skipCopy } = REGISTRY[coll]
+
+    if (skipCopy) {
+      if (!DRY_RUN) {
+        await database.containers.createIfNotExists({
+          id: containerName,
+          partitionKey: { paths: [pk], kind: 'Hash' },
+          ...(ttl !== undefined ? { defaultTtl: ttl } : {}),
+        })
+      }
+      console.log(`${coll.padEnd(20)} (created only — no Firestore source)`)
+      continue
+    }
+
     const snap = await firestore.collection(coll).get()
     grandTotal += snap.size
 
@@ -163,6 +180,7 @@ async function main() {
     const { container } = await database.containers.createIfNotExists({
       id: containerName,
       partitionKey: { paths: [pk], kind: 'Hash' },
+      ...(ttl !== undefined ? { defaultTtl: ttl } : {}),
     })
 
     let written = 0

@@ -77,6 +77,11 @@ app.http('negotiate', {
 // Trust level: anonymous, same as negotiate — clients already hold the Cosmos
 // key and receive all broadcast docs, so this adds no new exposure. Endpoint
 // auth (validated tokens) lands with Phase 6 alongside negotiate hardening.
+// Phase 5: 'liveGameState' is a broadcast-only hub target (no Cosmos
+// container behind it) carrying ephemeral per-frame game state — always
+// group-scoped so it never fans out beyond the two players in a room.
+const VIRTUAL_TARGETS = new Set(['liveGameState'])
+
 app.http('broadcast', {
   methods: ['POST'],
   authLevel: 'anonymous',
@@ -84,12 +89,84 @@ app.http('broadcast', {
   handler: async (request, context) => {
     let body
     try { body = await request.json() } catch { return { status: 400 } }
-    const { container, docs } = body ?? {}
-    if (!LIVE_CONTAINERS[container] || !Array.isArray(docs) || docs.length === 0 || docs.length > 20) {
+    const { container, docs, group } = body ?? {}
+    const known = LIVE_CONTAINERS[container] || VIRTUAL_TARGETS.has(container)
+    if (!known || !Array.isArray(docs) || docs.length === 0 || docs.length > 20) {
       return { status: 400 }
     }
-    context.extraOutputs.set(signalROutput, [{ target: container, arguments: [docs] }])
+    if (VIRTUAL_TARGETS.has(container) && typeof group !== 'string') {
+      return { status: 400 } // virtual targets must be group-scoped
+    }
+    context.extraOutputs.set(signalROutput, [{
+      target: container,
+      arguments: [docs],
+      ...(typeof group === 'string' && group ? { groupName: group } : {}),
+    }])
     return { status: 204 }
+  },
+})
+
+// ── /api/group (Phase 5 — hub group membership) ────────────────────────────────
+// Adds/removes a connection to a hub group (e.g. live-{joinCode} for the
+// ephemeral game channel). Clients re-add themselves after reconnects.
+app.http('group', {
+  methods: ['POST'],
+  authLevel: 'anonymous',
+  extraOutputs: [signalROutput],
+  handler: async (request, context) => {
+    let body
+    try { body = await request.json() } catch { return { status: 400 } }
+    const { connectionId, group, action } = body ?? {}
+    if (typeof connectionId !== 'string' || typeof group !== 'string' ||
+        !/^live-[A-Za-z0-9-]{1,32}$/.test(group) || !['add', 'remove'].includes(action)) {
+      return { status: 400 }
+    }
+    context.extraOutputs.set(signalROutput, [{ connectionId, groupName: group, action }])
+    return { status: 204 }
+  },
+})
+
+// ── /api/uploadSas (Phase 5 — Azure Blob Storage uploads) ──────────────────────
+// Returns a short-lived write SAS for one exact blob plus a long-lived read
+// SAS to store on the submission. The storage account (the Function App's
+// own AzureWebJobsStorage account) stays private — no public blob access.
+// Paths are pseudonymous (uid + assignmentId), mirroring the privacy model.
+const { BlobServiceClient, BlobSASPermissions } = require('@azure/storage-blob')
+const UPLOADS_CONTAINER = 'uploads'
+
+app.http('uploadSas', {
+  methods: ['POST'],
+  authLevel: 'anonymous',
+  handler: async (request, context) => {
+    let body
+    try { body = await request.json() } catch { return { status: 400 } }
+    const { path, contentType } = body ?? {}
+    // submissions/{year}/{uid}/{assignmentId}.{ext} — forbid traversal/weirdness
+    if (typeof path !== 'string' || !/^[A-Za-z0-9][A-Za-z0-9._/-]{2,200}$/.test(path) || path.includes('..')) {
+      return { status: 400 }
+    }
+
+    const service = BlobServiceClient.fromConnectionString(process.env.AzureWebJobsStorage)
+    const container = service.getContainerClient(UPLOADS_CONTAINER)
+    await container.createIfNotExists()
+    const blob = container.getBlockBlobClient(path)
+
+    const now = Date.now()
+    const uploadUrl = await blob.generateSasUrl({
+      permissions: BlobSASPermissions.parse('cw'),
+      startsOn:  new Date(now - 5 * 60_000),
+      expiresOn: new Date(now + 15 * 60_000),
+      contentType: typeof contentType === 'string' ? contentType : undefined,
+    })
+    // Read SAS lasts two school years — same trust model as Firebase's
+    // long-lived tokened download URLs (unguessable, no account access).
+    const readUrl = await blob.generateSasUrl({
+      permissions: BlobSASPermissions.parse('r'),
+      startsOn:  new Date(now - 5 * 60_000),
+      expiresOn: new Date(now + 2 * 365 * 24 * 3600_000),
+    })
+
+    return { jsonBody: { uploadUrl, readUrl } }
   },
 })
 

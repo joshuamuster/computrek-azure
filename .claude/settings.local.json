@@ -144,7 +144,9 @@
       "Bash(curl -s -X POST https://computrek-fusd.azurewebsites.net/api/broadcast -H \"content-type: application/json\" -d '{\"container\":\"missions\",\"docs\":[{\"id\":\"x\"}]}' -o /dev/null -w \"rejects non-live container: %{http_code}\\\\n\")",
       "Bash(curl -s -o /dev/null -w \"TopNav.vue: %{http_code}\\\\n\" \"http://localhost:1701/src/components/TopNav.vue\")",
       "Bash(curl -s -o /dev/null -w \"cosmosBackend.ts: %{http_code}\\\\n\" \"http://localhost:1701/src/data/cosmosBackend.ts\")",
-      "Bash(curl -s -o /dev/null -w \"realtime.ts: %{http_code}\\\\n\" \"http://localhost:1701/src/data/realtime.ts\")"
+      "Bash(curl -s -o /dev/null -w \"realtime.ts: %{http_code}\\\\n\" \"http://localhost:1701/src/data/realtime.ts\")",
+      "Bash(cd /Users/joshuamuster/Documents/Github/computrek-azure/azure-functions && npm install @azure/storage-blob 2>&1 | tail -1 && node --check src/index.js && echo \"syntax OK\" && cd .. && npm run build 2>&1 | grep -E \"✓ built|error\" | head -3)",
+      "Bash(sed -i '' 's/export const AZURE_STORAGE = false/export const AZURE_STORAGE = true/' src/config/featureFlags.ts)"
     ],
     "deny": []
   }

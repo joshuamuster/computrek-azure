@@ -264,8 +264,7 @@ import {
   createInitialState, resolveShot, computeMatchScore, weaponById, opponentOf,
   serializeState, deserializeState,
 } from '@/components/games/FracturedFrontier/engine'
-import { rtdb } from '@/firebase'
-import { ref as dbRef, update as dbUpdate, set as dbSet, onValue } from 'firebase/database'
+import { updateLive, clearLive, subscribeLive } from '@/multiplayer/liveChannel'
 import federationBadge from '@/assets/icons/starship1c.svg'
 import romulanBadge from '@/assets/icons/drone-front1c.svg'
 import gameLogo from '@/assets/images/games/title-fracturedfrontier.svg'
@@ -722,9 +721,9 @@ function _stepMove(dir: 'left' | 'right') {
     [role]: { ...displayShips.value[role], x: newX, y: newY },
   }
 
-  // Stream live position to RTDB so the opponent sees the tank moving
+  // Stream live position so the opponent sees the tank moving
   if (isMultiplayer.value && joinCode.value) {
-    dbUpdate(dbRef(rtdb, `live/${joinCode.value}/${role}`), { x: newX, fuelUsed: fuelUsed.value })
+    updateLive(`${joinCode.value}/${role}`, { x: newX, fuelUsed: fuelUsed.value })
   }
 
   render()
@@ -930,9 +929,9 @@ async function fire() {
   resultMessage.value = formatHitMessage(replay)
 
   if (isMultiplayer.value) {
-    // Clear live RTDB cursor now that the turn is committed
+    // Clear live cursor now that the turn is committed
     if (joinCode.value && playerRole.value) {
-      dbSet(dbRef(rtdb, `live/${joinCode.value}/${playerRole.value}`), null).catch(() => {})
+      clearLive(`${joinCode.value}/${playerRole.value}`)
     }
     try {
       await submitMove(
@@ -1095,12 +1094,12 @@ function shotsEqual(a?: LastShot | null, b?: LastShot | null): boolean {
 const hasSyncedOnce = ref(false)
 
 // Redraw whenever aim changes so the barrel and aim lines update live.
-// Also push the new aim to RTDB so the opponent sees the ghost arc update.
+// Also push the new aim so the opponent sees the ghost arc update.
 watch([aimAngle, aimPower], () => {
   if (gameState.value.phase === 'aiming') {
     render()
     if (isMultiplayer.value && playerRole.value && joinCode.value) {
-      dbUpdate(dbRef(rtdb, `live/${joinCode.value}/${playerRole.value}`), {
+      updateLive(`${joinCode.value}/${playerRole.value}`, {
         angle: aimAngle.value,
         power: aimPower.value,
       })
@@ -1216,10 +1215,9 @@ watch(
     if (!role || !code) return
 
     const opRole  = opponentOf(role)
-    const liveRef = dbRef(rtdb, `live/${code}/${opRole}`)
 
-    liveUnsub = onValue(liveRef, (snap) => {
-      const data = snap.val() as { x?: number; fuelUsed?: number; angle?: number; power?: number } | null
+    liveUnsub = subscribeLive(`${code}/${opRole}`, (raw) => {
+      const data = raw as { x?: number; fuelUsed?: number; angle?: number; power?: number } | null
 
       if (!data) {
         // Opponent cleared their cursor after firing — wipe ghost aim
@@ -1411,11 +1409,11 @@ onBeforeUnmount(() => {
   _clearKeyRepeat()
   _clearBtnRepeat()
   _clearMoveRepeat()
-  // Unsubscribe from opponent's live RTDB cursor and clear our own node
+  // Unsubscribe from opponent's live cursor and clear our own channel
   liveUnsub?.()
   liveUnsub = null
   if (isMultiplayer.value && playerRole.value && joinCode.value) {
-    dbSet(dbRef(rtdb, `live/${joinCode.value}/${playerRole.value}`), null).catch(() => {})
+    clearLive(`${joinCode.value}/${playerRole.value}`)
   }
   stopListening()
   if (animFrame) cancelAnimationFrame(animFrame)

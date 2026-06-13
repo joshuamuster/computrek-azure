@@ -91,6 +91,9 @@ export const CONTAINER_REGISTRY: Record<string, { container: string; pk: string 
   gradebookOrder:     { container: 'gradebookOrder',     pk: '/id' },
   activeTestSessions: { container: 'activeTestSessions', pk: '/id' },
   demo:               { container: 'demo',               pk: '/id' },
+  // Phase 5: heartbeat presence (replaces Firebase RTDB). Container has TTL
+  // enabled so stale heartbeats self-delete; see usePresence.ts.
+  presence:           { container: 'presence',           pk: '/id' },
 }
 
 function containerInfo(collName: string) {

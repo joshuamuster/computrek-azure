@@ -125,10 +125,29 @@ covers room sync. Phase 4 instead hardened the data layer for gameplay:
 Measured move-delivery latency (write → opponent's client): **~0.9s** via the
 broadcast fast path, ~1.3s via the change-feed backstop (was up to ~6s before).
 
-### Phase 5 — Storage + Presence
-- [ ] Replace Firebase Storage upload calls with Azure Blob Storage SDK
-- [ ] Replace `usePresence.ts` RTDB logic with Azure SignalR connection tracking
-- [ ] Set `AZURE_STORAGE: true` in featureFlags.ts when complete
+### Phase 5 — Storage + Presence ✅ (live as of June 12, 2026)
+
+- [x] File uploads → Azure Blob Storage via `src/data/storage.ts` (dual-backend
+  behind `AZURE_STORAGE`). The client requests SAS URLs from `/api/uploadSas`:
+  a 15-minute write SAS for the exact blob plus a 2-year read SAS stored on
+  the submission (same unguessable-URL trust model as Firebase download URLs).
+  Blobs live in the `uploads` container of the Function App's own storage
+  account (`computrekrga6cc`) — account stays private, CORS allows the app
+  origins. Verified round-trip; path traversal rejected.
+- [x] Presence → Cosmos DB heartbeat (`presence` container, TTL-enabled so
+  stale docs self-delete). `usePresence.ts` keeps its exact API; the Azure
+  path upserts a heartbeat every 25s and subscribers poll every 20s, counting
+  a cadet online only if the heartbeat is < 70s old (replaces RTDB
+  `onDisconnect`). Polling is deliberate here — broadcasting heartbeats over
+  SignalR would burn the message budget for 30-second-freshness data.
+- [x] (Unplanned discovery) FracturedFrontier's live opponent streaming used
+  RTDB directly. Now `src/multiplayer/liveChannel.ts`: a SignalR virtual
+  target (`liveGameState`) scoped to hub group `live-{joinCode}` so per-frame
+  aim updates reach only the two players, with sender-side throttling (~10/s).
+  New `/api/group` function manages membership (rejoined after reconnects).
+  Measured delivery: **~110ms**, with confirmed group isolation.
+- [x] `AZURE_STORAGE: true` — Firebase Storage and RTDB now have zero callers
+  in the live code paths (only the flag-off fallbacks reference them).
 
 ### Phase 6 — Standalone MSAL + Remove Firebase
 - [ ] Replace Firebase Auth entirely with standalone MSAL for staff

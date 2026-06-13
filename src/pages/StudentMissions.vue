@@ -458,9 +458,9 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage'
+import { uploadFile } from '@/data/storage'
 import { doc, getDoc, updateDoc, serverTimestamp, collection, getDocs, onSnapshot, query, where } from '@/data/db'
-import { db, storage } from '@/firebase'
+import { db } from '@/firebase'
 import { useAuth } from '@/composables/useAuth.js'
 import { useAssignments } from '@/composables/useAssignments'
 import { useMissions } from '@/composables/useMissions'
@@ -1045,9 +1045,7 @@ async function submitFile() {
   const ext = selectedFile.value.name.split('.').pop()
   const path = `submissions/${SCHOOL_YEAR_ID}/${uid}/${a.assignmentId}.${ext}`
   try {
-    const fileRef = storageRef(storage, path)
-    await uploadBytes(fileRef, selectedFile.value)
-    const downloadURL = await getDownloadURL(fileRef)
+    const downloadURL = await uploadFile(path, selectedFile.value)
     await updateDoc(doc(db, 'submissions', a.submissionId), {
       data: { url: downloadURL, fileName: selectedFile.value.name },
       status: 'submitted', submittedAt: serverTimestamp(),

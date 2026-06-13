@@ -23,6 +23,7 @@ type StateHandler = (event: ConnectionEvent) => void
 const docHandlers   = new Map<string, Set<DocHandler>>()   // container → handlers
 const stateHandlers = new Set<StateHandler>()
 const boundTargets  = new Set<string>()                    // containers with a connection.on() registered
+const joinedGroups  = new Set<string>()                    // hub groups to (re)join on (re)connect
 
 let connection: any = null            // signalR.HubConnection (lazy)
 let connectPromise: Promise<boolean> | null = null
@@ -48,8 +49,12 @@ async function ensureConnected(): Promise<boolean> {
           .build()
 
         // Subscribers refetch on reconnect — change-feed events during the
-        // outage were missed, so local result sets must be rebuilt.
-        connection.onreconnected(() => notifyState('reconnected'))
+        // outage were missed, so local result sets must be rebuilt. Group
+        // membership is also connection-scoped, so rejoin all groups.
+        connection.onreconnected(() => {
+          for (const g of joinedGroups) sendGroupAction(g, 'add')
+          notifyState('reconnected')
+        })
 
         // Bind any targets that were requested before the connection existed
         for (const container of docHandlers.keys()) bindTarget(container)
@@ -120,18 +125,47 @@ export function subscribeContainer(
 }
 
 /**
- * Fire-and-forget push of a just-written doc to all connected clients via the
+ * Fire-and-forget push of a just-written doc to connected clients via the
  * Functions app's /broadcast endpoint, skipping the change-feed poll delay.
  * Used by cosmosBackend for latency-sensitive containers (game moves,
  * challenges, timers, CHAMPS). The change feed re-broadcasts the same doc
  * shortly after — subscribers upsert by id, so duplicates are harmless.
+ *
+ * Pass `group` to deliver only to that hub group (used by the ephemeral
+ * live-game channel so per-frame aim updates don't fan out school-wide).
  */
-export function pushDocBroadcast(container: string, doc: Record<string, unknown>): void {
+export function pushDocBroadcast(container: string, doc: Record<string, unknown>, group?: string): void {
   fetch(`${SIGNALR_URL}/broadcast`, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ container, docs: [doc] }),
+    body: JSON.stringify({ container, docs: [doc], ...(group ? { group } : {}) }),
   }).catch(() => {
     // Best-effort only — the change feed delivers the doc regardless.
   })
+}
+
+// ── Hub groups (Phase 5 — ephemeral live-game channels) ───────────────────────
+
+function sendGroupAction(group: string, action: 'add' | 'remove'): void {
+  const connectionId = connection?.connectionId
+  if (!connectionId) return
+  fetch(`${SIGNALR_URL}/group`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ connectionId, group, action }),
+  }).catch(() => { /* best-effort; rejoin happens on reconnect anyway */ })
+}
+
+/**
+ * Join a hub group on the shared connection (connecting first if needed).
+ * Membership survives reconnects (re-added automatically). Returns a leave
+ * function.
+ */
+export function joinGroup(group: string): () => void {
+  joinedGroups.add(group)
+  ensureConnected().then(ok => { if (ok) sendGroupAction(group, 'add') })
+  return () => {
+    joinedGroups.delete(group)
+    sendGroupAction(group, 'remove')
+  }
 }

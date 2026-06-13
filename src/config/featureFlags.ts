@@ -61,7 +61,7 @@ export const AZURE_MULTIPLAYER = true
  * Flip to true once the Blob Storage container and SAS token endpoint
  * (Azure Function) are configured and tested.
  */
-export const AZURE_STORAGE = false
+export const AZURE_STORAGE = true
 
 /**
  * Phase 6: Standalone MSAL replaces Firebase Auth entirely.
