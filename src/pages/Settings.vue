@@ -245,6 +245,13 @@
                       @click="confirmPwReset(user)"
                   >RESET PW</button>
                   <button
+                      v-if="user.role === 'cadet'"
+                      class="link-ms-btn"
+                      :class="{ 'link-ms-btn--linked': user.msalHash }"
+                      :title="user.msalHash ? 'Microsoft account linked — click to relink' : 'Link Microsoft account'"
+                      @click="startLinkMsal(user)"
+                  >{{ user.msalHash ? 'MS LINKED' : 'LINK MS' }}</button>
+                  <button
                       v-if="isAdmin"
                       class="remove-btn"
                       :disabled="user.email === currentUserEmail"
@@ -376,6 +383,45 @@
           </div>
         </template>
 
+      </div>
+    </div>
+
+    <!-- Link Microsoft Account Modal -->
+    <div v-if="linkingUser" class="modal-overlay" @click.self="closeLinkModal">
+      <div class="modal modal--link">
+        <div class="modal-title modal-title--link">LINK MICROSOFT ACCOUNT</div>
+        <template v-if="!linkSuccess">
+          <p class="modal-body">
+            Enter <strong>{{ linkingUser.displayName || linkingUser.email }}</strong>'s district email.
+            It's stored as a one-way hash — the actual email is never saved.
+          </p>
+          <div class="field" style="margin-bottom: 1rem;">
+            <label class="field-label">DISTRICT EMAIL</label>
+            <input
+                v-model="linkDistrictEmail"
+                class="lcars-input"
+                type="email"
+                placeholder="e.g. firstname.lastname@fresnounified.org"
+                :disabled="isLinking"
+                @keyup.enter="executeLinkMsal"
+            />
+          </div>
+          <p v-if="linkError" class="pw-reset-error">{{ linkError }}</p>
+          <div class="modal-actions">
+            <button class="lcars-btn lcars-btn--ghost" :disabled="isLinking" @click="closeLinkModal">CANCEL</button>
+            <button class="lcars-btn lcars-btn--link" :disabled="isLinking || !linkDistrictEmail.trim()" @click="executeLinkMsal">
+              {{ isLinking ? 'LINKING...' : 'LINK ACCOUNT' }}
+            </button>
+          </div>
+        </template>
+        <template v-else>
+          <p class="modal-body">
+            <strong>{{ linkingUser.displayName }}</strong> can now sign in with their district Microsoft account.
+          </p>
+          <div class="modal-actions">
+            <button class="lcars-btn" @click="closeLinkModal">DONE</button>
+          </div>
+        </template>
       </div>
     </div>
 
@@ -710,6 +756,43 @@ const closePwResetModal = () => {
   pwResetTarget.value = null
   pwResetResult.value = null
   pwResetError.value  = ''
+}
+
+// ── Link Microsoft account ────────────────────────────────────────────────────
+const linkingUser      = ref(null)
+const linkDistrictEmail = ref('')
+const isLinking        = ref(false)
+const linkError        = ref('')
+const linkSuccess      = ref(false)
+
+const startLinkMsal = (user) => {
+  linkingUser.value       = user
+  linkDistrictEmail.value = ''
+  linkError.value         = ''
+  linkSuccess.value       = false
+}
+
+const closeLinkModal = () => { linkingUser.value = null }
+
+const executeLinkMsal = async () => {
+  if (!linkingUser.value || !linkDistrictEmail.value.trim()) return
+  isLinking.value = true
+  linkError.value = ''
+  try {
+    const res = await fetch(`${API_BASE}/auth`, {
+      method:  'POST',
+      headers: await staffAuthHeader(),
+      body:    JSON.stringify({ action: 'linkStudent', cadetEmail: linkingUser.value.email, districtEmail: linkDistrictEmail.value.trim().toLowerCase() }),
+    })
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(data?.error ?? 'Link failed.')
+    linkSuccess.value = true
+    await fetchUsers()
+  } catch (e) {
+    linkError.value = e?.message ?? 'Failed to link account. Please try again.'
+  } finally {
+    isLinking.value = false
+  }
 }
 
 // ── Remove user ───────────────────────────────────────────────────────────────
@@ -1228,6 +1311,22 @@ onUnmounted(() => {
 }
 .reset-pw-btn:hover { background: rgba(255,153,0,0.15); }
 
+.link-ms-btn {
+  background: transparent;
+  border: 1px solid rgba(153,204,255,0.4);
+  border-radius: 0.3rem;
+  color: rgba(153,204,255,0.6);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
+  transition: all 0.2s;
+}
+.link-ms-btn:hover { background: rgba(153,204,255,0.1); border-color: #99ccff; color: #99ccff; }
+.link-ms-btn--linked { border-color: #69f0ae; color: #69f0ae; }
+.link-ms-btn--linked:hover { background: rgba(105,240,174,0.1); }
+
 /* ── Modal ───────────────────────────────────────────────────────────────────── */
 .modal-overlay {
   position: fixed;
@@ -1345,4 +1444,14 @@ onUnmounted(() => {
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
+
+.modal--link         { border-color: #99ccff; box-shadow: 0 0 2rem rgba(153,204,255,0.2); }
+.modal-title--link   { color: #99ccff; }
+.lcars-btn--link {
+  background: linear-gradient(90deg, #1a3a66, #2255aa);
+  border: none;
+  color: #e6f0ff;
+}
+.lcars-btn--link:hover:not(:disabled) { box-shadow: 0 0 0.75rem rgba(153,204,255,0.4); }
+.lcars-btn--link:disabled { opacity: 0.4; cursor: not-allowed; }
 </style>

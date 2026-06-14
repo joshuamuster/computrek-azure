@@ -155,6 +155,52 @@ const signInAsCadet = async () => {
   }
 }
 
+// ── Student sign-in via MSAL (hash-matched to cadet code) ────────────────────
+const signInAsStudentWithMicrosoft = async () => {
+  isSigningIn.value  = true
+  errorMessage.value = ''
+  try {
+    const msalUser = await msalLogin()
+    if (!msalUser) return  // iOS redirect — page will navigate away
+
+    const res = await fetch(`${API_BASE}/auth`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ action: 'student', idToken: msalUser.idToken }),
+    })
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok) {
+      playSound(soundError, 0.6)
+      errorMessage.value = data?.error ?? 'Sign-in failed. Ask your teacher for help.'
+      return
+    }
+
+    setAuthToken(data.token)
+    playSound(soundSuccess, 0.6)
+    emit('authenticate', 'cadet', {
+      displayName:  data.displayName,
+      email:        data.uid,
+      uid:          data.uid,
+      periodId:     data.periodId,
+      teacherEmail: data.teacherEmail,
+    })
+  } catch (err: any) {
+    const msg = err?.message ?? ''
+    if (msg.includes('popup_window_error') || msg.includes('user_cancelled')) {
+      errorMessage.value = 'Sign-in cancelled.'
+    } else if (msg.includes('popup_blocked')) {
+      errorMessage.value = 'Popup blocked. Allow pop-ups and try again.'
+    } else if (msg.includes('VITE_AZURE_CLIENT_ID')) {
+      errorMessage.value = 'Microsoft sign-in is not configured yet. Use code + PIN.'
+    } else {
+      errorMessage.value = 'Sign-in failed. Ask your teacher for help.'
+      console.error('[student MSAL]', err)
+    }
+  } finally {
+    isSigningIn.value = false
+  }
+}
+
 // ── Staff sign-in via MSAL ───────────────────────────────────────────────────
 const signInAsStaffWithMicrosoft = async () => {
   isSigningIn.value  = true
@@ -366,13 +412,27 @@ const clearPassword = () => { password.value = '' }
             <!-- Right column: auth UI -->
             <div class="right-column">
 
-              <!-- Cadet: access code + PIN -->
-              <!-- Real student identities must not enter Firebase — cadets use   -->
-              <!-- teacher-assigned access codes and PINs only. No Microsoft SSO. -->
+              <!-- Cadet: Microsoft SSO (primary) or access code + PIN (fallback) -->
               <template v-if="selectedRole === 'cadet'">
                 <div class="lcars-subtitle">STEP 02</div>
 
                 <div class="student-signin-area">
+                  <button
+                      class="ms-btn"
+                      :disabled="isSigningIn"
+                      @click="signInAsStudentWithMicrosoft"
+                  >
+                    <svg class="ms-icon" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1"  y="1"  width="9" height="9" fill="#f25022"/>
+                      <rect x="11" y="1"  width="9" height="9" fill="#7fba00"/>
+                      <rect x="1"  y="11" width="9" height="9" fill="#00a4ef"/>
+                      <rect x="11" y="11" width="9" height="9" fill="#ffb900"/>
+                    </svg>
+                    <span>{{ isSigningIn ? 'CONTACTING STARFLEET...' : 'SIGN IN WITH MICROSOFT' }}</span>
+                  </button>
+
+                  <div class="auth-divider">— OR —</div>
+
                   <div class="field-group">
                     <label class="field-label">ACCESS CODE</label>
                     <input

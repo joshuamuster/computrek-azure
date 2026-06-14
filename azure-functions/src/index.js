@@ -21,6 +21,7 @@ const { app, input, output } = require('@azure/functions')
 const { CosmosClient } = require('@azure/cosmos')
 const jwt     = require('jsonwebtoken')
 const bcrypt  = require('bcryptjs')
+const crypto  = require('crypto')
 
 const HUB      = 'computrek'
 const DATABASE = 'computrek'
@@ -90,6 +91,10 @@ function requireAuth(request) {
   const user = validateToken(request)
   if (!user) return { status: 401, jsonBody: { error: 'Unauthorized' } }
   return null
+}
+
+function hashEmail(email) {
+  return crypto.createHash('sha256').update(email.toLowerCase().trim()).digest('hex')
 }
 
 /** Middleware: returns 403 unless the caller is staff or admin. */
@@ -284,6 +289,63 @@ app.http('auth', {
       const hash = await bcrypt.hash(String(newPin), 8)
       await db.container('approvedUsers').items.upsert({ ...cadet, password: hash, requiresPasswordChange: true })
       return { jsonBody: { success: true, displayName: cadet.displayName } }
+    }
+
+    // ── student: MSAL id_token → hash lookup → cadet JWT ─────────────────────
+    if (action === 'student') {
+      const { idToken } = body
+      if (!idToken) return { status: 400, jsonBody: { error: 'idToken required' } }
+
+      let decoded
+      try {
+        decoded = jwt.decode(idToken)
+        if (!decoded || typeof decoded !== 'object') throw new Error('bad token')
+        if (decoded.exp && decoded.exp < Date.now() / 1000) return { status: 401, jsonBody: { error: 'Token expired. Please sign in again.' } }
+        if (AZURE_TENANT && decoded.iss && !decoded.iss.includes(AZURE_TENANT)) return { status: 401, jsonBody: { error: 'Invalid token issuer' } }
+      } catch {
+        return { status: 401, jsonBody: { error: 'Invalid token' } }
+      }
+
+      const email = (decoded.preferred_username ?? decoded.email ?? decoded.upn ?? '').toLowerCase().trim()
+      if (!email) return { status: 401, jsonBody: { error: 'Could not read email from token' } }
+
+      const hash = hashEmail(email)
+      const db   = cosmos().database(DATABASE)
+      const { resources } = await db.container('approvedUsers').items.query({
+        query: 'SELECT * FROM c WHERE c.msalHash = @hash AND NOT IS_DEFINED(c["__deleted"])',
+        parameters: [{ name: '@hash', value: hash }],
+      }).fetchAll()
+
+      const user = resources[0]
+      if (!user || user.role !== 'cadet') {
+        return { status: 401, jsonBody: { error: 'Microsoft account not linked. Ask your teacher to link your account in Settings.' } }
+      }
+
+      const uid   = user.uid || user.id
+      const token = issueToken({ sub: user.id, uid, role: 'cadet', periodId: user.periodId, teacherEmail: user.teacherEmail, displayName: user.displayName })
+      return { jsonBody: { token, displayName: user.displayName, uid, periodId: user.periodId, teacherEmail: user.teacherEmail } }
+    }
+
+    // ── linkStudent: staff links a district email to a cadet code ─────────────
+    if (action === 'linkStudent') {
+      const deny = requireStaff(request)
+      if (deny) return deny
+
+      const { cadetEmail, districtEmail } = body
+      if (!cadetEmail || !districtEmail) return { status: 400, jsonBody: { error: 'cadetEmail and districtEmail required' } }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(districtEmail)) return { status: 400, jsonBody: { error: 'Invalid email format' } }
+
+      const db = cosmos().database(DATABASE)
+      const { resources } = await db.container('approvedUsers').items.query({
+        query: 'SELECT * FROM c WHERE c.id = @id',
+        parameters: [{ name: '@id', value: cadetEmail }],
+      }).fetchAll()
+      const cadet = resources[0]
+      if (!cadet) return { status: 404, jsonBody: { error: 'Cadet not found' } }
+
+      const hash = hashEmail(districtEmail)
+      await db.container('approvedUsers').items.upsert({ ...cadet, msalHash: hash })
+      return { jsonBody: { success: true } }
     }
 
     return { status: 400, jsonBody: { error: 'Unknown action' } }
